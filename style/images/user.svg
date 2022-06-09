@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg width="120" height="150"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>user</title>
+<desc>Stick Figure of a user</desc>
+<circle cx="60" cy="55" r="20" style="stroke: black; fill: none;"/>
+<!--neck of the user-->
+<path d="M 25 104 L 95 104 A 5 4 0 0 0 25 104"  style=" stroke: black; fill: none;"/>
+</svg>
