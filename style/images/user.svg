@@ -6,5 +6,5 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 <desc>Stick Figure of a user</desc>
 <circle cx="60" cy="55" r="20" style="stroke: black; fill: none;"/>
 <!--neck of the user-->
-<path d="M 25 104 L 95 104 A 5 4 0 0 0 25 104"  style=" stroke: black; fill: none;"/>
+<path d="M 30 104 L 90 104 A 5 4 0 0 0 30 104"  style=" stroke: black; fill: none;"/>
 </svg>
