@@ -4,7 +4,7 @@ xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>user</title>
 <desc>Stick Figure of a user</desc>
-<circle cx="60" cy="55" r="20" style="stroke: green; fill: green;"/>
+<circle cx="60" cy="55" r="20" style="stroke: black; fill: black;"/>
 <!--neck of the user-->
-<path d="M 30 104 L 90 104 A 5 4 0 0 0 30 104"  style=" stroke: green; fill: green;"/>
+<path d="M 30 104 L 90 104 A 5 4 0 0 0 30 104"  style=" stroke: black; fill: black;"/>
 </svg>
