@@ -1,0 +1,5 @@
+#directories to ignore
+.sass-cache
+
+#files to ignore
+*.swp
