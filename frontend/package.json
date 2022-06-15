@@ -7,7 +7,7 @@
         "start": "live-server src --verbose",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
+    "author": "Softcraze Corporation",
     "license": "ISC",
     "devDependencies": {
         "live-server": "^1.2.2"
