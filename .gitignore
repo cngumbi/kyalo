@@ -1,5 +1,10 @@
 #directories to ignore
 .sass-cache
+node_modules
 
 #files to ignore
 *.swp
+
+
+
+package-lock.json
