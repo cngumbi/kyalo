@@ -1,0 +1,80 @@
+@import 'variable';
+.container {
+    display: grid;
+    margin: 0;
+    //the container-grid holds all the content in a grid format
+    .container-grid {
+        //display: grid;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 1fr 5rem;
+        height: 100%;
+        header {
+            grid-area: header;
+            background-color: $forest-green-darck;
+            color: $text-color;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5rem;
+            a {
+                color: $text-color;
+                font-weight: bold;
+                text-decoration: none;
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+            .brand {
+                a {
+                    font-size: $font-medium-4;
+                }
+            }
+        }
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            li {
+                flex: 0 1 30rem;
+                margin: 1rem;
+                margin-bottom: 0;
+                height: 42rem;
+                border-top: 0.2rem $text-color solid;
+                .card-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 100%;
+                    img {
+                        max-height: 26rem;
+                        max-width: 22rem;
+                        margin-top: 2rem;
+                    }
+                    .item-name {
+                        line-height: 2.2rem;
+                    }
+                    .item-brand {
+                        font-size: $font-smaller;
+                        color: $brand-text-color;
+                    }
+                    .item-price {
+                        font-size: $font-medium-1;
+                    }
+                }
+            }
+        }
+        footer {
+            background-color: $green-cyan-dack;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $text-color;
+            font-size: $font-smallest !important;
+            height: 20px;
+        }
+    }
+}
