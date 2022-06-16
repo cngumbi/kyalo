@@ -1,5 +1,5 @@
-import data from "../data.js";
-const HomeScreen = {
+import data from "../../data.js";
+const MainSection = {
         render: () => {
                 const { products } = data;
                 return `
@@ -26,4 +26,4 @@ const HomeScreen = {
                 `;
     },
 };
-export default HomeScreen;
+export default MainSection;
