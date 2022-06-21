@@ -8,14 +8,14 @@ const routes = {
     '/product/:id': ProductSection,
 
 };
-const router = () => {
+const router = async() => {
     const request = parseRequestUrl();
     const parseUrl = (request.resource ? `/${request.resource}` : `/`) +
         (request.id ? '/:id' : '') +
         (request.verb ? `/${request.verb}` : '');
     const section = routes[parseUrl] ? routes[parseUrl] : Error404Section;
     const main = document.getElementById("main-container");
-    main.innerHTML = section.render();
+    main.innerHTML = await section.render();
 };
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);
