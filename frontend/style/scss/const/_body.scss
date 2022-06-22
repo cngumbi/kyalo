@@ -62,7 +62,11 @@
                         color: $brand-text-color;
                     }
                     .item-price {
-                        font-size: $font-medium-1;
+                        font-size: $font-default;
+                    }
+                    //reating class
+                    .item-rating {
+                        font-size: $font-smallest;
                     }
                 }
             }

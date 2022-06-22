@@ -50,7 +50,9 @@
   font-size: 0.875em;
   color: #808080; }
 .container .container-grid .card li .card-item .item-price {
-  font-size: 1.375em; }
+  font-size: 1em; }
+.container .container-grid .card li .card-item .item-rating {
+  font-size: 0.625em; }
 .container .container-grid footer {
   background-color: #001308;
   display: flex;

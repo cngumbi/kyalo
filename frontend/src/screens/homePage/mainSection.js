@@ -1,5 +1,6 @@
 //import data from "../data.js";
 import axios from 'axios';
+import Rating from '../components/rating'
 const MainSection = {
         render: async() => {
                 //const { products } = data;
@@ -24,6 +25,13 @@ const MainSection = {
                             </a>
                             <div class="item-name">
                                 <a href="#/product/1">${product.name}</a>
+                            </div>
+                            <!--items rating-->
+                            <div class="item-rating">
+                                ${Rating.render({
+                                    value: product.rating,
+                                    text: `${product.numReviews} reviews`,
+                                })}
                             </div>
                             <div class="item-brand">
                                 ${product.brand}
