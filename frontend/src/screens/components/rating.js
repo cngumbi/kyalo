@@ -1,3 +1,5 @@
+//to work on the design of the star icon
+//create a simple design to fit our needs
 const Rating = {
     render: (props) => {
         if (!props.value) {
