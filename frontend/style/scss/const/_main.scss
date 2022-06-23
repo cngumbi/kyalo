@@ -1,0 +1,36 @@
+//to reset all the brower default
+//reset
+@import 'variable';
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    font: $font-medium-3 $font_family;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+button {
+    font: $font-default $font_family;
+    padding: 1rem;
+    border: 0.1rem $brand-text-color solid;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+        border: 0.1rem $hover-color solid;
+        background-color: $light-color;
+    }
+}

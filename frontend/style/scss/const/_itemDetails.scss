@@ -1,0 +1,55 @@
+@import 'body';
+//items content
+.item-content {
+    padding: 1rem;
+    //items details
+    .item-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .details-img {
+            flex: 2 1 60rem;
+            img {
+                max-width: 50rem;
+                width: 100%;
+            }
+        }
+        .details-info {
+            flex: 1 1 30rem;
+            ul {
+                padding: 0;
+                list-style-type: none;
+            }
+            h1 {
+                font-size: $font-medium;
+                margin: 0;
+            }
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+        .details-action {
+            flex: 1 1 30rem;
+            border: 0.1rem $brand-text-color solid;
+            border-radius: 0.5rem;
+            background-color: $light-color;
+            padding: 1rem;
+            ul {
+                padding: 0;
+                list-style-type: none;
+            }
+            li {
+                margin-bottom: 1rem;
+            }
+            button.primary {
+                color: $text-color;
+                background-color: $green-cyan-dack;
+            }
+        }
+    }
+}
+
+.fwidth {
+    width: 100%;
+}
