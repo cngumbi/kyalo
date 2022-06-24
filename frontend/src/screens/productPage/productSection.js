@@ -3,6 +3,9 @@ import { parseRequestUrl } from '../../util';
 import Rating from '../components/rating';
 
 const ProductSection = {
+        after_render: () => {
+
+        },
         render: async() => {
                 const request = parseRequestUrl();
                 const product = await getItem(request.id);
