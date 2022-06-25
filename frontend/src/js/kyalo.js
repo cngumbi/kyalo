@@ -5,7 +5,7 @@ import axios from 'axios';
 import { apiURL } from "../config";
 
 //date: June sixteenth Two Thuosand Twenty-Two
-export const getItem = async(id) => {
+export const getProduct = async(id) => {
     try {
         const response = await axios({
             url: `${apiURL}/api/products/${id}`,

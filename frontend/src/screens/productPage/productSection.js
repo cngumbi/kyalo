@@ -1,14 +1,19 @@
-import { getItem } from '../../js/kyalo';
+import { getProduct } from '../../js/kyalo';
 import { parseRequestUrl } from '../../util';
 import Rating from '../components/rating';
 
 const ProductSection = {
         after_render: () => {
+            const request = parseRequestUrl();
+            document.getElementById('add-button').addEventListener('click',
+                () => {
+                    document.location.hash = `/cart/${request.id}`;
+                });
 
         },
         render: async() => {
                 const request = parseRequestUrl();
-                const product = await getItem(request.id);
+                const product = await getProduct(request.id);
                 if (product.error) {
                     return `<div> ${product.error}</Div>`;
                 }
@@ -52,7 +57,7 @@ const ProductSection = {
                                             Status : 
                                                 ${product.countInStock > 0 
                                                     ? `<span class="success">In  stock</span>`
-                                                    :  `<span class="denger">Unavailable</span>`
+                                                    :  `<span class="danger">Unavailable</span>`
                                                 }
                                                                         
                                         </li>

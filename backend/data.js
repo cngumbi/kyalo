@@ -8,7 +8,7 @@ export default {
             brand: 'official',
             rating: 4.5,
             numReviews: 20,
-            countInStock: 10
+            countInStock: 0
         },
         {
             _id: '2',
