@@ -1,0 +1,56 @@
+//Cart section
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 1rem;
+    .cart-list {
+        flex: 3 1 60rem;
+        .list-container {
+            padding: 1rem;
+            list-style-type: none;
+            li {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                border-bottom: 0.1rem $gray-color solid;
+                &:first-child {
+                    align-items: flex-end;
+                }
+                h3 {
+                    margin: 0;
+                }
+            }
+            img {
+                max-width: 5rem;
+                max-height: 5rem;
+            }
+            .cart-image {
+                flex: 1 1;
+            }
+            .cart-name {
+                flex: 8 1;
+                >div {
+                    padding: 1rem;
+                }
+            }
+            .cart-price {
+                flex: 1 1;
+                text-align: right;
+            }
+            button,
+            select {
+                font-size: $font-smaller;
+                padding: 0.5rem;
+            }
+        }
+    }
+    .cart-action {
+        flex: 1 1 20rem;
+        background-color: $light-color;
+        border: 0.1rem $brand-text-color solid;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+}
