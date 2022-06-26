@@ -3,6 +3,7 @@ import cors from 'cors';
 import data from './data';
 import mongoose from 'mongoose';
 import config from './config';
+import UserRouter from './routers/userRouter';
 
 mongoose.connect(config.MONGODB_URL, {
     useNewUrlParser: true,
@@ -17,6 +18,8 @@ mongoose.connect(config.MONGODB_URL, {
 
 const app = express();
 app.use(cors());
+
+app.use('/api/users', UserRouter);
 
 app.get('/api/products', (req, res) => {
     res.send(data.products);
