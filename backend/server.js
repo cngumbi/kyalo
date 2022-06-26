@@ -7,7 +7,8 @@ import config from './config';
 mongoose.connect(config.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true
+    //useFindAndModify: false,
+    //useCreateIndex: true
 }).then(() => {
     console.log('connected to mongodb.');
 }).catch((error) => {
