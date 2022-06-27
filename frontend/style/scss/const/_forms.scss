@@ -1,0 +1,28 @@
+//forms for the sign ups pages
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h1 {
+        font-size: $font-medium-2;
+    }
+    .form-items {
+        display: flex;
+        flex-direction: column;
+        width: 32rem;
+        padding: 2rem;
+        border: 0.1rem $gray-color solid;
+        border-radius: 0.5rem;
+        list-style-type: none;
+        li {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            a {
+                font-size: $font-smaller;
+            }
+        }
+    }
+}
