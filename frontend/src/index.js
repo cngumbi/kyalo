@@ -3,12 +3,14 @@ import ProductSection from "./screens/productPage/productSection.js";
 import { parseRequestUrl } from "./util.js";
 import Error404Section from "./screens/productPage/error404Section.js";
 import CartSection from "./screens/cart/cartSection.js";
+import SigninSection from "./screens/signups/signinSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
     '/product/:id': ProductSection,
     '/cart/:id': CartSection,
     '/cart': CartSection,
+    '/signin': SigninSection,
 
 };
 const router = async() => {

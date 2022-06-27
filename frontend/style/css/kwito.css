@@ -15,15 +15,17 @@ a {
 a:hover {
   color: #90ee90; }
 
-button {
+input, button {
   font: 1em Helvetica, sans-serif;
   padding: 1rem;
   border: 0.1rem #808080 solid;
-  border-radius: 0.5rem;
-  cursor: pointer; }
-button:hover {
+  border-radius: 0.5rem; }
+input:hover, button:hover {
   border: 0.1rem #90ee90 solid;
   background-color: #c7c7c7; }
+
+button {
+  cursor: pointer; }
 
 .container {
   display: grid;
@@ -74,7 +76,7 @@ button:hover {
 .container .container-grid .card li .card-item .item-name {
   line-height: 2.2rem; }
 .container .container-grid .card li .card-item .item-brand {
-  font-size: 0.875em;
+  font-size: 0.754em;
   color: #808080; }
 .container .container-grid .card li .card-item .item-price {
   font-size: 1em; }
@@ -122,7 +124,7 @@ button:hover {
   flex: 1 1;
   text-align: right; }
 .cart .cart-list .list-container button, .cart .cart-list .list-container select {
-  font-size: 0.875em;
+  font-size: 0.754em;
   padding: 0.5rem; }
 .cart .cart-action {
   flex: 1 1 20rem;
@@ -176,5 +178,28 @@ button:hover {
 
 .danger {
   color: #c04040; }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+.form-container h1 {
+  font-size: 1.5em; }
+.form-container .form-items {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  list-style-type: none; }
+.form-container .form-items li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+.form-container .form-items li a {
+  font-size: 0.754em; }
 
 /*# sourceMappingURL=kwito.css.map */
