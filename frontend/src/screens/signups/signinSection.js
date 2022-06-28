@@ -1,4 +1,5 @@
 import { signin } from '../../js/kyalo';
+import { getUserInfo, setUserInfo } from '../../localStorage';
 
 const SigninSection = {
     after_render: () => {
@@ -13,11 +14,15 @@ const SigninSection = {
                 if (data.error) {
                     alert(data.error);
                 } else {
+                    setUserInfo(data);
                     document.location.hash = '/';
                 }
             });
     },
     render: () => {
+        if (getUserInfo().name) {
+            document.location.hash = '/';
+        }
         return `
         <div class="form-container">
             <form id="signin-form">
