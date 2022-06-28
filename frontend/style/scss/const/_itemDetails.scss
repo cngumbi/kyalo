@@ -43,14 +43,15 @@
             li {
                 margin-bottom: 1rem;
             }
-            button.primary {
-                color: $text-color;
-                background-color: $green-cyan-dack;
-            }
         }
     }
 }
 
 .fwidth {
     width: 100%;
+}
+
+.primary {
+    color: $text-color;
+    background-color: $green-cyan-dack;
 }
