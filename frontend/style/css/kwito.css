@@ -21,8 +21,7 @@ input, button {
   border: 0.1rem #808080 solid;
   border-radius: 0.5rem; }
 input:hover, button:hover {
-  border: 0.1rem #90ee90 solid;
-  background-color: #c7c7c7; }
+  border: 0.1rem #90ee90 solid; }
 
 button {
   cursor: pointer; }
@@ -166,12 +165,13 @@ button {
   list-style-type: none; }
 .item-content .item-details .details-action li {
   margin-bottom: 1rem; }
-.item-content .item-details .details-action button.primary {
-  color: #ffffff;
-  background-color: #001308; }
 
 .fwidth {
   width: 100%; }
+
+.primary {
+  color: #ffffff;
+  background-color: #001308; }
 
 .success {
   color: #40c040; }
