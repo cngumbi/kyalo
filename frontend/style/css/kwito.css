@@ -202,4 +202,29 @@ button {
 .form-container .form-items li a {
   font-size: 0.754em; }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 19, 8, 0.3); }
+.overlay > div {
+  background-color: #29ab87;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 40rem; }
+.overlay > div > * {
+  margin: 2rem; }
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; }
+
 /*# sourceMappingURL=kwito.css.map */

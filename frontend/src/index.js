@@ -1,6 +1,6 @@
 import MainSection from "./screens/homePage/mainSection.js";
 import ProductSection from "./screens/productPage/productSection.js";
-import { parseRequestUrl } from "./util.js";
+import { hideLoading, parseRequestUrl, showLoading } from "./util.js";
 import Error404Section from "./screens/productPage/error404Section.js";
 import CartSection from "./screens/cart/cartSection.js";
 import SigninSection from "./screens/signups/signinSection.js";
@@ -16,6 +16,7 @@ const routes = {
 
 };
 const router = async() => {
+    showLoading();
     const request = parseRequestUrl();
     const parseUrl = (request.resource ? `/${request.resource}` : `/`) +
         (request.id ? '/:id' : '') +
@@ -29,10 +30,12 @@ const router = async() => {
     const main = document.getElementById('main-container');
     main.innerHTML = await section.render();
     await section.after_render();
+    hideLoading();
     //this code renders the footer section
     const footer = document.getElementById('footer-container');
     footer.innerHTML = await Footer.render();
     await Footer.after_render();
+
 
 };
 window.addEventListener('load', router);

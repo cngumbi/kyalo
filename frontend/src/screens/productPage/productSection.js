@@ -1,5 +1,5 @@
 import { getProduct } from '../../js/kyalo';
-import { parseRequestUrl } from '../../util';
+import { hideLoading, parseRequestUrl, showLoading } from '../../util';
 import Rating from '../components/rating';
 
 const ProductSection = {
@@ -13,10 +13,12 @@ const ProductSection = {
         },
         render: async() => {
                 const request = parseRequestUrl();
+                showLoading();
                 const product = await getProduct(request.id);
                 if (product.error) {
                     return `<div> ${product.error}</Div>`;
                 }
+                hideLoading();
                 return `
                     <div class="item-content">
                         <div class="back-to-main">
