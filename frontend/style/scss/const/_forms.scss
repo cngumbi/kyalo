@@ -2,7 +2,7 @@
 .form-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     h1 {
         font-size: $font-medium-2;

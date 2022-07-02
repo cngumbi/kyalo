@@ -8,7 +8,8 @@ import Header from "./screens/components/header.js";
 import Footer from "./screens/components/footer.js";
 import RegisterSection from "./screens/signups/registerSection.js";
 import ProfileSection from "./screens/signups/profileSection.js";
-import shippingSection from "./screens/signups/shippingSection.js";
+import ShippingSection from "./screens/signups/shippingSection.js";
+import PaymentSection from "./screens/signups/paymentSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
@@ -18,7 +19,8 @@ const routes = {
     '/signin': SigninSection,
     '/register': RegisterSection,
     '/profile': ProfileSection,
-    '/shipping': shippingSection,
+    '/shipping': ShippingSection,
+    '/payment': PaymentSection,
 
 };
 const router = async() => {
