@@ -30,7 +30,7 @@ export const showMessage = (message, callback) => {
     `;
     document.getElementById('message-overlay').classList.add('active');
     document.getElementById('close-button').addEventListener('click', () => {
-        document.getElementsByName('message-overlay').classList.remove('active');
+        document.getElementsById('message-overlay').classList.remove('active');
         if (callback) {
             callback();
         }
