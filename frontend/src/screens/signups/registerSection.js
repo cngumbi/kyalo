@@ -1,6 +1,6 @@
 import { register } from '../../js/kyalo';
 import { getUserInfo, setUserInfo } from '../../localStorage';
-import { hideLoading, showLoading, showMessage } from '../../util';
+import { hideLoading, redirectUser, showLoading, showMessage } from '../../util';
 
 const RegisterSection = {
     after_render: () => {
@@ -19,13 +19,13 @@ const RegisterSection = {
                     showMessage(data.error);
                 } else {
                     setUserInfo(data);
-                    document.location.hash = '/';
+                    redirectUser();
                 }
             });
     },
     render: () => {
         if (getUserInfo().name) {
-            document.location.hash = '/';
+            redirectUser();
         }
         return `
         <div class="form-container">

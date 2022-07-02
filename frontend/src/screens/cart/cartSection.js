@@ -1,6 +1,6 @@
 import { getProduct } from "../../js/kyalo";
 import { getCartItems, setCartItems } from "../../localStorage";
-import { parseRequestUrl, rerender } from "../../util";
+import { parseRequestUrl, rerender, redirectUser } from "../../util";
 
 const addToCart = (item, forceUpdate = false) => {
     let cartItems = getCartItems();
@@ -44,7 +44,8 @@ const CartSection = {
                 });
             });
             document.getElementById('checkout-button').addEventListener('click', () => {
-                document.location.hash = '/login';
+                redirectUser();
+                //document.location.hash = '/login';
             });
         },
         render: async() => {

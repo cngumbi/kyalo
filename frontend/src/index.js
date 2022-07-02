@@ -8,6 +8,7 @@ import Header from "./screens/components/header.js";
 import Footer from "./screens/components/footer.js";
 import RegisterSection from "./screens/signups/registerSection.js";
 import ProfileSection from "./screens/signups/profileSection.js";
+import shippingSection from "./screens/signups/shippingSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
@@ -17,6 +18,7 @@ const routes = {
     '/signin': SigninSection,
     '/register': RegisterSection,
     '/profile': ProfileSection,
+    '/shipping': shippingSection,
 
 };
 const router = async() => {
@@ -34,11 +36,11 @@ const router = async() => {
     const main = document.getElementById('main-container');
     main.innerHTML = await section.render();
     if (section.after_render) { await section.after_render(); }
-    hideLoading();
     //this code renders the footer section
     const footer = document.getElementById('footer-container');
     footer.innerHTML = await Footer.render();
     await Footer.after_render();
+    hideLoading();
 
 
 };
