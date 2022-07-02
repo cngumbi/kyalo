@@ -6,6 +6,8 @@ import CartSection from "./screens/cart/cartSection.js";
 import SigninSection from "./screens/signups/signinSection.js";
 import Header from "./screens/components/header.js";
 import Footer from "./screens/components/footer.js";
+import RegisterSection from "./screens/signups/registerSection.js";
+import ProfileSection from "./screens/signups/profileSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
@@ -13,6 +15,8 @@ const routes = {
     '/cart/:id': CartSection,
     '/cart': CartSection,
     '/signin': SigninSection,
+    '/register': RegisterSection,
+    '/profile': ProfileSection,
 
 };
 const router = async() => {
@@ -29,7 +33,7 @@ const router = async() => {
     //this code renders the main section
     const main = document.getElementById('main-container');
     main.innerHTML = await section.render();
-    await section.after_render();
+    if (section.after_render) { await section.after_render(); }
     hideLoading();
     //this code renders the footer section
     const footer = document.getElementById('footer-container');
