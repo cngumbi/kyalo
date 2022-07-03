@@ -73,7 +73,7 @@ const PlaceorderSection = {
                                                         <div class="cart-image">
                                                             <img src="${item.image}" alt="${item.name}" />
                                                         <div>
-                                                        <div class="cart-item">
+                                                        <div class="cart-name">
                                                             <div>
                                                                 <a href="/#/product/${item.product}">${item.name}</a>
                                                             </div>
@@ -95,7 +95,7 @@ const PlaceorderSection = {
                                         <li><div>Items</div><div>${itemsPrice} Ksh</div></li>
                                         <li><div>Shipping</div><div>${shippingPrice} Ksh</div></li>
                                         <li><div>Tax</div><div>${taxPrice} Ksh</div></li>
-                                        <li><div>Order Total</div><div>${totalPrice} Ksh</div></li>
+                                        <li class="total"><div>Order Total</div><div>${totalPrice} Ksh</div></li>
                                         <li>
                                             <button class="primary fwidth">Place Order</button>
                                         </li>

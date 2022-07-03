@@ -6,6 +6,7 @@
     justify-content: space-between;
     h2 {
         margin: 0;
+        padding-bottom: 1rem;
         font-size: $font-medium;
     }
     .order-info {
@@ -16,18 +17,31 @@
             background-color: $light-w;
             padding: 1rem;
             margin: 1rem;
+            &:first-child {
+                margin-top: 0;
+            }
         }
     }
     .order-action {
         flex: 1 1 20rem;
-        background-color: $light-color;
-        border: 0.1rem $brand-text-color solid;
+        border: 0.1rem $gray-color solid;
         border-radius: 0.5rem;
+        background-color: $light-w;
         padding: 1rem;
-        max-height: 40rem;
+        max-height: 30rem;
+        >ul {
+            padding: 0;
+            list-style-type: none;
+        }
         li {
-            list-style: none;
+            display: flex;
             justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .total {
+            font-size: $font-medium;
+            font-weight: bold;
+            color: #c04000;
         }
     }
     .cart-list-container {
