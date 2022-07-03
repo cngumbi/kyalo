@@ -1,6 +1,7 @@
-import { getCartItems, getPayment, getShipping } from "../../localStorage";
+import { cleanCart, getCartItems, getPayment, getShipping } from "../../localStorage";
 import CheckoutSteps from "../components/checkoutSteps";
-
+import { hideLoading, showLoading, showMessage } from "../../util";
+import { createOrder } from "../../js/kyalo";
 const convertCartToOrder = () => {
     const orderItems = getCartItems();
     if (orderItems.length === 0) {
@@ -30,8 +31,19 @@ const convertCartToOrder = () => {
     };
 };
 const PlaceorderSection = {
-        after_render: () => {
-
+        after_render: async() => {
+            document.getElementById('placeorder-button').addEventListener('click', async() => {
+                const order = convertCartToOrder();
+                showLoading();
+                const data = await createOrder(order);
+                hideLoading();
+                if (data.error) {
+                    showMessage(data.error);
+                } else {
+                    cleanCart();
+                    document.location.hash = `/order/${data.order._id}`;
+                }
+            });
         },
         render: () => {
                 const {
@@ -97,7 +109,7 @@ const PlaceorderSection = {
                                         <li><div>Tax</div><div>${taxPrice} Ksh</div></li>
                                         <li class="total"><div>Order Total</div><div>${totalPrice} Ksh</div></li>
                                         <li>
-                                            <button class="primary fwidth">Place Order</button>
+                                            <button id="placeorder-button" class="primary fwidth">Place Order</button>
                                         </li>
                                 </ul>
                             </div>

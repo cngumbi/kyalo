@@ -40,7 +40,7 @@ export const signin = async({ email, password }) => {
             },
         });
         if (response.statusText !== 'OK') {
-            throw new error(response.data.message);
+            throw new Error(response.data.message);
         }
         return response.data;
 
@@ -65,7 +65,7 @@ export const register = async({ name, email, password }) => {
             },
         });
         if (response.statusText !== 'OK') {
-            throw new error(response.data.message);
+            throw new Error(response.data.message);
         }
         return response.data;
 
@@ -93,13 +93,35 @@ export const update = async({ name, email, password }) => {
             },
         });
         if (response.statusText !== 'OK') {
-            throw new error(response.data.message);
+            throw new Error(response.data.message);
         }
         return response.data;
 
     } catch (err) {
         console.log(err);
         return { error: err.response.data.message || err.massage };
+
+    }
+};
+//create order function
+export const createOrder = async(order) => {
+    try {
+        const { token } = getUserInfo();
+        const response = await axios({
+            url: `${apiURL}/api/orders`,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `bearer ${token}`,
+            },
+            data: order,
+        });
+        if (response.statusText !== 'Created') {
+            throw new Error(response.data.message);
+        }
+        return response.data;
+    } catch (err) {
+        return { error: err.response ? err.response.data.message : err.message };
 
     }
 };
