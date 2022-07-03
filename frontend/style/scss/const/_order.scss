@@ -1,0 +1,36 @@
+//Order section
+.order {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-between;
+    h2 {
+        margin: 0;
+        font-size: $font-medium;
+    }
+    .order-info {
+        flex: 3 1 60rem;
+        >div {
+            border: 0.1rem $gray-color solid;
+            border-radius: 0.5rem;
+            background-color: $light-w;
+            padding: 1rem;
+            margin: 1rem;
+        }
+    }
+    .order-action {
+        flex: 1 1 20rem;
+        background-color: $light-color;
+        border: 0.1rem $brand-text-color solid;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        max-height: 40rem;
+        li {
+            list-style: none;
+            justify-content: space-between;
+        }
+    }
+    .cart-list-container {
+        padding: 0;
+    }
+}

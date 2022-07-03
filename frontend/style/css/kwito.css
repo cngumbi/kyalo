@@ -242,4 +242,33 @@ button {
   color: #001308;
   border-top-color: #001308; }
 
+.order {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: space-between; }
+.order h2 {
+  margin: 0;
+  font-size: 1.125em; }
+.order .order-info {
+  flex: 3 1 60rem; }
+.order .order-info > div {
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  margin: 1rem; }
+.order .order-action {
+  flex: 1 1 20rem;
+  background-color: #c7c7c7;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-height: 40rem; }
+.order .order-action li {
+  list-style: none;
+  justify-content: space-between; }
+.order .cart-list-container {
+  padding: 0; }
+
 /*# sourceMappingURL=kwito.css.map */
