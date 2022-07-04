@@ -11,6 +11,7 @@ import ProfileSection from "./screens/signups/profileSection.js";
 import ShippingSection from "./screens/signups/shippingSection.js";
 import PaymentSection from "./screens/signups/paymentSection.js";
 import PlaceorderSection from "./screens/signups/placeorderSection.js";
+import OrderSection from "./screens/signups/orderSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
@@ -23,6 +24,7 @@ const routes = {
     '/shipping': ShippingSection,
     '/payment': PaymentSection,
     '/placeorder': PlaceorderSection,
+    '/order/:id': OrderSection,
 
 };
 const router = async() => {

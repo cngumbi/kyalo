@@ -20,6 +20,9 @@
             &:first-child {
                 margin-top: 0;
             }
+            >div {
+                padding: 1rem;
+            }
         }
     }
     .order-action {

@@ -84,7 +84,7 @@ export const update = async({ name, email, password }) => {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `bearer ${token}`,
+                Authorization: `Bearer ${token}`,
             },
             data: {
                 name,
@@ -112,7 +112,7 @@ export const createOrder = async(order) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `bearer ${token}`,
+                Authorization: `Bearer ${token}`,
             },
             data: order,
         });
@@ -124,6 +124,26 @@ export const createOrder = async(order) => {
         return { error: err.response ? err.response.data.message : err.message };
 
     }
+};
+//get order function
+export const getOrder = async(id) => {
+    try {
+        const { token } = getUserInfo();
+        const response = await axios({
+            url: `${apiURL}/api/orders/${id}`,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        if (response.statusText !== 'OK') {
+            throw new Error(response.data.message);
+        }
+        return response.data;
+    } catch (err) {
+        return { error: err.message };
+    }
+
 };
 
 //function __(selector) {
