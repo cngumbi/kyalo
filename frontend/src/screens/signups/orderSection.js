@@ -1,5 +1,62 @@
-import { parseRequestUrl } from "../../util";
-import { getOrder } from "../../js/kyalo";
+import { hideLoading, parseRequestUrl, rerender, showLoading, showMessage } from "../../util";
+import { getOrder, getPaypalClientId, payOrder } from "../../js/kyalo";
+//function for paypal SDK
+const addPaypalSDK = async(totalPrice) => {
+    const clientId = await getPaypalClientId();
+    showLoading();
+    if (!window.paypal) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://www.paypalobjects.com/api/checkout.js';
+        script.onload = () => handlePayment(clientId, totalPrice);
+        document.body.appendChild(script);
+    } else {
+        handlePayment(clientId, totalPrice);
+    }
+};
+//the Payment handler function
+const handlePayment = (clientId, totalPrice) => {
+    window.paypal.Button.render({
+        env: 'sandbox',
+        client: {
+            sandbox: clientId,
+            production: '',
+        },
+        locale: 'en_US',
+        style: {
+            size: 'responsive',
+            color: 'black',
+            shape: 'pill',
+        },
+        commit: true,
+        payment(data, actions) {
+            return actions.payment.create({
+                transactions: [{
+                    amount: {
+                        total: totalPrice,
+                        currency: 'USD', // Ksh
+                    },
+                }],
+            });
+        },
+        onAuthorize(data, actions) {
+            return actions.payment.execute().then(async() => {
+                showLoading();
+                await payOrder(parseRequestUrl(), {
+                    orderID: data.orderID,
+                    payerID: data.payerID,
+                    paymentID: data.paymentID,
+                });
+                hideLoading();
+                showMessage('Payment was Successful.', () => {
+                    rerender(OrderSection);
+                });
+            });
+        },
+    }, '#paypal-button').then(() => {
+        hideLoading();
+    });
+};
 const OrderSection = {
         after_render: async() => {},
         render: async() => {
@@ -18,6 +75,9 @@ const OrderSection = {
                     isPaid,
                     paidAt,
                 } = await getOrder(request.id);
+                if (!isPaid) {
+                    addPaypalSDK(totalPrice);
+                }
                 return `
                 <div>
                     <h1> Order ${_id} </h1>
@@ -79,6 +139,7 @@ const OrderSection = {
                                     <li><div>Shipping</div><div>${shippingPrice} Ksh</div></li>
                                     <li><div>Tax</div><div>${taxPrice} Ksh</div></li>
                                     <li class="total"><div>Order Total</div><div>${totalPrice} Ksh</div></li>
+                                    <li><div class="fwidth" id="paypal-button"></div></li>
                             </ul>
                         </div>
                     </div>
