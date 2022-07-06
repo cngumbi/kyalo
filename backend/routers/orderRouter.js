@@ -4,6 +4,10 @@ import Order from '../models/orderModel';
 import { isAuth } from '../util';
 
 const OrderRouter = express.Router();
+OrderRouter.get('/mine', isAuth, expressAsyncHandler(async(req, res) => {
+    const orders = await Order.find({ user: req.user._id });
+    res.send(orders);
+}));
 OrderRouter.get('/:id', isAuth, expressAsyncHandler(async(req, res) => {
     const order = await Order.findById(req.params.id);
     if (order) {
