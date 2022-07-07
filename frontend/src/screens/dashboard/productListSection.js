@@ -15,6 +15,7 @@ const ProductListSection = {
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>IMAGE</th>
                                 <th>NAME</th>
                                 <th>PRICE</th>
                                 <th>CATEGORY</th>
@@ -27,6 +28,7 @@ const ProductListSection = {
                                 (product) =>`
                                 <tr>
                                     <td>${product._id}</tr>
+                                    <td><img src="${product.image}" alt="${product.name}"></td>
                                     <td>${product.name}</tr>
                                     <td>${product.price}</tr>
                                     <td>${product.category}</tr>

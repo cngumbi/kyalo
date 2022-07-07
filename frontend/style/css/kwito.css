@@ -335,5 +335,13 @@ button {
   padding: 0.5rem; }
 .dashboard .dashboard-content .product-list .tr-action {
   width: 10rem; }
+.dashboard .dashboard-content .product-list table {
+  width: 100%; }
+.dashboard .dashboard-content .product-list table th {
+  text-align: left; }
+.dashboard .dashboard-content .product-list table tbody > tr:nth-child(odd) {
+  background-color: #c0c0c0; }
+.dashboard .dashboard-content .product-list table tbody td {
+  padding: 0.1rem; }
 
 /*# sourceMappingURL=kwito.css.map */

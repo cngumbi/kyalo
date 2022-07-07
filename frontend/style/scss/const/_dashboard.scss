@@ -39,6 +39,20 @@
             .tr-action {
                 width: 10rem;
             }
+            table {
+                width: 100%;
+                th {
+                    text-align: left;
+                }
+                tbody {
+                    >tr:nth-child(odd) {
+                        background-color: $gray-color;
+                    }
+                    td {
+                        padding: 0.1rem;
+                    }
+                }
+            }
         }
     }
 }
