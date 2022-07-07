@@ -19,15 +19,17 @@
             padding: .5rem;
             a {
                 color: $text-color;
-                font-weight: bold;
                 text-decoration: none;
+                padding-right: 2.5rem;
                 &:hover {
                     color: $hover-color;
                 }
             }
             .brand {
                 a {
+                    font-weight: bold;
                     font-size: $font-medium-4;
+                    padding-left: 3rem;
                 }
             }
         }

@@ -1,22 +1,27 @@
 //import data from "../data.js";
 import axios from 'axios';
+import { getProducts } from '../../js/kyalo';
 import { hideLoading, showLoading } from '../../util';
 import Rating from '../components/rating'
 const MainSection = {
         render: async() => {
                 //const { products } = data;
-                showLoading();
-                const response = await axios({
-                    url: 'http://localhost:5000/api/products',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                });
-                hideLoading();
-                if (!response || response.statusText !== 'OK') {
-                    return `<div>Error in getting data</div>`;
+                //showLoading();
+                //const response = await axios({
+                //    url: 'http://localhost:5000/api/products',
+                //    headers: {
+                //        'Content-Type': 'application/json',
+                //    },
+                //});
+                //hideLoading();
+                //if (!response || response.statusText !== 'OK') {
+                //    return `<div>Error in getting data</div>`;
+                //}
+                //const products = response.data;
+                const products = await getProducts();
+                if (products.error) {
+                    return `<div class="denger">${products.error}</div>`;
                 }
-                const products = response.data;
                 return `
                 <ul class="card">
                     ${products.map( product =>`

@@ -44,12 +44,14 @@ button {
   padding: .5rem; }
 .container .container-grid header a {
   color: #ffffff;
-  font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-right: 2.5rem; }
 .container .container-grid header a:hover {
   color: #90ee90; }
 .container .container-grid header .brand a {
-  font-size: 2.25em; }
+  font-weight: bold;
+  font-size: 2.25em;
+  padding-left: 3rem; }
 .container .container-grid .card {
   display: flex;
   flex-wrap: wrap;
@@ -301,5 +303,37 @@ button {
   background-color: #c0c0c0; }
 .profile table tbody td {
   padding: 0.5rem; }
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%; }
+.dashboard h1 {
+  font-size: 1.875em;
+  margin: 1rem 0; }
+.dashboard .dashboard-menu {
+  flex: 1 1 20rem;
+  background-color: #c7c7c7; }
+.dashboard .dashboard-menu ul {
+  padding: 0; }
+.dashboard .dashboard-menu a {
+  display: flex;
+  padding: 1rem;
+  padding-left: 2rem;
+  justify-content: space-between; }
+.dashboard .dashboard-menu a:hover {
+  background-color: #fcfcfc; }
+.dashboard .dashboard-menu li.selected a {
+  background-color: #fcfcfc;
+  color: #001308; }
+.dashboard .dashboard-content {
+  flex: 4 1 80rem;
+  padding: 1rem;
+  color: #001308; }
+.dashboard .dashboard-content .product-list button {
+  font-size: 0.625em;
+  padding: 0.5rem; }
+.dashboard .dashboard-content .product-list .tr-action {
+  width: 10rem; }
 
 /*# sourceMappingURL=kwito.css.map */
