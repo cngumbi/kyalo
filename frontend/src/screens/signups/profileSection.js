@@ -66,6 +66,7 @@ const ProfileSection = {
                                 </form>
                             </div>
                         </div>
+                        <h2> Order History</h2>
                         <div class="profile-orders">
                             <table>
                                 <thead>

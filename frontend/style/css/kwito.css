@@ -284,4 +284,22 @@ button {
 .order .cart-list-container {
   padding: 0; }
 
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between; }
+.profile .profile-infor {
+  flex: 1 1 20rem; }
+.profile .profile-orders {
+  flex: 3 1 60rem; }
+.profile table {
+  width: 100%; }
+.profile table th {
+  text-align: left; }
+.profile table tbody > tr:nth-child(odd) {
+  background-color: #c0c0c0; }
+.profile table tbody td {
+  padding: 0.5rem; }
+
 /*# sourceMappingURL=kwito.css.map */
