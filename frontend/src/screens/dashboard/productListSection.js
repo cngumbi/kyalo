@@ -27,12 +27,12 @@ const ProductListSection = {
                             ${products.map(
                                 (product) =>`
                                 <tr>
-                                    <td>${product._id}</tr>
-                                    <td><img src="${product.image}" alt="${product.name}"></td>
-                                    <td>${product.name}</tr>
-                                    <td>${product.price}</tr>
-                                    <td>${product.category}</tr>
-                                    <td>${product.brand}</tr>
+                                    <td>${product._id}</td>
+                                    <td class="image"><img src="${product.image}" alt="${product.name}"></td>
+                                    <td>${product.name}</td>
+                                    <td>${product.price}</td>
+                                    <td>${product.category}</td>
+                                    <td>${product.brand}</td>
                                     <td>
                                         <button id="${product._id}" class="edit-button">Edit</button>
                                         <button id="${product._id}" class="delete-button">Delete</button>

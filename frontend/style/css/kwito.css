@@ -1,3 +1,22 @@
+html, body, header, footer, p, h1, h2, h3, h4, h5, h6, b, strong, i, em, small, del, mark, sub, sup, a, img, table, thead, tbody tr, td, th, ol, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ol, ul {
+  list-style: none; }
+
 * {
   box-sizing: border-box; }
 
@@ -303,6 +322,9 @@ button {
   background-color: #c0c0c0; }
 .profile table tbody td {
   padding: 0.5rem; }
+.profile table tbody .image {
+  width: 10px;
+  height: 10px; }
 
 .dashboard {
   display: flex;
