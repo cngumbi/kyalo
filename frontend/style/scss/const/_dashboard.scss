@@ -39,17 +39,34 @@
             .tr-action {
                 width: 10rem;
             }
+            //start the creation of tables here
             table {
                 width: 100%;
-                th {
-                    text-align: left;
-                }
-                tbody {
-                    >tr:nth-child(odd) {
-                        background-color: $gray-color;
+                border: 0.2rem $gray-color solid;
+                //border-radius: 50% !important;
+                >thead {
+                    background-color: $gray-color;
+                    color: $green-cyan-dack;
+                    th {
+                        text-align: left;
+                        padding: 10px;
                     }
-                    td {
-                        padding: 0.1rem;
+                }
+                >tbody {
+                    >tr {
+                        >td {
+                            align-items: baseline;
+                            padding: 0.1rem;
+                            >img {
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                                object-fit: contain;
+                            }
+                        }
+                        &:nth-child(even) {
+                            background-color: $table-color-row-odd;
+                        }
                     }
                 }
             }

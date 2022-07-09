@@ -366,12 +366,23 @@ button {
 .dashboard .dashboard-content .product-list .tr-action {
   width: 10rem; }
 .dashboard .dashboard-content .product-list table {
-  width: 100%; }
-.dashboard .dashboard-content .product-list table th {
-  text-align: left; }
-.dashboard .dashboard-content .product-list table tbody > tr:nth-child(odd) {
-  background-color: #c0c0c0; }
-.dashboard .dashboard-content .product-list table tbody td {
+  width: 100%;
+  border: 0.2rem #c0c0c0 solid; }
+.dashboard .dashboard-content .product-list table > thead {
+  background-color: #c0c0c0;
+  color: #001308; }
+.dashboard .dashboard-content .product-list table > thead th {
+  text-align: left;
+  padding: 10px; }
+.dashboard .dashboard-content .product-list table > tbody > tr > td {
+  align-items: baseline;
   padding: 0.1rem; }
+.dashboard .dashboard-content .product-list table > tbody > tr > td > img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain; }
+.dashboard .dashboard-content .product-list table > tbody > tr:nth-child(even) {
+  background-color: #daecda; }
 
 /*# sourceMappingURL=kwito.css.map */
