@@ -8,8 +8,10 @@
         margin: 1rem 0;
     }
     .dashboard-menu {
-        flex: 1 1 20rem;
-        background-color: $light-color;
+        flex: 1 1 10rem;
+        background-color: $main-color;
+        height: 550px;
+        box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
         ul {
             padding: 0;
         }
@@ -28,9 +30,83 @@
         }
     }
     .dashboard-content {
-        flex: 4 1 80rem;
-        padding: 1rem;
+        flex: 4 1 90rem;
         color: $green-cyan-dack;
+        overflow-y: hidden;
+        header {
+            background-color: $light-w;
+            color: $green-cyan-dack;
+            justify-content: space-between;
+            padding-left: 2rem;
+            box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
+            label {
+                span {
+                    font-size: $font-default;
+                    padding-right: 1rem;
+                }
+            }
+            .search-wrapper {
+                border: 1px solid $light-color;
+                border-radius: 8px;
+                height: 35px;
+                width: 600px;
+                overflow-x: hidden;
+                input {
+                    border: none;
+                    height: 100%;
+                    width: 570px;
+                }
+                span {
+                    display: inline-block;
+                    font-size: $font-default;
+                    width: 21px;
+                }
+            }
+            .user-wrapper {
+                display: flex;
+                align-items: center;
+                img {
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                }
+                small {
+                    display: inline-block;
+                    font-size: $font-smaller;
+                    color: $forest-green-darck;
+                }
+            }
+        }
+        main {
+            padding: 1rem 2rem;
+            background-color: #f1f5f9;
+            .dashboard-cards {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-gap: 1rem;
+                margin-top: 1rem;
+                .card-single {
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: $light-w;
+                    padding: 2rem;
+                    border-radius: 2px;
+                    div:last-child span {
+                        font-size: $font-default;
+                        color: $main-color;
+                    }
+                    div:first-child span {
+                        color: $gray-color;
+                    }
+                    &:last-child {
+                        background-color: $main-color;
+                        color: $text-color;
+                    }
+                }
+            }
+            .recent-grid {
+                margin-top: 3.5rem;
+            }
+        }
         .product-list {
             button {
                 font-size: $font-smallest;

@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  text-decoration: none; }
 
 html, body, header, footer, p, h1, h2, h3, h4, h5, h6, b, strong, i, em, small, del, mark, sub, sup, a, img, table, thead, tbody tr, td, th, ol, ul, li, dl, dt, dd, form, output, label, video, source, audio, div, span, s, section, details, nav, canvas, menu, summary, time, hgroup, caption, aside, article, center, legend, strike, dfn, ins, samp, big, kbd, cite code, address, applet, object, abbr, iframe, tt, acronym, var, u, pre, blockquote, q {
   margin: 0;
@@ -117,7 +118,7 @@ button {
   align-items: center;
   color: #ffffff;
   font-size: 0.625em !important;
-  height: 20px; }
+  height: 45px; }
 
 .cart {
   display: flex;
@@ -342,8 +343,10 @@ button {
   font-size: 1.875em;
   margin: 1rem 0; }
 .dashboard .dashboard-menu {
-  flex: 1 1 20rem;
-  background-color: #c7c7c7; }
+  flex: 1 1 10rem;
+  background-color: #29ab87;
+  height: 550px;
+  box-shadow: 2px 2px 10px rgba(0, 19, 8, 0.3); }
 .dashboard .dashboard-menu ul {
   padding: 0; }
 .dashboard .dashboard-menu a {
@@ -357,9 +360,66 @@ button {
   background-color: #fcfcfc;
   color: #001308; }
 .dashboard .dashboard-content {
-  flex: 4 1 80rem;
-  padding: 1rem;
-  color: #001308; }
+  flex: 4 1 90rem;
+  color: #001308;
+  overflow-y: hidden; }
+.dashboard .dashboard-content header {
+  background-color: #fcfcfc;
+  color: #001308;
+  justify-content: space-between;
+  padding-left: 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 19, 8, 0.3); }
+.dashboard .dashboard-content header label span {
+  font-size: 1em;
+  padding-right: 1rem; }
+.dashboard .dashboard-content header .search-wrapper {
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  height: 35px;
+  width: 600px;
+  overflow-x: hidden; }
+.dashboard .dashboard-content header .search-wrapper input {
+  border: none;
+  height: 100%;
+  width: 570px; }
+.dashboard .dashboard-content header .search-wrapper span {
+  display: inline-block;
+  font-size: 1em;
+  width: 21px; }
+.dashboard .dashboard-content header .user-wrapper {
+  display: flex;
+  align-items: center; }
+.dashboard .dashboard-content header .user-wrapper img {
+  border-radius: 50%;
+  margin-right: 1rem; }
+.dashboard .dashboard-content header .user-wrapper small {
+  display: inline-block;
+  font-size: 0.754em;
+  color: #252f2d; }
+.dashboard .dashboard-content main {
+  padding: 1rem 2rem;
+  background-color: #f1f5f9; }
+.dashboard .dashboard-content main .dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  margin-top: 1rem; }
+.dashboard .dashboard-content main .dashboard-cards .card-single {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  padding: 2rem;
+  border-radius: 2px; }
+.dashboard .dashboard-content main .dashboard-cards .card-single div:last-child span {
+  font-size: 1em;
+  color: #29ab87; }
+.dashboard .dashboard-content main .dashboard-cards .card-single div:first-child span {
+  color: #c0c0c0; }
+.dashboard .dashboard-content main .dashboard-cards .card-single:last-child {
+  background-color: #29ab87;
+  color: #ffffff; }
+.dashboard .dashboard-content main .recent-grid {
+  margin-top: 3.5rem; }
 .dashboard .dashboard-content .product-list button {
   font-size: 0.625em;
   padding: 0.5rem; }
