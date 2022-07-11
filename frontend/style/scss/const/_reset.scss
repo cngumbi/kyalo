@@ -5,7 +5,7 @@
 //Author: Softcraze Corporation
 //Date: 08/07/2022
 //updated: 10/07/2022
-//Versin: 1.1.0
+//Versin: 1.1.1
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -84,7 +84,9 @@ var,
 u,
 pre,
 blockquote,
-q {
+q,
+input,
+button {
     margin: 0;
     padding: 0;
     border: 0;
