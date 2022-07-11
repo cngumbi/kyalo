@@ -22,7 +22,7 @@ export const getProduct = async(id) => {
         return response.data;
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.message };
+        return { error: err.response ? err.response.data.message : err.message };
 
     }
 };
@@ -42,7 +42,7 @@ export const getProducts = async() => {
         return response.data;
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.message };
+        return { error: err.response ? err.response.data.message : err.message };
 
     }
 };
@@ -67,7 +67,7 @@ export const signin = async({ email, password }) => {
 
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.massage };
+        return { error: err.response ? err.response.data.message : err.massage };
 
     }
 };
@@ -92,7 +92,7 @@ export const register = async({ name, email, password }) => {
 
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.massage };
+        return { error: err.response ? err.response.data.message : err.massage };
 
     }
 };
@@ -120,7 +120,7 @@ export const update = async({ name, email, password }) => {
 
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.massage };
+        return { error: err.response ? err.response.data.message : err.massage };
 
     }
 };
