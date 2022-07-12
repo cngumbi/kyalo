@@ -220,12 +220,3 @@ export const payOrder = async(orderId, paymentResults) => {
         return { error: err.response ? err.response.data.message : err.message };
     }
 };
-
-
-//function __(selector) {
-//    const self = {
-//        element: document.querySelector(selector),
-//
-//    }
-//}
-//
