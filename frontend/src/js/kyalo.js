@@ -46,6 +46,7 @@ export const getProducts = async() => {
 
     }
 };
+
 //----------------------------------------------------------------
 export const signin = async({ email, password }) => {
     try {
@@ -124,6 +125,27 @@ export const update = async({ name, email, password }) => {
 
     }
 };
+//function to get the user 
+//export const getUsers = async() => {
+//    try {
+//        const response = await axios({
+//            url: `${apiURL}/api/users/`,
+//            method: 'GET',
+//            headers: {
+//                'Content-Type': 'application/json',
+//                Authorization: `Bearer ${token}`,
+//            },
+//        });
+//        if (response.statusText !== 'OK') {
+//            throw new Error(response.data.message);
+//        }
+//        return response.data;
+//    } catch (err) {
+//        console.log(err);
+//        return { error: err.response ? err.response.data.message : err.message };
+//
+//    }
+//};
 //create order function
 export const createOrder = async(order) => {
     try {
