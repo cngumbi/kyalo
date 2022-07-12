@@ -9,3 +9,28 @@ const headerLinks = {
     chats: "#"
 
 };
+//function __(selector) {
+//    const self = {
+//        element: document.querySelector(selector),
+//
+//    }
+//}
+//object literal approach is used for the design of this library
+// 
+function Q(selector) {
+    const self = {
+        //create an element to hold the selector passed to the function
+        element: doucument.querySelector(selector),
+        //this name-value pair return the selector passed
+        html: () => self.element,
+        //create an event lister
+        on: (event, callback) => {
+            document.addEventListener(event, callback);
+        },
+        hide: () => {
+            self.element.style.display = "none";
+        }
+    };
+
+    return self;
+};

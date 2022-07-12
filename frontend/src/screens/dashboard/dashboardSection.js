@@ -1,11 +1,13 @@
+import { getProducts } from "../../js/kyalo";
 import DashboardMenu from "./components/dashboardMenu";
 
 const DashboardSection = {
-    after_render: () => {
+        after_render: () => {
 
-    },
-    render: () => {
-        return `
+        },
+        render: async() => {
+                const products = await getProducts();
+                return `
         <div class="dashboard">
             ${DashboardMenu.render({selected: 'dashboard'})}
             <div class="dashboard-content">
@@ -42,7 +44,7 @@ const DashboardSection = {
                         </div>
                         <div class="card-single">
                             <div>
-                                <h1>54</h1>
+                                <h1>${products.length}</h1>
                                 <span>Products</span>
                             </div>
                             <div>
@@ -84,14 +86,48 @@ const DashboardSection = {
                                        <h3> New Products</h3>
                                        <button>See all<span class=""></span></button>
                                    </div>
-                                   <div class="card-body">
+                                   <!--<div class="card-body">
                                        <table>
                                        </table>
-                                   </div>
+                                   </div>-->
+                                   
                                </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
+                    <div class="product-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>IMAGE</th>
+                                    <th>NAME</th>
+                                    <th>PRICE</th>
+                                    <th>CATEGORY</th>
+                                    <th>BRAND</th>
+                                    <th class="tr-action">ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${products.map(
+                                    (product) =>`
+                                    <tr>
+                                        <td>${product._id}</td>
+                                        <td class="image"><img src="${product.image}" alt="${product.name}"></td>
+                                        <td>${product.name}</td>
+                                        <td>${product.price}</td>
+                                        <td>${product.category}</td>
+                                        <td>${product.brand}</td>
+                                        <td>
+                                            <button id="${product._id}" class="edit-button">Edit</button>
+                                            <button id="${product._id}" class="delete-button">Delete</button>
+                                        </td>
+                                    </tr>
+                                    `
+                                ).join('\n')}                        
+                            </tbody>
+                        </table>
+                    </div>                  
                 </main>
             </div>
         </div>`;

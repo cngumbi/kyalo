@@ -22,7 +22,7 @@ export const getProduct = async(id) => {
         return response.data;
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.message };
+        return { error: err.response ? err.response.data.message : err.message };
 
     }
 };
@@ -42,10 +42,11 @@ export const getProducts = async() => {
         return response.data;
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.message };
+        return { error: err.response ? err.response.data.message : err.message };
 
     }
 };
+
 //----------------------------------------------------------------
 export const signin = async({ email, password }) => {
     try {
@@ -67,7 +68,7 @@ export const signin = async({ email, password }) => {
 
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.massage };
+        return { error: err.response ? err.response.data.message : err.massage };
 
     }
 };
@@ -92,7 +93,7 @@ export const register = async({ name, email, password }) => {
 
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.massage };
+        return { error: err.response ? err.response.data.message : err.massage };
 
     }
 };
@@ -120,10 +121,31 @@ export const update = async({ name, email, password }) => {
 
     } catch (err) {
         console.log(err);
-        return { error: err.response.data.message || err.massage };
+        return { error: err.response ? err.response.data.message : err.massage };
 
     }
 };
+//function to get the user 
+//export const getUsers = async() => {
+//    try {
+//        const response = await axios({
+//            url: `${apiURL}/api/users/`,
+//            method: 'GET',
+//            headers: {
+//                'Content-Type': 'application/json',
+//                Authorization: `Bearer ${token}`,
+//            },
+//        });
+//        if (response.statusText !== 'OK') {
+//            throw new Error(response.data.message);
+//        }
+//        return response.data;
+//    } catch (err) {
+//        console.log(err);
+//        return { error: err.response ? err.response.data.message : err.message };
+//
+//    }
+//};
 //create order function
 export const createOrder = async(order) => {
     try {
@@ -220,12 +242,3 @@ export const payOrder = async(orderId, paymentResults) => {
         return { error: err.response ? err.response.data.message : err.message };
     }
 };
-
-
-//function __(selector) {
-//    const self = {
-//        element: document.querySelector(selector),
-//
-//    }
-//}
-//

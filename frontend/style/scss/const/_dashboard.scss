@@ -38,7 +38,9 @@
             color: $green-cyan-dack;
             justify-content: space-between;
             padding-left: 2rem;
-            box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
+            height: 43px;
+            //box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
+            border-bottom: 1px solid rgba($green-cyan-dack, 0.3);
             label {
                 span {
                     font-size: $font-default;
@@ -48,13 +50,14 @@
             .search-wrapper {
                 border: 1px solid $light-color;
                 border-radius: 8px;
-                height: 35px;
+                height: 28px;
                 width: 600px;
                 overflow-x: hidden;
                 input {
                     border: none;
                     height: 100%;
                     width: 570px;
+                    font-size: $font-smaller;
                 }
                 span {
                     display: inline-block;
@@ -118,11 +121,12 @@
             //start the creation of tables here
             table {
                 width: 100%;
-                border: 0.2rem $gray-color solid;
+                //border: 0.2rem $gray-color solid;
                 //border-radius: 50% !important;
                 >thead {
                     background-color: $gray-color;
                     color: $green-cyan-dack;
+                    border-bottom: 1px solid rgba($green-cyan-dack, 0.5);
                     th {
                         text-align: left;
                         padding: 10px;
