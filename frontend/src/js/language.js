@@ -27,8 +27,17 @@ function Q(selector) {
         on: (event, callback) => {
             document.addEventListener(event, callback);
         },
+        //this code is used tohide the diplay of an item
         hide: () => {
             self.element.style.display = "none";
+        },
+        show: () => {
+            self.element.style.display = "block";
+        },
+        //used to reove an element from an HTML document
+        remove: (x) => {
+            var parameter = document.getElementById(x);
+            parameter.remove();
         }
     };
 
