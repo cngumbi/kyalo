@@ -3,9 +3,26 @@
 //Author: Softcraze Corparation
 //Date: Fune Fourteenth Two Thousand Ywenty-two
 //Font Family
+//-----------------------------------------------------------------
 $font_family: Helvetica,
 sans-serif;
+//-----------------------------------------------------------------
+//font weights
+//to use the font-weight variable
+//use the map-get($map, key)
+//eg. p{
+//          font-weight: map-get($font-weights, regular); 
+//      }
+//or use the weight function
+//eg. p{
+//          font-weight: weight(regular); 
+//      }
+//-----------------------------------------------------------------
+$font-weights: ( "regular": 400, "medium": 600, "bold": 800);
+//
+//-----------------------------------------------------------------
 //Font Size
+//-----------------------------------------------------------------
 $font-smallest: 0.625em; //10px
 $font-smaller: 0.754em; //12px
 $font-small: 0.875em; //14px
@@ -19,7 +36,9 @@ $font-medium-5: 3.0em; //48px
 $font-big: 3.75em; //60px
 $font-bigger: 4.5em; //72px
 $font-biggest: 5.25em; //84px
+//------------------------------------------------------------------
 //main colors
+//------------------------------------------------------------------
 $main-color: #29ab87;
 $text-color: #ffffff;
 $hover-color: #90ee90;
