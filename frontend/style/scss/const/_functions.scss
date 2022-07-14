@@ -1,0 +1,9 @@
+@import 'variable';
+//how to use the weight function
+//use the map-get($map, key)
+//eg. p{
+//          font-weight: weight(regular); 
+//      }
+@function weight($weights) {
+    @return map-get($font-weights, $weights);
+}
