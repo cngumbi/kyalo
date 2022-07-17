@@ -1,5 +1,6 @@
 //to work on the design of the star icon
 //create a simple design to fit our needs
+//the rating functions
 const Rating = {
     render: (props) => {
         if (!props.value) {
@@ -38,7 +39,7 @@ const Rating = {
                     <i class="${
                         props.value >= 4
                           ? 'sc sc-star'
-                          : props.value >= 3.5
+                          : props.value >= 3.5 
                           ? 'sc sc-star-half-f'
                           : 'sc sc-star-e'
                     }"></i>
