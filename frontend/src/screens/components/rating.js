@@ -11,46 +11,46 @@ const Rating = {
                 <span>
                     <i class="${
                         props.value >= 1
-                          ? 'sc sc-star'
+                          ? 'ky ky-star'
                           : props.value >= 0.5
-                          ? 'sc sc-star-half-f'
-                          : 'sc sc-star-e'
+                          ? 'ky ky-star-half'
+                          : 'ky ky-star-e'
                     }"></i>
                 </span>
                 <span>
                     <i class="${
                         props.value >= 2
-                          ? 'sc sc-star'
+                          ? 'ky ky-star'
                           : props.value >= 1.5
-                          ? 'sc sc-star-half-f'
-                          : 'sc sc-star-e'
+                          ? 'ky ky-star-half'
+                          : 'ky ky-star-e'
                     }"></i>
                 </span>
                 <span>
                     <i class="${
                         props.value >= 3
-                          ? 'sc sc-star'
+                          ? 'ky ky-star'
                           : props.value >= 2.5
-                          ? 'sc sc-star-half-f'
-                          : 'sc sc-star-e'
+                          ? 'ky ky-star-half'
+                          : 'ky ky-star-e'
                     }"></i>
                 </span>
                 <span>
                     <i class="${
                         props.value >= 4
-                          ? 'sc sc-star'
+                          ? 'ky ky-star'
                           : props.value >= 3.5 
-                          ? 'sc sc-star-half-f'
-                          : 'sc sc-star-e'
+                          ? 'ky ky-star-half'
+                          : 'ky ky-star-e'
                     }"></i>
                 </span>
                 <span>
                     <i class="${
                         props.value >= 5
-                          ? 'sc sc-star'
+                          ? 'ky ky-star'
                           : props.value >= 4.5
-                          ? 'sc sc-star-half-f'
-                          : 'sc sc-star-e'
+                          ? 'ky ky-star-half'
+                          : 'ky ky-star-e'
                     }"></i>
                 </span>
                 <span> ${props.text || ''} </span>

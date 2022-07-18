@@ -1,11 +1,12 @@
 //normal icon size
 //auther Softcraze Corporation
 //version 1.0.0
+@import 'iconImages';
 .ky {
-    font-style: normal;
-    line-height: 1;
-    font-variant: normal;
-    text-rendering: auto;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 .ky-2xs {
