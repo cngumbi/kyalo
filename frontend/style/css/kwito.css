@@ -50,6 +50,36 @@ blockquote::before, blockquote::after, q::before, q::after {
 .ky-team {
   background-image: url("./svgs/team.svg"); }
 
+.ky-next {
+  background-image: url("./svgs/media/next.svg"); }
+
+.ky-play {
+  background-image: url("./svgs/media/play.svg"); }
+
+.ky-previous {
+  background-image: url("./svgs/media/previous.svg"); }
+
+.ky-volume {
+  background-image: url("./svgs/media/volume.svg"); }
+
+.ky-search {
+  background-image: url("./svgs/search.svg"); }
+
+.ky-location {
+  background-image: url("./svgs/location.svg"); }
+
+.ky-check {
+  background-image: url("./svgs/check.svg"); }
+
+.ky-align-c {
+  background-image: url("./svgs/align/horizontal-align-center.svg"); }
+
+.ky-align-l {
+  background-image: url("./svgs/align/horizontal-align-left.svg"); }
+
+.ky-align-r {
+  background-image: url("./svgs/align/horizontal-align-right.svg"); }
+
 .ky {
   display: inline-flex;
   padding: 0;
