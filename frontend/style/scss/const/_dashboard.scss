@@ -18,8 +18,8 @@
         a {
             display: flex;
             padding: 1rem;
-            padding-left: 2rem;
-            justify-content: space-between;
+            //justify-content: space-between;
+            align-items: center;
             &:hover {
                 background-color: $light-w;
             }
@@ -32,16 +32,18 @@
     .dashboard-content {
         flex: 4 1 90rem;
         color: $green-cyan-dack;
-        overflow-y: hidden;
+        overflow: hidden;
         header {
             background-color: $light-w;
             color: $green-cyan-dack;
             justify-content: space-between;
             padding-left: 2rem;
-            height: 43px;
+            height: 59px;
             //box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
             border-bottom: 1px solid rgba($green-cyan-dack, 0.3);
             label {
+                display: inline-flex;
+                align-items: center;
                 span {
                     font-size: $font-default;
                     padding-right: 1rem;
@@ -50,19 +52,27 @@
             .search-wrapper {
                 border: 1px solid $light-color;
                 border-radius: 8px;
-                height: 28px;
+                height: 40px;
                 width: 600px;
-                overflow-x: hidden;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
                 input {
+                    //display: inline-flex;
+                    float: right;
+                    left: 1em;
                     border: none;
                     height: 100%;
-                    width: 570px;
+                    width: 560px;
                     font-size: $font-smaller;
+                    &:focus {
+                        outline: none;
+                    }
                 }
                 span {
-                    display: inline-block;
-                    font-size: $font-default;
-                    width: 21px;
+                    background-color: aqua;
+                    display: inline-flex;
+                    border-radius: 8px;
                 }
             }
             .user-wrapper {

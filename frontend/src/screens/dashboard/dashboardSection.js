@@ -13,14 +13,10 @@ const DashboardSection = {
             <div class="dashboard-content">
                 <header>
                     <h2>
-                        <label for="">
-                        <!--the spans will hold the icons-->
-                            <span class=""></span>
-                        </label>
-                        Dashboard
+                        <label for=""><span class="ky-whiteboard"></span>Dashboard</label>                       
                     </h2>
                     <div class="search-wrapper">
-                        <span class="">S</span>
+                        <span class="ky-search"></span>
                         <input type="search" placeholder="Search Here"/>                 
                     </div>
                     <div class="user-wrapper">

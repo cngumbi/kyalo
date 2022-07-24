@@ -80,35 +80,19 @@ blockquote::before, blockquote::after, q::before, q::after {
 .ky-align-r {
   background-image: url("./svgs/align/horizontal-align-right.svg"); }
 
-.ky {
-  display: inline-flex;
-  padding: 0;
-  margin: 0;
-  overflow: hidden; }
+.ky-whiteboard {
+  background-image: url("./svgs/whiteboard.svg"); }
 
-.ky-2xs {
-  height: 10px;
-  width: 10px; }
+[class*="ky-"] {
+  display: block; }
 
-.ky-xs {
-  height: 12px;
-  width: 12px; }
-
-.ky-sm {
-  height: 14px;
-  width: 14px; }
-
-.ky-lg {
-  height: 20px;
-  width: 20px; }
-
-.ky-xl {
-  height: 24px;
-  width: 24px; }
-
-.ky-2xl {
-  height: 32px;
-  width: 32px; }
+[class*="ky-"] {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 html {
   font-size: 62.5%; }
@@ -433,8 +417,7 @@ button {
 .dashboard .dashboard-menu a {
   display: flex;
   padding: 1rem;
-  padding-left: 2rem;
-  justify-content: space-between; }
+  align-items: center; }
 .dashboard .dashboard-menu a:hover {
   background-color: #fcfcfc; }
 .dashboard .dashboard-menu li.selected a {
@@ -443,32 +426,41 @@ button {
 .dashboard .dashboard-content {
   flex: 4 1 90rem;
   color: #001308;
-  overflow-y: hidden; }
+  overflow: hidden; }
 .dashboard .dashboard-content header {
   background-color: #fcfcfc;
   color: #001308;
   justify-content: space-between;
   padding-left: 2rem;
-  height: 43px;
+  height: 59px;
   border-bottom: 1px solid rgba(0, 19, 8, 0.3); }
+.dashboard .dashboard-content header label {
+  display: inline-flex;
+  align-items: center; }
 .dashboard .dashboard-content header label span {
   font-size: 1em;
   padding-right: 1rem; }
 .dashboard .dashboard-content header .search-wrapper {
   border: 1px solid #c7c7c7;
   border-radius: 8px;
-  height: 28px;
+  height: 40px;
   width: 600px;
-  overflow-x: hidden; }
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
 .dashboard .dashboard-content header .search-wrapper input {
+  float: right;
+  left: 1em;
   border: none;
   height: 100%;
-  width: 570px;
+  width: 560px;
   font-size: 0.754em; }
+.dashboard .dashboard-content header .search-wrapper input:focus {
+  outline: none; }
 .dashboard .dashboard-content header .search-wrapper span {
-  display: inline-block;
-  font-size: 1em;
-  width: 21px; }
+  background-color: aqua;
+  display: inline-flex;
+  border-radius: 8px; }
 .dashboard .dashboard-content header .user-wrapper {
   display: flex;
   align-items: center; }
