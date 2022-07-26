@@ -508,7 +508,8 @@ button {
   justify-content: space-between;
   background-color: #fcfcfc;
   padding: 2rem;
-  border-radius: 2px; }
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 19, 8, 0.3); }
 .dashboard .dashboard-content main .dashboard-cards .card-single h1 {
   text-align: center;
   padding: 0;
