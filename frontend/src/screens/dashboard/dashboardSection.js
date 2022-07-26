@@ -1,5 +1,7 @@
 import { getProducts } from "../../js/kyalo";
+import { getUserInfo } from "../../localStorage";
 import DashboardMenu from "./components/dashboardMenu";
+import User from "../../../../backend/models/userModel";
 
 const DashboardSection = {
         after_render: () => {
@@ -7,6 +9,7 @@ const DashboardSection = {
         },
         render: async() => {
                 const products = await getProducts();
+                const users = User;
                 return `
         <div class="dashboard">
             ${DashboardMenu.render({selected: 'dashboard'})}
@@ -20,6 +23,7 @@ const DashboardSection = {
                         <input type="search" placeholder="Search Here"/>                 
                     </div>
                     <div class="user-wrapper">
+
                         <img src="" width="30px" height="30px" alt="">
                         <div>
                             <h4> chris</h4>
@@ -31,11 +35,11 @@ const DashboardSection = {
                     <div class="dashboard-cards">
                         <div class="card-single">
                             <div>
-                                <h1>54</h1>
+                                <h1>${users.length}</h1>
                                 <span>Customers</span>
                             </div>
                             <div>
-                                <span class=""></span>
+                                <span class="ky-team lg"></span>
                             </div>
                         </div>
                         <div class="card-single">
@@ -129,4 +133,4 @@ const DashboardSection = {
         </div>`;
     },
 };
-export default DashboardSection;
+export default DashboardSection

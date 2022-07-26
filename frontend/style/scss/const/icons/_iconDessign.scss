@@ -1,47 +1,47 @@
-//normal icon size
-//auther Softcraze Corporation
-//version 1.0.0
-@import 'iconImages';
-//all classes that start with ky
-[class*="ky-"] {
-    display: block;
-}
-
-[class*="ky-"] {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 2em;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-//.ky-2xs {
-//    height: 10px;
-//    width: 10px;
-//}
-//
-//.ky-xs {
-//    height: 12px;
-//    width: 12px;
-//}
-//
-//.ky-sm {
-//    height: 14px;
-//    width: 14px;
-//}
-//
-//.ky-lg {
-//    height: 20px;
-//    width: 20px;
-//}
-//
-//.ky-xl {
-//    height: 24px;
-//    width: 24px;
-//}
-//
-//.ky-2xl {
-//    height: 32px;
-//    width: 32px;
-//}
+    //normal icon size
+    //auther Softcraze Corporation
+    //version 1.0.0
+    @import 'iconImages';
+    //all classes that start with ky
+    [class*="ky-"] {
+        display: block;
+    }
+    
+    [class*="ky-"] {
+        content: '';
+        display: block;
+        width: 2em;
+        height: 2em;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .txs {
+        height: 0.5em;
+        width: 0.5em;
+    }
+    
+    .xs {
+        height: 1em;
+        width: 1em;
+    }
+    
+    .sm {
+        height: 1.5em;
+        width: 1.5em;
+    }
+    
+    .lg {
+        height: 4em;
+        width: 4em;
+    }
+    
+    .xl {
+        height: 5em;
+        width: 5em;
+    }
+    
+    .txl {
+        height: 7em;
+        width: 7em;
+    }

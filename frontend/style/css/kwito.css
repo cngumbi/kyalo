@@ -94,6 +94,30 @@ blockquote::before, blockquote::after, q::before, q::after {
   background-repeat: no-repeat;
   background-size: contain; }
 
+.txs {
+  height: 0.5em;
+  width: 0.5em; }
+
+.xs {
+  height: 1em;
+  width: 1em; }
+
+.sm {
+  height: 1.5em;
+  width: 1.5em; }
+
+.lg {
+  height: 4em;
+  width: 4em; }
+
+.xl {
+  height: 5em;
+  width: 5em; }
+
+.txl {
+  height: 7em;
+  width: 7em; }
+
 html {
   font-size: 62.5%; }
 
@@ -485,6 +509,10 @@ button {
   background-color: #fcfcfc;
   padding: 2rem;
   border-radius: 2px; }
+.dashboard .dashboard-content main .dashboard-cards .card-single h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0; }
 .dashboard .dashboard-content main .dashboard-cards .card-single div:last-child span {
   font-size: 1em;
   color: #29ab87; }

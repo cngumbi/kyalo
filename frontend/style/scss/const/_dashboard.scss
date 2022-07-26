@@ -103,6 +103,11 @@
                     background-color: $light-w;
                     padding: 2rem;
                     border-radius: 2px;
+                    h1 {
+                        text-align: center;
+                        padding: 0;
+                        margin: 0;
+                    }
                     div:last-child span {
                         font-size: $font-default;
                         color: $main-color;
