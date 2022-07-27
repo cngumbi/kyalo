@@ -24,7 +24,7 @@ const DashboardSection = {
                     </div>
                     <div class="user-wrapper">
 
-                        <img src="" width="30px" height="30px" alt="">
+                        <img src="../../images/1.png" width="30px" height="30px" alt="">
                         <div>
                             <h4> chris</h4>
                             <small> super admin</small>
