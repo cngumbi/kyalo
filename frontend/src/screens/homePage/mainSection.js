@@ -1,7 +1,7 @@
 //import data from "../data.js";
 import axios from 'axios';
 import { getProducts } from '../../js/kyalo';
-import { hideLoading, showLoading } from '../../util';
+//import { hideLoading, showLoading } from '../../util';
 import Rating from '../components/rating'
 const MainSection = {
         render: async() => {
