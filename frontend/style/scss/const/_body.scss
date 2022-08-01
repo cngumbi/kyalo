@@ -11,14 +11,15 @@
         height: 100%;
         header {
             grid-area: header;
-            background-color: $forest-green-darck;
-            color: $text-color;
+            background-color: $text-color;
+            // color: $forest-green-darck;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: .5rem;
+            border-bottom: 1px solid rgba($forest-green-darck, 0.2);
             a {
-                color: $text-color;
+                color: $forest-green-darck;
                 text-decoration: none;
                 padding-right: 2.5rem;
                 &:hover {
