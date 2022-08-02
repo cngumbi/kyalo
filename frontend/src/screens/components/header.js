@@ -18,7 +18,7 @@ const Header = {
                                     <img src="../../images/1.png" width="30px" height="30px" alt="">
                                     <div>
                                         <h4> <a href="#/profile">${name}</a></h4>
-                                        <small>  ${isAdmin ? `<a href="#">super admin</a>` : ''}</small>
+                                        <small>  ${isAdmin ? `<a href="#">super admin</a>` : `<a href="#">Your Account</a>`}</small>
                                     </div>
                                 </div>
                                 ` 

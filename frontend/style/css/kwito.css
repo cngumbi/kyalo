@@ -408,10 +408,7 @@ footer {
   padding: 0; }
 
 .profile {
-  width: 85%; }
-
-.profile-info form {
-  margin: 0;
+  width: 320px;
   padding: 0; }
 
 .dashboard {
@@ -421,24 +418,10 @@ footer {
 .dashboard h1 {
   font-size: 1.875em;
   margin: 1rem 0; }
-.dashboard .dashboard-menu {
-  flex: 1 1 10rem;
-  background-color: #29ab87;
-  height: 550px; }
-.dashboard .dashboard-menu ul {
-  padding: 0; }
-.dashboard .dashboard-menu a {
-  display: flex;
-  padding: 1rem;
-  align-items: center; }
-.dashboard .dashboard-menu a:hover {
-  background-color: #fcfcfc; }
-.dashboard .dashboard-menu li.selected a {
-  background-color: #fcfcfc;
-  color: #001308; }
 .dashboard .dashboard-content {
   flex: 4 1 90rem;
   color: #001308;
+  background-color: #f1f5f9;
   overflow: hidden; }
 .dashboard .dashboard-content header {
   background-color: #fcfcfc;
@@ -525,6 +508,22 @@ footer {
   object-fit: contain; }
 .dashboard .dashboard-content .product-list table > tbody > tr:nth-child(even) {
   background-color: #daecda; }
+
+.dashboard-menu {
+  flex: 1 1 10rem;
+  height: 530px;
+  border-right: 1px solid rgba(0, 19, 8, 0.2); }
+.dashboard-menu ul {
+  padding: 0; }
+.dashboard-menu a {
+  display: flex;
+  padding: 1rem;
+  align-items: center; }
+.dashboard-menu a:hover {
+  background-color: #fcfcfc; }
+.dashboard-menu li.selected a {
+  background-color: #fcfcfc;
+  color: #001308; }
 
 .user-wrapper {
   display: inline-flex;

@@ -15,6 +15,9 @@ const DashboardMenu = {
                 <li class="${props.selected === 'users' ? 'selected' : ''}">
                     <a href="/#/userslist"><span class="ky-team"></span>Users</a>
                 </li>
+                <li class="${props.selected === 'profile' ? 'selected' : ''}">
+                    <a href="/#/profile"><span class="ky-user"></span>Profile</a>
+                </li>
             </ul>
         </div>
         `;

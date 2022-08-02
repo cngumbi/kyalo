@@ -37,7 +37,8 @@ const ProfileSection = {
 
         return `
             <div class="dashboard">
-                ${DashboardMenu.render({selected: 'products'})}
+                ${DashboardMenu.render({selected: 'profile'})}
+                <div class="dashboard-content">
                     <div class="profile">
                         <div class="profile-info">
                             <!--profile update form-->
@@ -71,6 +72,7 @@ const ProfileSection = {
                         </div>
                         
                     </div>
+                </div>
                 </div>`;
     },
 };
