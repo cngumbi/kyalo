@@ -8,32 +8,8 @@
         grid-template-areas: 'header' 'main' 'footer';
         grid-template-columns: 1fr;
         grid-template-rows: 5rem 1fr 5rem;
+        //grid-row-gap: 1em;
         height: 100%;
-        header {
-            grid-area: header;
-            background-color: $text-color;
-            // color: $forest-green-darck;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: .5rem;
-            border-bottom: 1px solid rgba($forest-green-darck, 0.2);
-            a {
-                color: $forest-green-darck;
-                text-decoration: none;
-                padding-right: 2.5rem;
-                &:hover {
-                    color: $hover-color;
-                }
-            }
-            .brand {
-                a {
-                    font-weight: bold;
-                    font-size: $font-medium-4;
-                    padding-left: 3rem;
-                }
-            }
-        }
         .card {
             display: flex;
             flex-wrap: wrap;
@@ -74,17 +50,44 @@
                 }
             }
         }
-        footer {
-            background-color: $green-cyan-dack;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $text-color;
-            font-size: $font-smallest !important;
-            height: 45px;
-            //z-index: 100;
-            //top: 550px;
-            //position: absolute;
+    }
+}
+
+//header
+header {
+    grid-area: header;
+    background-color: $text-color;
+    // color: $forest-green-darck;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border-bottom: 1px solid rgba($forest-green-darck, 0.2);
+    a {
+        color: $forest-green-darck;
+        text-decoration: none;
+        padding-right: 2.5rem;
+        &:hover {
+            color: $hover-color;
         }
     }
+    .brand {
+        a {
+            font-weight: bold;
+            font-size: $font-medium-4;
+            padding-left: 3rem;
+        }
+    }
+}
+
+//footer
+footer {
+    //background-color: $green-cyan-dack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $green-cyan-dack;
+    font-size: $font-smallest !important;
+    border-top: 1px solid rgba($forest-green-darck, 0.2);
+    height: 60px;
 }

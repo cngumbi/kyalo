@@ -1,30 +1,10 @@
 .profile {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    .profile-infor {
-        flex: 1 1 20rem;
-    }
-    .profile-orders {
-        flex: 3 1 60rem;
-    }
-    table {
-        width: 100%;
-        th {
-            text-align: left;
-        }
-        tbody {
-            >tr:nth-child(odd) {
-                background-color: $gray-color;
-            }
-            td {
-                padding: 0.5rem;
-            }
-            .image {
-                width: 10px;
-                height: 10px;
-            }
-        }
+    width: 85%;
+}
+
+.profile-info {
+    form {
+        margin: 0;
+        padding: 0;
     }
 }

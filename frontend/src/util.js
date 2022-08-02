@@ -1,7 +1,7 @@
 // create a function parseRequesturl to handle the urls
 //Author: Softcraze Corporation
 //Date Eighteenth June Two Thousand Twenty-Two
-import { getCartItems } from "./localStorage";
+import { getCartItems, getUserInfo } from "./localStorage";
 
 export const parseRequestUrl = () => {
     const url = document.location.hash.toLowerCase();
@@ -27,7 +27,7 @@ export const showMessage = (message, callback) => {
     <div>
         <div id="message-content">${message}</div>
         <button id="close-button">OK</button>
-    </div>
+        >Dashboard  </div>
     `;
     document.getElementById('message-overlay').classList.add('active');
     document.getElementById('close-button').addEventListener('click', () => {
@@ -41,6 +41,12 @@ export const redirectUser = () => {
     if (getCartItems().length !== 0) {
         document.location.hash = '/shipping';
     } else {
-        document.location.hash = '/';
+        const { name } = getUserInfo();
+        if (!name) {
+            document.location.hash = '/';
+        } else {
+            document.location.hash = '/dashboard';
+        }
+
     }
 };

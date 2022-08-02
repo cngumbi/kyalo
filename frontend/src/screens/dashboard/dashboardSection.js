@@ -1,7 +1,9 @@
 import { getProducts } from "../../js/kyalo";
-import { getUserInfo } from "../../localStorage";
+//import { getUserInfo } from "../../localStorage";
 import DashboardMenu from "./components/dashboardMenu";
 import User from "../../../../backend/models/userModel";
+import { getUserInfo } from "../../localStorage";
+import { redirectUser } from "../../util";
 
 const DashboardSection = {
         after_render: () => {
@@ -10,8 +12,12 @@ const DashboardSection = {
         render: async() => {
                 const products = await getProducts();
                 const users = User;
-                return `
-        <div class="dashboard">
+                const { name } = getUserInfo();
+                if (!name) {
+                    redirectUser();
+                } else {
+                    return `
+            <div class="dashboard">
             ${DashboardMenu.render({selected: 'dashboard'})}
             <div class="dashboard-content">
                 <header>
@@ -21,14 +27,6 @@ const DashboardSection = {
                     <div class="search-wrapper">
                         <span class="ky-search"></span>
                         <input type="search" placeholder="Search Here"/>                 
-                    </div>
-                    <div class="user-wrapper">
-
-                        <img src="../../images/1.png" width="30px" height="30px" alt="">
-                        <div>
-                            <h4> chris</h4>
-                            <small> super admin</small>
-                        </div>
                     </div>
                 </header>
                 <main>
@@ -90,7 +88,7 @@ const DashboardSection = {
                                        <table>
                                        </table>
                                    </div>-->
-                                   
+
                                </div>
                             </div>
                         </div>
@@ -127,10 +125,14 @@ const DashboardSection = {
                                 ).join('\n')}                        
                             </tbody>
                         </table>
-                    </div>                  
+                    </div>
                 </main>
             </div>
-        </div>`;
+            </div>`;
+                
+
+        }
+
     },
 };
 export default DashboardSection

@@ -11,11 +11,20 @@ const Header = {
                     <div class="list-items">
                     ${
                         name
-                            ? `<a href="#/profile">${name}</a>
-                                <a href="#/cart">chat</a>` 
-                            : `<a href="#/signin">login</a>`
+                            ? `
+                                <!--<a href="#/cart">chat</a>
+                                <a href="#/signin">login</a>-->
+                                <div class="user-wrapper">
+                                    <img src="../../images/1.png" width="30px" height="30px" alt="">
+                                    <div>
+                                        <h4> <a href="#/profile">${name}</a></h4>
+                                        <small>  ${isAdmin ? `<a href="#">super admin</a>` : ''}</small>
+                                    </div>
+                                </div>
+                                ` 
+                            : ``
                     }
-                    ${isAdmin ? `<a href="/#/dashboard">Dashboard</a>` : ''}
+                   
                     </div>`;
         },
         after_render: () => {},
