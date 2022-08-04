@@ -11,7 +11,7 @@
         display: flex;
         flex-direction: column;
         float: right;
-        margin: 50px;
+        margin: 40px;
         width: 32rem;
         padding: 2rem;
         border: 0.1rem $gray-color solid;
@@ -21,8 +21,8 @@
         li {
             display: flex;
             flex-direction: column;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
+            margin-bottom: .5rem;
+            margin-top: .5rem;
             a {
                 font-size: $font-smaller;
             }

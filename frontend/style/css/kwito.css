@@ -311,7 +311,7 @@ footer {
   display: flex;
   flex-direction: column;
   float: right;
-  margin: 50px;
+  margin: 40px;
   width: 32rem;
   padding: 2rem;
   border: 0.1rem #c0c0c0 solid;
@@ -320,8 +320,8 @@ footer {
 .form-container .form-items li {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
-  margin-top: 1rem; }
+  margin-bottom: .5rem;
+  margin-top: .5rem; }
 .form-container .form-items li a {
   font-size: 0.754em; }
 

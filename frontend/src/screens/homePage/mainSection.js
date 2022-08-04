@@ -42,10 +42,12 @@ const MainSection = {
                     <li>
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email"/>
+                        <small></small>
                     </li>
                     <li>
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password"/>
+                        <small></small>
                     </li>
                     <li>
                         <button type="submit" class="primary">Sign In</button>
