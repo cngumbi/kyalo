@@ -9,6 +9,7 @@ const RegisterSection = {
         const emailVd = document.querySelector('#email');
         const passwordVd = document.querySelector('#password');
         const confirmpwdVd = document.querySelector('#confirmPassword');
+        //--------------------------------------------------------------
         document
             .getElementById('register-form')
             .addEventListener('submit', async(e) => {
@@ -27,6 +28,7 @@ const RegisterSection = {
                     redirectUser();
                 }
             });
+        //-----------------------------------------------------------------
         //function to check validity of user name
         const checkName = () => {
             let valid = false;

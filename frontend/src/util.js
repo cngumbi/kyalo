@@ -22,6 +22,8 @@ export const showLoading = () => {
 export const hideLoading = () => {
     document.getElementById('loading-overlay').classList.remove('active');
 };
+//--------------------------------------------------------------------------
+//validation section
 export const showMessage = (message, callback) => {
     document.getElementById('message-overlay').innerHTML = `
     <div>
@@ -37,6 +39,7 @@ export const showMessage = (message, callback) => {
         }
     });
 };
+//------------------------------------------------------------------------------
 export const redirectUser = () => {
     if (getCartItems().length !== 0) {
         document.location.hash = '/shipping';
