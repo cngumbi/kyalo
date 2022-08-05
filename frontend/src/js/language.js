@@ -42,7 +42,9 @@ function Q(selector) {
     };
     return self;
 };
-//----------------------------------
+//-----------------------------------------------------------------
+//form vaidations
+//-------------------------------------------------------------------
 export const isRequired = value => {
     value === '' ? false : true;
 };
@@ -63,7 +65,7 @@ export const pwdValid = (password) => {
     return re.test(password);
 };
 //show the error message
-export const msgError = (input, message, y) => {
+export const msgError = (input, message) => {
     //get the li element
     const field = input.parentElement;
 
@@ -72,12 +74,12 @@ export const msgError = (input, message, y) => {
     field.classList.add('error');
 
     //display the  message
-    const msg = field.querySelector(y);
+    const msg = field.querySelector('small');
     error.textContent = message;
 };
 
 //show the success message
-export const msgSuccess = (input, y) => {
+export const msgSuccess = (input) => {
     //get the li element
     const field = input.parentElement;
 
@@ -86,6 +88,6 @@ export const msgSuccess = (input, y) => {
     field.classList.add('success');
 
     //hide the error message
-    const msg = field.querySelector(y);
+    const msg = field.querySelector('small');
     msg.textContent = '';
 };
