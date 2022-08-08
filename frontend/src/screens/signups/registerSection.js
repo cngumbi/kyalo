@@ -159,22 +159,22 @@ const RegisterSection = {
                     <li>
                         <h1>Create Account</h1>
                     </li>
-                    <li>
+                    <li class="form-field">
                         <label for="name">Name</label>
                         <input type="name" name="name" id="name"/>
                         <small></small>
                     </li>
-                    <li>
+                    <li class="form-field">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email"/>
                         <small></small>
                     </li>
-                    <li>
+                    <li class="form-field">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password"/>
                         <small></small>
                     </li>
-                    <li>
+                    <li class="form-field">
                         <label for="confirmPassword">Confirm Password</label>
                         <input type="password" name="confirmPassword" id="confirmPassword"/>
                         <small></small>
