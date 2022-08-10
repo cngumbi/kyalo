@@ -10,6 +10,7 @@ body {
     height: 100vh;
     font: $font-medium-3 $font_family;
     margin: 0;
+    font-weight: weight(regular); // use the font weight function
 }
 
 a {
