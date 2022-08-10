@@ -190,7 +190,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: .5rem;
-  border-bottom: 1px solid rgba(37, 47, 45, 0.2); }
+  border-bottom: 1px solid rgba(37, 47, 45, 0.2);
+  box-shadow: 1px 1px 5px rgba(0, 19, 8, 0.2); }
 header a {
   color: #252f2d;
   text-decoration: none;
