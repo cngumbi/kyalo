@@ -6,8 +6,12 @@
 //Date: 08/07/2022
 //updated: 10/07/2022
 //Versin: 1.1.4
-* {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
     text-decoration: none;
 }
 

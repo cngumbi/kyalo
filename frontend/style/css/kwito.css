@@ -1,5 +1,7 @@
-* {
-  box-sizing: border-box;
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
   text-decoration: none; }
 
 html, body, header, footer, p, h1, h2, h3, h4, h5, h6, b, strong, i, em, small, del, mark, sub, sup, a, img, table, thead, tbody tr, td, th, ol, ul, li, dl, dt, dd, form, output, label, video, source, audio, div, span, s, section, details, nav, canvas, menu, summary, time, hgroup, caption, aside, article, center, legend, strike, dfn, ins, samp, big, kbd, cite code, address, applet, object, abbr, iframe, tt, acronym, var, u, pre, blockquote, q, button {
@@ -124,6 +126,7 @@ html {
 body {
   height: 100vh;
   font: 1.875em Helvetica, sans-serif;
+  box-sizing: border-box;
   margin: 0;
   font-weight: weight(regular); }
 

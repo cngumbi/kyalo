@@ -9,6 +9,7 @@ html {
 body {
     height: 100vh;
     font: $font-medium-3 $font_family;
+    box-sizing: border-box;
     margin: 0;
     font-weight: weight(regular); // use the font weight function
 }
