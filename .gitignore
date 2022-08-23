@@ -5,6 +5,9 @@ node_modules
 #files to ignore
 *.swp
 
+#the environment file
+.env
+
 
 
 package-lock.json
