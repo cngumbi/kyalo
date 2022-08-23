@@ -1,7 +1,9 @@
-//this configuration file is used to
-//configure the data "MONGODB"
-//also you can use import 'dotenv/config'
-import dotenv from 'dotenv';
+//this the configuration file of the whole project
+//it includes:
+//      1: data base configuration
+//      2: payment configuration
+
+import dotenv from 'dotenv'; //also you can use import 'dotenv/config'
 
 dotenv.config();
 //console.log(process.env.MONGODB_URL)
