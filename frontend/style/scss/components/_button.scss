@@ -1,0 +1,13 @@
+button {
+    font: $font-default $font_family;
+    padding: 1rem;
+    border: 0.1rem $brand-text-color solid;
+    border-radius: 0.5rem;
+    &:hover {
+        border: 0.1rem $hover-color solid;
+    }
+}
+
+button {
+    cursor: pointer;
+}

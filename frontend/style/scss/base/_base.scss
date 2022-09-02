@@ -1,0 +1,20 @@
+//basic definations of the project
+html {
+    //defines the size of the rem
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+input {
+    padding: 1rem;
+    border: 0.1rem $brand-text-color solid;
+    border-radius: 0.5rem;
+    &:hover {
+        border: 0.1rem $hover-color solid;
+    }
+}
