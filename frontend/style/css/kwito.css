@@ -130,7 +130,7 @@ blockquote::before, blockquote::after, q::before, q::after {
     opacity: 1;
     transform: translateX(0); } }
 body {
-  font: 1.875em Helvetica, sans-serif;
+  font: 3rem Helvetica, sans-serif;
   font-weight: 500; }
 
 a {
@@ -140,10 +140,10 @@ a:hover {
   color: #55c57a; }
 
 input {
-  font: 1em Helvetica, sans-serif; }
+  font: 1.6rem Helvetica, sans-serif; }
 
 button {
-  font: 1em Helvetica, sans-serif;
+  font: 1.6rem Helvetica, sans-serif;
   padding: 1rem;
   border: 0.1rem #808080 solid;
   border-radius: 0.5rem; }
@@ -159,6 +159,31 @@ button {
 .danger {
   color: #c04040; }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 19, 8, 0.3); }
+.overlay > div {
+  background-color: #29ab87;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 40rem; }
+.overlay > div > * {
+  margin: 2rem; }
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; }
+
 header {
   grid-area: header;
   background-color: #ffffff;
@@ -166,21 +191,20 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: .5rem;
-  border-bottom: 1px solid rgba(37, 47, 45, 0.2);
-  box-shadow: 1px 1px 5px rgba(0, 19, 8, 0.2);
   backface-visibility: hidden; }
 header a {
-  color: #252f2d;
+  color: red;
   text-decoration: none;
-  padding-right: 2.5rem; }
+  padding-right: 1.5rem; }
 header a:hover {
   color: #55c57a; }
 header .brand {
   animation: moveInLeft 1s ease-out; }
 header .brand a {
   font-weight: bold;
-  font-size: 2.25em;
-  padding-left: 3rem; }
+  font-size: 2.2rem;
+  padding-left: 2rem;
+  color: #29ab87; }
 
 .row {
   max-width: 114rem;
@@ -193,7 +217,6 @@ header .brand a {
   display: table;
   clear: both; }
 .row [class^="col-"] {
-  background-color: green;
   float: left; }
 .row [class^="col-"]:not(:last-child) {
   margin-right: 6rem; }
@@ -210,14 +233,38 @@ header .brand a {
 .row .col-3-of-4 {
   width: calc(3 * ((100% - (3 *6rem)) / 4) + (2 * 6rem)); }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%; }
+.form-container h1 {
+  font-size: 2.2rem; }
+.form-container .form-items {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin: 3rem;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  list-style-type: none; }
+.form-container .form-items li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5rem;
+  margin-top: .5rem; }
+.form-container .form-items li a {
+  font-size: 1.2rem; }
+
 footer {
   grid-area: footer;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #001308;
-  font-size: 0.625em !important;
-  border-top: 1px solid rgba(37, 47, 45, 0.2);
+  font-size: 1rem !important;
   height: 60px; }
 
 /*# sourceMappingURL=kwito.css.map */

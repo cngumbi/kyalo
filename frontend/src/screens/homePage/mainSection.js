@@ -13,73 +13,7 @@ const MainSection = {
 
     },
     render: async() => {
-        return `
-        
-            <div class="grid-test">
-                <div class="row">
-                    <div class="col-1-of-2">
-                    test col 1
-                    </div>
-                    <div class="col-1-of-2">
-                    test col 1
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                    test col 3
-                    </div>
-                    <div class="col-1-of-3">
-                    test col 3
-                    </div>
-                    <div class="col-1-of-3">
-                    test col 3
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                    test col 3
-                    </div>
-                    <div class="col-2-of-3">
-                    test col 2 of3
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-4">
-                    test col 4
-                    </div>
-                    <div class="col-1-of-4">
-                    test col 4
-                    </div>
-                    <div class="col-1-of-4">
-                    test col 4
-                    </div>
-                    <div class="col-1-of-4">
-                    test col 4
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-4">
-                    test col 4
-                    </div>
-                    <div class="col-1-of-4">
-                    test col 4
-                    </div>
-                    <div class="col-2-of-4">
-                    test col 2 of 4
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-4">
-                    test col 4
-                    </div>
-                    <div class="col-3-of-4">
-                    test col 3 of 4
-                    </div>
-                    
-                </div>
-            </div>
-        
-            
+        return `            
         `;
         //const { products } = data;
         //showLoading();

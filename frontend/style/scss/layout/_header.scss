@@ -5,13 +5,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: .5rem;
-    border-bottom: 1px solid rgba($forest-green-darck, 0.2);
-    box-shadow: 1px 1px 5px rgba($green-cyan-dack, 0.2);
+    //border-bottom: 0.1rem solid rgba($forest-green-darck, 0.2);
+    //box-shadow: 1px 1px 5px rgba($green-cyan-dack, 0.2);
     backface-visibility: hidden;
     a {
-        color: $forest-green-darck;
+        color: red;
         text-decoration: none;
-        padding-right: 2.5rem;
+        padding-right: 1.5rem;
         &:hover {
             color: $hover-color;
         }
@@ -20,8 +20,9 @@ header {
         animation: moveInLeft 1s ease-out;
         a {
             font-weight: bold;
-            font-size: $font-medium-4;
-            padding-left: 3rem;
+            font-size: $font-medium-1;
+            padding-left: 2rem;
+            color: $main-color;
         }
     }
 }
