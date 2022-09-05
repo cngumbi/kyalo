@@ -4,25 +4,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
-    //border-bottom: 0.1rem solid rgba($forest-green-darck, 0.2);
+    padding: 1.2rem;
+    border-bottom: 0.1rem solid rgba($forest-green-darck, 0.3);
     //box-shadow: 1px 1px 5px rgba($green-cyan-dack, 0.2);
     backface-visibility: hidden;
-    a {
-        color: red;
-        text-decoration: none;
-        padding-right: 1.5rem;
-        &:hover {
-            color: $hover-color;
-        }
-    }
-    .brand {
-        animation: moveInLeft 1s ease-out;
-        a {
-            font-weight: bold;
-            font-size: $font-medium-1;
-            padding-left: 2rem;
-            color: $main-color;
-        }
-    }
 }
