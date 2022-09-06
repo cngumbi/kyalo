@@ -131,27 +131,73 @@ blockquote::before, blockquote::after, q::before, q::after {
     transform: translateX(0); } }
 body {
   font: 3rem Helvetica, sans-serif;
-  font-weight: 500; }
+  font-weight: 400; }
 
 a {
-  color: black;
+  color: #001308;
   text-decoration: none; }
 a:hover {
-  color: #55c57a; }
+  cursor: pointer; }
 
 input {
   font: 1.6rem Helvetica, sans-serif; }
 
-button {
-  font: 1.6rem Helvetica, sans-serif;
-  padding: 1rem;
-  border: 0.1rem #808080 solid;
-  border-radius: 0.5rem; }
-button:hover {
-  border: 0.1rem #55c57a solid; }
+.brand {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .1rem;
+  animation: moveInLeft 1s ease-out; }
+.brand a {
+  color: #29ab87; }
 
-button {
+li {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: .1rem; }
+
+.button-text {
+  font-size: 1.2rem;
+  color: #252f2d;
+  text-align: center; }
+
+h6 {
+  font-size: 1.2rem;
+  color: rgba(37, 47, 45, 0.5); }
+
+.center-text {
+  text-align: center; }
+
+.space-between {
+  padding-right: 1rem; }
+
+.bottom-margin {
+  margin-bottom: 2rem; }
+
+.button-cursor {
   cursor: pointer; }
+
+.composition {
+  display: flex;
+  justify-content: space-between; }
+
+.button-fill {
+  background-color: #38805d;
+  width: 8rem;
+  padding-top: .4rem;
+  height: 1.5rem;
+  border-radius: 50rem; }
+.button-fill:hover {
+  background-color: rgba(56, 128, 93, 0.8); }
+
+.button-clear {
+  width: 8rem;
+  padding-top: .4rem;
+  height: 1.5rem;
+  border-radius: 50rem;
+  border: 0.1rem solid #252f2d; }
+.button-clear:hover {
+  background-color: rgba(56, 128, 93, 0.1); }
 
 .success {
   color: #40c040; }
@@ -190,25 +236,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem;
+  padding: 1.2rem;
+  border-bottom: 0.1rem solid rgba(37, 47, 45, 0.3);
   backface-visibility: hidden; }
-header a {
-  color: red;
-  text-decoration: none;
-  padding-right: 1.5rem; }
-header a:hover {
-  color: #55c57a; }
-header .brand {
-  animation: moveInLeft 1s ease-out; }
-header .brand a {
-  font-weight: bold;
-  font-size: 2.2rem;
-  padding-left: 2rem;
-  color: #29ab87; }
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 6rem; }
 .row:not(:last-child) {
   margin-bottom: 8rem; }
@@ -264,7 +297,26 @@ footer {
   justify-content: center;
   align-items: center;
   color: #001308;
-  font-size: 1rem !important;
+  font-size: 0.8rem !important;
   height: 60px; }
+
+.main-page .home-header {
+  font-size: 0.8rem;
+  height: 4rem; }
+.main-page .home-header ul {
+  padding: 1.5rem 5rem;
+  display: flex; }
+.main-page .home-header ul a:hover {
+  text-decoration: underline;
+  color: #55c57a; }
+.main-page .motor h1 {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #29ab87; }
+.main-page .motivation h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(37, 47, 45, 0.5); }
 
 /*# sourceMappingURL=kwito.css.map */
