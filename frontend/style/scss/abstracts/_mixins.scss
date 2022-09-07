@@ -5,3 +5,8 @@
         clear: both;
     }
 }
+
+@mixin perspectives($value) {
+    -moz-perspective: $value;
+    perspective: $value;
+}

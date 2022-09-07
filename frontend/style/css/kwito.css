@@ -230,6 +230,32 @@ h6 {
   align-items: center;
   color: #ffffff; }
 
+.card {
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+  position: relative; }
+.card__side {
+  background-color: orangered;
+  height: 25rem;
+  color: white;
+  width: 17rem;
+  transition: all .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(37, 47, 45, 0.15); }
+.card__side--front {
+  background-color: #fff; }
+.card__side--back {
+  background-color: green;
+  transform: rotateY(180deg); }
+.card:hover .card__side--front {
+  transform: rotateY(180deg); }
+.card:hover .card__side--back {
+  transform: rotateY(0); }
+
 header {
   grid-area: header;
   background-color: #ffffff;
