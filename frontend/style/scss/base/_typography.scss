@@ -1,16 +1,47 @@
-body {
-    font: $font-medium-3 $font_family;
-    font-weight: weight(regular);
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    &:hover {
-        color: $hover-color;
+    //general setting for the app typography
+    body {
+        font: $font-medium-3 $font_family;
+        font-weight: weight(regular);
     }
-}
-
-input {
-    font: $font-default $font_family;
-}
+    
+    a {
+        color: $green-cyan-dack;
+        text-decoration: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    input {
+        font: $font-default $font_family;
+    }
+    
+    //the logo and brand name of the site
+    .brand {
+        font-size: $font-medium;
+        text-transform: uppercase;
+        font-weight: weight(bold);
+        letter-spacing: .1rem;
+        animation: moveInLeft 1s ease-out;
+        a {
+            color: $main-color;
+        }
+    }
+    
+    li {
+        text-transform: uppercase;
+        font-size: $font-smallest;
+        letter-spacing: .1rem;
+    }
+    
+    //buttons
+    .button-text {
+        font-size: $font-smaller;
+        color: $forest-green-darck;
+        text-align: center;
+    }
+    
+    h6 {
+        font-size: $font-smaller;
+        color: rgba($forest-green-darck, .5);
+    }

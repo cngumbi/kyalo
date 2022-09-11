@@ -1,0 +1,32 @@
+.main-page {
+    .home-header {
+        font-size: $font-smallest;
+        height: 4rem;
+        //background-color: red;
+        ul {
+            padding: 1.5rem 5rem;
+            display: flex;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+    .motor {
+        h1 {
+            font-size: $font-medium-4;
+            text-transform: uppercase;
+            font-weight: weight(bold);
+            color: $main-color;
+        }
+    }
+    .motivation {
+        h2 {
+            font-size: $font-smaller;
+            font-weight: weight(medium);
+            color: rgba($forest-green-darck, .5);
+        }
+    }
+}

@@ -18,12 +18,12 @@ sans-serif;
 //          font-weight: weight(regular); 
 //      }
 //-----------------------------------------------------------------
-$font-weights: ( "regular": 500, "medium": 600, "bold": 800);
+$font-weights: ( "regular": 400, "medium": 700, "bold": 900);
 //
 //-----------------------------------------------------------------
 //Font Size
 //-----------------------------------------------------------------
-$font-smallest: 1.0rem; //10px
+$font-smallest: 0.8rem; //10px
 $font-smaller: 1.2rem; //12px
 $font-small: 1.4rem; //14px
 $font-default: 1.6rem; //16px
@@ -54,6 +54,8 @@ $table-color-row-odd: #daecda;
 $border-color: #505050;
 $color-dark: #1d2231;
 $text-gray: #8390a2;
+$button-color: #38805d;
+$color-white: #fff;
 //-----------------------------------------------------------------
 //grid
 //-----------------------------------------------------------------

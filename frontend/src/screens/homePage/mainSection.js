@@ -13,53 +13,61 @@ const MainSection = {
 
     },
     render: async() => {
-        return `            
+        return `
+            <div class="main-page">
+                <div class="home-header bottom-margin">
+                    <ul>
+                        <li class="space-between"><a>tournaments</a></li>
+                        <li class="space-between"><a>new games</a></li>
+                        <li class="space-between"><a>new teams</a></li>
+                        <li class="space-between"><a>match fixture</a></li>
+                        <li class="space-between"><a>league</a></li>
+                    </ul>
+                </div> 
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="motor">
+                            <h1>how teams </h1>
+                            <h1>should play</h1>
+                        </div>
+                        <div class="motivation bottom-margin">
+                            <h2>Forget the old rules. You can Play the Best teams</h2>
+                            <h2>Right here. Right now</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-1-of-2"><div class="button-fill button-cursor button-text"><a href="/#/register">Join Us</a></div></div>
+                            <div class="col-1-of-2"><div class="button-clear button-cursor button-text"><a href="/#/signin">Sign In</a></div></div>
+                        </div>
+                        <div >
+                            <h6>sponsored by</h6>
+                            <ul class="composition">
+                                <li><img src="" alt="" class="">logo image</li>
+                                <li><img src="" alt="" class="">logo image</li>
+                                <li><img src="" alt="" class="">logo image</li>
+                            </ul>
+                        </div>                       
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="card">
+                            <div class="card__side">
+                                <div class="card__picture">image</div>
+                                <h4 class="card__heading"><span class="card__heading--highlight">the sea travel</span></h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>tournament period</li>
+                                        <li>maximum teams</li>
+                                        <li>number of referies</li>
+                                        <li>tournament sponsor</li>
+                                        <li><button class="card__details--btn">join</button></li>
+                                    </ul>
+                                </div>
+                            </div> 
+                                   
+                        </div>
+                    </div>
+                </div>
+            </div>   
         `;
-        //const { products } = data;
-        //showLoading();
-        //const response = await axios({
-        //    url: 'http://localhost:5000/api/products',
-        //    headers: {
-        //        'Content-Type': 'application/json',
-        //    },
-        //});
-        //hideLoading();
-        //if (!response || response.statusText !== 'OK') {
-        //    return `<div>Error in getting data</div>`;
-        //}
-        //const products = response.data;
-        //const products = await getProducts();
-        //if (products.error) {
-        //    return `<div class="denger">${products.error}</div>`;
-        //}
-        //return `
-        //<ul class="card">
-        //    ${products.map( product =>`
-        //    <li>
-        //        <div class="card-item">
-        //            <a href="#/product/${product._id}">
-        //                <img src="${product.image}" alt="${product.name}">
-        //            </a>
-        //            <div class="item-name">
-        //                <a href="#/product/1">${product.name}</a>
-        //            </div>
-        //            <!--items rating-->
-        //            <div class="item-rating">
-        //                ${Rating.render({
-        //                    value: product.rating,
-        //                    text: `${product.numReviews} reviews`,
-        //                })}
-        //            </div>
-        //            <div class="item-brand">
-        //                ${product.brand}
-        //            </div>
-        //            <div class="item-price">
-        //            ${product.price}
-        //            </div>
-        //        </div>
-        //    </li>
-        //    `).join('\n')}
-        //`;
     },
 };
 export default MainSection;
