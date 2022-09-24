@@ -1,8 +1,8 @@
 @import '../abstracts/variable';
 .success {
-    color: $success-color;
+    @include alert-manager("success");
 }
 
 .danger {
-    color: $danger-color;
+    @include alert-manager("danger");
 }

@@ -3,6 +3,8 @@
 //Author: Softcraze Corparation
 //Date: Fune Fourteenth Two Thousand Ywenty-two
 //Font Family
+//import the color file
+@import 'variables/color';
 //-----------------------------------------------------------------
 $font_family: Helvetica,
 sans-serif;
@@ -39,6 +41,7 @@ $font-biggest: 8.4rem; //84px
 //------------------------------------------------------------------
 //main colors
 //------------------------------------------------------------------
+$theme-color:( "success": #28a745, "info":#17a2b8, "warning": #ffc107, "danger": #c04040, );
 $main-color: #29ab87;
 $text-color: #ffffff;
 $hover-color: #55c57a; //#90ee90;
@@ -46,8 +49,6 @@ $green-cyan-dack: #001308;
 $forest-green-darck: #252f2d;
 $brand-text-color: #808080;
 $light-color: #c7c7c7;
-$success-color: #40c040;
-$danger-color: #c04040;
 $gray-color: #c0c0c0;
 $light-w: #fcfcfc;
 $table-color-row-odd: #daecda;

@@ -200,10 +200,10 @@ h6 {
   background-color: rgba(56, 128, 93, 0.1); }
 
 .success {
-  color: #40c040; }
+  background-color: #28a745; }
 
 .danger {
-  color: #c04040; }
+  background-color: #c04040; }
 
 .overlay {
   display: none;

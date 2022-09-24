@@ -54,3 +54,16 @@
         ;
     }
 }
+
+//mixin to handle background color
+@mixin background-color($color, $text-color) {
+    #{if(&, '&__background-color', '.backgound-color')} {
+        background-color: $color;
+        color: $text-color;
+    }
+}
+
+//alert mixin
+@mixin alert-manager($alertType) {
+    background-color: map-get($theme-color, $alertType);
+}
