@@ -7,3 +7,19 @@
 @function weight($weights) {
     @return map-get($font-weights, $weights);
 }
+
+@function remCalculator($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+//functions to calculate the content width of the website
+@function calcContentWidth($container) {
+    $contentWidth: round($container / 1.618);
+    @return #{$contentWidth};
+}
+
+@function calcNavWidth($container) {
+    $navWidth: round($container * 0.382);
+    @return #{$navWidth};
+}
