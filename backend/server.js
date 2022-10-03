@@ -7,9 +7,15 @@ import config from './config';
 import UserRouter from './routers/userRouter';
 import OrderRouter from './routers/orderRouter';
 
+
 //-----------------------------------------------------
 //create a connection with the database
 //-----------------------------------------------------
+//main().catch(err => console.log(err));
+//async function main() {
+//    await mongoose.connect('database url');
+//}
+//------------------------------------------------------
 mongoose.connect(config.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
