@@ -6,6 +6,7 @@ import CartSection from "./screens/cart/cartSection.js";
 import SigninSection from "./screens/signups/signinSection.js";
 import Header from "./screens/components/header.js";
 import Footer from "./screens/components/footer.js";
+import AddPlayerSection from "./pages/addPlayer.js";
 import RegisterSection from "./screens/signups/registerSection.js";
 import ProfileSection from "./screens/signups/profileSection.js";
 import ShippingSection from "./screens/signups/shippingSection.js";
@@ -23,6 +24,7 @@ const routes = {
     '/cart': CartSection,
     '/signin': SigninSection,
     '/register': RegisterSection,
+    '/addplayer': AddPlayerSection,
     '/profile': ProfileSection,
     '/shipping': ShippingSection,
     '/payment': PaymentSection,

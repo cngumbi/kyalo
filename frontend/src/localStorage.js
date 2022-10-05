@@ -79,3 +79,55 @@ export const setPayment = ({
 export const cleanCart = () => {
     localStorage.removeItem('cartItems');
 };
+//-------------------------------------------------------------------------------------
+//player info
+//-------------------------------------------------------------------------------------
+export const setPlayerInfo = ({
+    _id = '',
+    sirName = '',
+    firstName = '',
+    lastName = '',
+    positionPlayed = '',
+    age = '',
+    date = '',
+    month = '',
+    year = '',
+    height = '',
+    weight = '',
+    gender = ''
+}) => {
+    localStorage.setItem(
+        'playerInfo',
+        JSON.stringify({
+            _id,
+            sirName,
+            firstName,
+            lastName,
+            positionPlayed,
+            age,
+            date,
+            month,
+            year,
+            height,
+            weight,
+            gender
+
+        })
+    );
+};
+export const getPlayerInfo = () => {
+    return localStorage.getItem('playerInfo') ?
+        JSON.parse(localStorage.getItem('playerInfo')) : {
+            sirName: '',
+            firstName: '',
+            lastName: '',
+            positionPlayed: '',
+            age: '',
+            date: '',
+            month: '',
+            year: '',
+            height: '',
+            weight: '',
+            gender: ''
+        };
+};

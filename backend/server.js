@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import config from './config';
 import UserRouter from './routers/userRouter';
 import OrderRouter from './routers/orderRouter';
+import PlayerRouter from './routers/playerRouter';
 
 
 //-----------------------------------------------------
@@ -34,6 +35,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/users', UserRouter);
+app.use('/api/players', PlayerRouter);
 app.use('/api/orders', OrderRouter);
 app.get('/api/paypal/clientId', (req, res) => {
     res.send({ clientId: config.PAYPAL_CLIENT_ID });
