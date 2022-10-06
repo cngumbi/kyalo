@@ -11,9 +11,7 @@ PlayerRouter.post('/addplayer', expressAsyncHandler(async(req, res) => {
         lastName: req.body.name.lastName,
         positionPlayed: req.body.positionPlayed,
         age: req.body.age,
-        date: req.body.DOB.date,
-        month: req.body.DOB.month,
-        year: req.body.DOB.year,
+        DOB: req.body.DOB,
         height: req.body.height,
         weight: req.body.weight,
         gender: req.body.gender
@@ -32,9 +30,7 @@ PlayerRouter.post('/addplayer', expressAsyncHandler(async(req, res) => {
             lastName: createdPlayer.lastName,
             positionPlayed: createdPlayer.positionPlayed,
             age: createdPlayer.age,
-            date: createdPlayer.date,
-            month: createdPlayer.month,
-            year: createdPlayer.year,
+            DOB: createdPlayer.DOB,
             height: createdPlayer.height,
             weight: createdPlayer.weight,
             gender: createdPlayer.gender

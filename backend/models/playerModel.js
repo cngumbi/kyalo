@@ -9,11 +9,7 @@ const playerSchema = new Schema({
 
     },
     age: { type: Number, required: true, min: 4, max: 50 },
-    DOB: {
-        date: { type: Number, required: true },
-        month: { type: String, required: true },
-        year: { type: Number, required: true }
-    },
+    DOB: { type: String, required: true },
     positionPlayed: { type: String, required: true },
     height: { type: String, required: true },
     weight: { type: String, required: true },

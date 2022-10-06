@@ -245,7 +245,7 @@ export const payOrder = async(orderId, paymentResults) => {
 //----------------------------------------------------------------------------
 //add player function
 //----------------------------------------------------------------------------
-export const addPlayer = async({ sirName, firstName, lastName, positionPlayed, age, date, month, year, height, weight, gender }) => {
+export const addPlayer = async({ sirName, firstName, lastName, positionPlayed, age, DOB, height, weight, gender }) => {
     try {
         const response = await axios({
             url: `${apiURL}/api/players/addPlayers`,
@@ -259,9 +259,7 @@ export const addPlayer = async({ sirName, firstName, lastName, positionPlayed, a
                 lastName,
                 positionPlayed,
                 age,
-                date,
-                month,
-                year,
+                DOB,
                 height,
                 weight,
                 gender

@@ -89,9 +89,7 @@ export const setPlayerInfo = ({
     lastName = '',
     positionPlayed = '',
     age = '',
-    date = '',
-    month = '',
-    year = '',
+    DOB = '',
     height = '',
     weight = '',
     gender = ''
@@ -105,9 +103,7 @@ export const setPlayerInfo = ({
             lastName,
             positionPlayed,
             age,
-            date,
-            month,
-            year,
+            DOB,
             height,
             weight,
             gender
@@ -123,9 +119,7 @@ export const getPlayerInfo = () => {
             lastName: '',
             positionPlayed: '',
             age: '',
-            date: '',
-            month: '',
-            year: '',
+            DOB: '',
             height: '',
             weight: '',
             gender: ''

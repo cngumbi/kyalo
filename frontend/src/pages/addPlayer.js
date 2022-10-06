@@ -15,9 +15,7 @@ const AddPlayerSection = {
                     lastName: document.getElementById('lastName').value,
                     positionPlayed: document.getElementById('positionPlayed').value,
                     age: document.getElementById('age').value,
-                    date: document.getElementById('date').value,
-                    month: document.getElementById('month').value,
-                    year: document.getElementById('year').value,
+                    DOB: document.getElementById('DOB').value,
                     height: document.getElementById('height').value,
                     weight: document.getElementById('weight').value,
                     gender: document.getElementById('gender').value
@@ -42,42 +40,32 @@ const AddPlayerSection = {
                     </li>
                     <li class="form-field">
                         <label for="sirName">Sir Name</label>
-                        <input type="name" name="sirName" id="sirName"/>
+                        <input type="name" name="sirName" id="sirName" placeholder="SIR NAME"/>
                         <small></small>
                     </li>
                     <li class="form-field">
                         <label for="firstName">first Name</label>
-                        <input type="name" name="firstName" id="firstName"/>
+                        <input type="text" name="firstName" id="firstName" placeholder="FIRST NAME"/>
                         <small></small>
                     </li>
                     <li class="form-field">
                         <label for="lastName">Last Name</label>
-                        <input type="name" name="lastName" id="lastName"/>
+                        <input type="text" name="lastName" id="lastName" placeholder="LAST NAME"/>
                         <small></small>
                     </li>
                     <li class="form-field">
                         <label for="positionPlayed"> Position Player</label>
-                        <input type="name" name="positionPlayed" id=" positionPlayed"/>
+                        <input type="text" name="positionPlayed" id=" positionPlayed" placeholder="POSITION PLAYED"/>
                         <small></small>
                     </li>
                     <li class="form-field">
                         <label for="age">Age</label>
-                        <input type="number" name="age" id="age"/>
+                        <input type="number" name="age" id="age" min="4" max="55" placeholder="4 Years"/>
                         <small></small>
                     </li>
                     <li class="form-field">
-                        <label for="date">Date</label>
-                        <input type="number" name="date" id="date"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="month">Month</label>
-                        <input type="name" name="month" id="month"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="year">Year</label>
-                        <input type="number" name="year" id="year"/>
+                        <label for="date">Date Of Birth</label>
+                        <input type="date" name="DOB" id="DOB" min="1964-01-01"/>
                         <small></small>
                     </li>
                     <li class="form-field">
