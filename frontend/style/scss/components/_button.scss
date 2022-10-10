@@ -20,3 +20,14 @@
         background-color: rgba($button-color, .1);
     }
 }
+
+.button__box-fill {
+    width: 18rem;
+    height: 2.2rem;
+    background-color: lighten(rgba($main-page, .8), 10%);
+    border-radius: .5rem;
+    &:hover {
+        background-color: rgba($main-page, .8);
+        border: .1rem solid lighten(rgba($main-page, .8), 10%);
+    }
+}
