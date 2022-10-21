@@ -4,27 +4,29 @@
     justify-content: center;
     align-items: flex-start;
     height: 100%;
-    h1 {
-        font-size: $font-medium-1;
-    }
     .form-items {
         display: flex;
         flex-direction: column;
         float: right;
         margin: 3rem;
-        width: 32rem;
+        width: 22rem;
         padding: 2rem;
         border: 0.1rem $gray-color solid;
         border-radius: 0.5rem;
         list-style-type: none;
-        //box-shadow: 1px 1px 5px rgba($forest-green-darck, 0.2);
+        box-shadow: 2px 5px 10px rgba($forest-green-darck, 0.2);
         li {
             display: flex;
             flex-direction: column;
             margin-bottom: .5rem;
             margin-top: .5rem;
-            a {
-                font-size: $font-smaller;
+        }
+        input {
+            height: 2rem;
+            border: none;
+            border-bottom: .1rem solid lighten(rgba($forest-green-darck, .5), 50);
+            &:focus {
+                outline: none;
             }
         }
     }

@@ -13,18 +13,18 @@
     }
     
     input {
-        font: $font-default $font_family;
+        font: $font-smallest $font_family;
     }
     
     //the logo and brand name of the site
     .brand {
-        font-size: $font-medium;
+        font-size: $font-default;
         text-transform: uppercase;
         font-weight: weight(bold);
         letter-spacing: .1rem;
         animation: moveInLeft 1s ease-out;
         a {
-            color: $main-color;
+            color: $color-white;
         }
     }
     
@@ -37,11 +37,27 @@
     //buttons
     .button-text {
         font-size: $font-smaller;
-        color: $forest-green-darck;
+        padding-top: 1rem;
         text-align: center;
+        a {
+            color: $color-white;
+        }
     }
     
     h6 {
         font-size: $font-smaller;
         color: rgba($forest-green-darck, .5);
+    }
+    
+    //forms
+    .form-container {
+        h1 {
+            font-size: $font-medium;
+        }
+        li {
+            a {
+                font-size: $font-smallest;
+                color: $main-color;
+            }
+        }
     }

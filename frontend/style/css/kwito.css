@@ -140,16 +140,16 @@ a:hover {
   cursor: pointer; }
 
 input {
-  font: 1.6rem Helvetica, sans-serif; }
+  font: 0.8rem Helvetica, sans-serif; }
 
 .brand {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: .1rem;
   animation: moveInLeft 1s ease-out; }
 .brand a {
-  color: #29ab87; }
+  color: #fff; }
 
 li {
   text-transform: uppercase;
@@ -158,12 +158,20 @@ li {
 
 .button-text {
   font-size: 1.2rem;
-  color: #252f2d;
+  padding-top: 1rem;
   text-align: center; }
+.button-text a {
+  color: #fff; }
 
 h6 {
   font-size: 1.2rem;
   color: rgba(37, 47, 45, 0.5); }
+
+.form-container h1 {
+  font-size: 1.8rem; }
+.form-container li a {
+  font-size: 0.8rem;
+  color: #29ab87; }
 
 .center-text {
   text-align: center; }
@@ -172,7 +180,10 @@ h6 {
   padding-right: 1rem; }
 
 .bottom-margin {
-  margin-bottom: 2rem; }
+  margin-bottom: 3.5rem; }
+
+.top-margin {
+  margin-top: 3rem; }
 
 .button-cursor {
   cursor: pointer; }
@@ -198,6 +209,15 @@ h6 {
   border: 0.1rem solid #252f2d; }
 .button-clear:hover {
   background-color: rgba(56, 128, 93, 0.1); }
+
+.button__box-fill {
+  width: 18rem;
+  height: 2.2rem;
+  background-color: rgba(61, 75, 86, 0.8);
+  border-radius: .5rem; }
+.button__box-fill:hover {
+  background-color: rgba(40, 49, 56, 0.8);
+  border: 0.1rem solid rgba(61, 75, 86, 0.8); }
 
 .success {
   background-color: #28a745; }
@@ -289,14 +309,13 @@ h6 {
   background-color: #55c57a; }
 
 header {
-  grid-area: header;
-  background-color: #ffffff;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem;
-  border-bottom: 0.1rem solid rgba(37, 47, 45, 0.3);
-  backface-visibility: hidden; }
+  padding: 1rem;
+  backface-visibility: hidden;
+  background-color: #29ab87; }
 
 .row {
   max-width: 114rem;
@@ -329,25 +348,28 @@ header {
   justify-content: center;
   align-items: flex-start;
   height: 100%; }
-.form-container h1 {
-  font-size: 2.2rem; }
 .form-container .form-items {
   display: flex;
   flex-direction: column;
   float: right;
   margin: 3rem;
-  width: 32rem;
+  width: 22rem;
   padding: 2rem;
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
-  list-style-type: none; }
+  list-style-type: none;
+  box-shadow: 2px 5px 10px rgba(37, 47, 45, 0.2); }
 .form-container .form-items li {
   display: flex;
   flex-direction: column;
   margin-bottom: .5rem;
   margin-top: .5rem; }
-.form-container .form-items li a {
-  font-size: 1.2rem; }
+.form-container .form-items input {
+  height: 2rem;
+  border: none;
+  border-bottom: 0.1rem solid rgba(159, 180, 176, 0.5); }
+.form-container .form-items input:focus {
+  outline: none; }
 
 footer {
   grid-area: footer;
@@ -358,6 +380,9 @@ footer {
   font-size: 0.8rem !important;
   height: 60px; }
 
+.main-page {
+  position: relative;
+  z-index: 7; }
 .main-page .home-header {
   font-size: 0.8rem;
   height: 4rem; }
@@ -367,14 +392,16 @@ footer {
 .main-page .home-header ul a:hover {
   text-decoration: underline;
   color: #55c57a; }
+.main-page .motor {
+  margin-top: 5rem; }
 .main-page .motor h1 {
-  font-size: 3.6rem;
+  font-size: 5rem;
   text-transform: uppercase;
   font-weight: 900;
-  color: #29ab87; }
+  color: rgba(31, 130, 103, 0.9); }
 .main-page .motivation h2 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: rgba(37, 47, 45, 0.5); }
+  color: rgba(34, 34, 154, 0.7); }
 
 /*# sourceMappingURL=kwito.css.map */

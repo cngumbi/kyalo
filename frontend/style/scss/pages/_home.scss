@@ -1,4 +1,7 @@
 .main-page {
+    position: relative;
+    z-index: 7;
+    //display: inline-block;
     .home-header {
         font-size: $font-smallest;
         height: 4rem;
@@ -15,18 +18,21 @@
         }
     }
     .motor {
+        margin-top: 5rem;
         h1 {
-            font-size: $font-medium-4;
+            font-size: $font-medium-6;
+            //position: relative;
             text-transform: uppercase;
             font-weight: weight(bold);
-            color: $main-color;
+            color: darken(rgba($main-color, .9), 10);
         }
     }
     .motivation {
         h2 {
+            //position: relative;
             font-size: $font-smaller;
             font-weight: weight(medium);
-            color: rgba($forest-green-darck, .5);
+            color: lighten(rgba($midnightBlue, .7), 10);
         }
     }
 }
