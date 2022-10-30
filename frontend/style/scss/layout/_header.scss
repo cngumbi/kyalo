@@ -1,0 +1,10 @@
+header {
+    //grid-area: header;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    backface-visibility: hidden;
+    background-color: $main-color;
+}

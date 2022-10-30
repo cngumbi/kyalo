@@ -242,3 +242,37 @@ export const payOrder = async(orderId, paymentResults) => {
         return { error: err.response ? err.response.data.message : err.message };
     }
 };
+//----------------------------------------------------------------------------
+//add player function
+//----------------------------------------------------------------------------
+export const addPlayer = async({ sirName, firstName, lastName, positionPlayed, age, DOB, height, weight, gender }) => {
+    try {
+        const response = await axios({
+            url: `${apiURL}/api/players/addPlayers`,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: {
+                sirName,
+                firstName,
+                lastName,
+                positionPlayed,
+                age,
+                DOB,
+                height,
+                weight,
+                gender
+            },
+        });
+        if (response.statusText !== 'OK') {
+            throw new Error(response.data.message);
+        }
+        return response.data;
+
+    } catch (err) {
+        console.log(err);
+        return { error: err.response ? err.response.data.message : err.massage };
+
+    }
+};

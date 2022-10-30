@@ -1,9 +1,21 @@
-@import 'const/main',
-'const/itemDetails',
-'const/message',
-'const/forms',
-'const/loading',
-'const/progressbar',
-'const/order',
-'const/profile',
-'const/dashboard';
+@import 'abstracts/reset';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variable';
+@import 'abstracts/icons/iconDessign';
+//base
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
+//components
+@import 'components/button';
+@import 'components/message';
+@import 'components/loading';
+@import 'components/card';
+//layout
+@import 'layout/header';
+@import 'layout/grid';
+@import 'layout/forms';
+@import 'layout/footer';
+//pages
+@import 'pages/home';

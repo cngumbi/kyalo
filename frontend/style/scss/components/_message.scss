@@ -1,0 +1,8 @@
+@import '../abstracts/variable';
+.success {
+    @include alert-manager("success");
+}
+
+.danger {
+    @include alert-manager("danger");
+}

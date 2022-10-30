@@ -3,6 +3,8 @@
 //Author: Softcraze Corparation
 //Date: Fune Fourteenth Two Thousand Ywenty-two
 //Font Family
+//import the color file
+@import 'variables/color';
 //-----------------------------------------------------------------
 $font_family: Helvetica,
 sans-serif;
@@ -18,27 +20,29 @@ sans-serif;
 //          font-weight: weight(regular); 
 //      }
 //-----------------------------------------------------------------
-$font-weights: ( "regular": 500, "medium": 600, "bold": 800);
+$font-weights: ( "regular": 400, "medium": 700, "bold": 900);
 //
 //-----------------------------------------------------------------
 //Font Size
 //-----------------------------------------------------------------
-$font-smallest: 0.625em; //10px
-$font-smaller: 0.754em; //12px
-$font-small: 0.875em; //14px
-$font-default: 1em; //16px
-$font-medium: 1.125em; //18px
-$font-medium-1: 1.375em; //22px
-$font-medium-2: 1.5em; //24px
-$font-medium-3: 1.875em; //30px
-$font-medium-4: 2.25em; //36px
-$font-medium-5: 3.0em; //48px
-$font-big: 3.75em; //60px
-$font-bigger: 4.5em; //72px
-$font-biggest: 5.25em; //84px
+$font-smallest: 0.8rem; //10px
+$font-smaller: 1.2rem; //12px
+$font-small: 1.4rem; //14px
+$font-default: 1.6rem; //16px
+$font-medium: 1.8rem; //18px
+$font-medium-1: 2.2rem; //22px
+$font-medium-2: 2.4rem; //24px
+$font-medium-3: 3.0rem; //30px
+$font-medium-4: 3.6rem; //36px
+$font-medium-5: 4.8rem; //48px
+$font-medium-6: 5.0rem; //50px
+$font-big: 6.0rem; //60px
+$font-bigger: 7.2rem; //72px
+$font-biggest: 8.4rem; //84px
 //------------------------------------------------------------------
 //main colors
 //------------------------------------------------------------------
+$theme-color:( "success": #28a745, "info":#17a2b8, "warning": #ffc107, "danger": #c04040, );
 $main-color: #29ab87;
 $text-color: #ffffff;
 $hover-color: #55c57a; //#90ee90;
@@ -46,11 +50,26 @@ $green-cyan-dack: #001308;
 $forest-green-darck: #252f2d;
 $brand-text-color: #808080;
 $light-color: #c7c7c7;
-$success-color: #40c040;
-$danger-color: #c04040;
 $gray-color: #c0c0c0;
 $light-w: #fcfcfc;
 $table-color-row-odd: #daecda;
 $border-color: #505050;
 $color-dark: #1d2231;
 $text-gray: #8390a2;
+$button-color: #38805d;
+$color-white: #fff;
+$body-color: #353e45;
+//circle colors
+$circle-top-left: #3ae187;
+$circle-top-right: #222a2d;
+$circle-bottom-right: #5761e4;
+$circle-bottom-right2: #9b83f3;
+//main-page colors
+$main-page: #283138;
+$design-color: #e4eef7;
+//-----------------------------------------------------------------
+//grid
+//-----------------------------------------------------------------
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

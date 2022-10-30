@@ -1,0 +1,14 @@
+.main-page {
+    position: relative;
+    z-index: 7;
+    .home-header {
+        height: 4rem;
+        ul {
+            padding: 1.5rem 5rem;
+            display: flex;
+        }
+    }
+    .motor {
+        margin-top: 5rem;
+    }
+}

@@ -180,7 +180,7 @@ const RegisterSection = {
                         <small></small>
                     </li>
                     <li>
-                        <button type="submit" class="primary">Registor</button>
+                        <button type="submit" class="button-fill">Registor</button>
                     </li>
                     <li>
                         <div>

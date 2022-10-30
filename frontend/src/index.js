@@ -6,13 +6,14 @@ import CartSection from "./screens/cart/cartSection.js";
 import SigninSection from "./screens/signups/signinSection.js";
 import Header from "./screens/components/header.js";
 import Footer from "./screens/components/footer.js";
+import AddPlayerSection from "./pages/addPlayer.js";
 import RegisterSection from "./screens/signups/registerSection.js";
 import ProfileSection from "./screens/signups/profileSection.js";
 import ShippingSection from "./screens/signups/shippingSection.js";
 import PaymentSection from "./screens/signups/paymentSection.js";
 import PlaceorderSection from "./screens/signups/placeorderSection.js";
 import OrderSection from "./screens/signups/orderSection.js";
-import DashboardSection from "./screens/dashboard/dashboardSection.js";
+//import DashboardSection from "./screens/dashboard/dashboardSection.js";
 import ProductListSection from "./screens/dashboard/productListSection.js";
 import UsersListSection from "./screens/dashboard/usersListSection.js";
 //create the route of the web pages
@@ -23,12 +24,13 @@ const routes = {
     '/cart': CartSection,
     '/signin': SigninSection,
     '/register': RegisterSection,
+    '/addplayer': AddPlayerSection,
     '/profile': ProfileSection,
     '/shipping': ShippingSection,
     '/payment': PaymentSection,
     '/placeorder': PlaceorderSection,
     '/order/:id': OrderSection,
-    '/dashboard': DashboardSection,
+    //'/dashboard': DashboardSection,
     '/productlist': ProductListSection,
     '/userslist': UsersListSection,
 

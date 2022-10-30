@@ -27,7 +27,7 @@ const SigninSection = {
             redirectUser();
         }
         return `
-        <div class="form-container">
+        <div class="form-container bottom-margin">
             <form id="signin-form">
                 <ul class="form-items">
                     <li>
@@ -42,7 +42,7 @@ const SigninSection = {
                         <input type="password" name="password" id="password"/>
                     </li>
                     <li>
-                        <button type="submit" class="primary">Sign In</button>
+                        <button type="submit" class="button-fill">Sign In</button>
                     </li>
                     <li>
                         <div>

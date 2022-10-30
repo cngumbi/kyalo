@@ -1,0 +1,67 @@
+.card {
+    @include perspectives(150rem);
+    position: relative;
+    height: 25rem;
+    &__side {
+        //background-color: orangered;
+        height: 25rem;
+        width: 17rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($forest-green-darck, .35);
+    }
+    &__picture {
+        background-size: cover;
+        height: 10rem;
+        background-image: linear-gradient(to right bottom, rgba($hover-color, 0.2), rgba($main-color, 0.2));
+        background-blend-mode: screen;
+        @include prefix(clip-path, polygon(0 0, 100% 0, 100% 90%, 0 100%), webkit);
+    }
+    &__heading {
+        font-size: $font-default;
+        font-weight: weight(regular);
+        text-transform: uppercase;
+        text-align: right;
+        position: absolute;
+        top: 6rem;
+        right: 1rem;
+        width: 70%;
+    }
+    &__heading--highlight {
+        padding: .2rem;
+        @include prefix(box-decoration-break, clone, webkit);
+        background-image: linear-gradient(to right bottom, rgba($hover-color, 0.9), rgba($main-color, 0.9));
+    }
+    &__details {
+        padding-left: 1rem;
+        ul {
+            width: 90%;
+            //top: 10rem;
+            li {
+                text-align: center;
+                font-size: $font-smallest;
+                padding: .8rem;
+                margin: 0 auto;
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba($forest-green-darck, .35);
+                }
+            }
+        }
+        &--btn {
+            text-transform: uppercase;
+            height: 2rem;
+            width: 8rem;
+            border-radius: 5rem;
+            background-color: $main-color;
+            cursor: pointer;
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+    }
+}
