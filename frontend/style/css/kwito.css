@@ -1,60 +1,643 @@
-/*
-Error: File to import not found or unreadable: abstracts/mixins.
-        on line 3 of kwito.scss
+.ky-x {
+  background-image: url("./svgs/x.svg"); }
 
-1: @import 'abstracts/reset';
-2: @import 'abstracts/functions';
-3: @import 'abstracts/mixins';
-4: @import 'abstracts/variable';
-5: @import 'abstracts/icons/iconDessign';
-6: //base
-7: @import 'base/animations';
-8: @import 'base/typography';
+.ky-x-circle {
+  background-image: url("./svgs/x-circle.svg"); }
 
-Backtrace:
-kwito.scss:3
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/home/muamba/.rvm/gems/ruby-3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: abstracts/mixins.\A         on line 3 of kwito.scss\A \A 1: @import 'abstracts/reset';\A 2: @import 'abstracts/functions';\A 3: @import 'abstracts/mixins';\A 4: @import 'abstracts/variable';\A 5: @import 'abstracts/icons/iconDessign';\A 6: //base\A 7: @import 'base/animations';\A 8: @import 'base/typography';"; }
+.ky-star {
+  background-image: url("./svgs/stars/star.svg"); }
+
+.ky-star-half {
+  background-image: url("./svgs/stars/star-half.svg"); }
+
+.ky-star-e {
+  background-image: url("./svgs/stars/star-e.svg"); }
+
+.ky-user {
+  background-image: url("./svgs/user.svg"); }
+
+.ky-team {
+  background-image: url("./svgs/team.svg"); }
+
+.ky-next {
+  background-image: url("./svgs/media/next.svg"); }
+
+.ky-play {
+  background-image: url("./svgs/media/play.svg"); }
+
+.ky-previous {
+  background-image: url("./svgs/media/previous.svg"); }
+
+.ky-volume {
+  background-image: url("./svgs/media/volume.svg"); }
+
+.ky-search {
+  background-image: url("./svgs/search.svg"); }
+
+.ky-location {
+  background-image: url("./svgs/location.svg"); }
+
+.ky-check {
+  background-image: url("./svgs/check.svg"); }
+
+.ky-align-c {
+  background-image: url("./svgs/align/horizontal-align-center.svg"); }
+
+.ky-align-l {
+  background-image: url("./svgs/align/horizontal-align-left.svg"); }
+
+.ky-align-r {
+  background-image: url("./svgs/align/horizontal-align-right.svg"); }
+
+.ky-whiteboard {
+  background-image: url("./svgs/whiteboard.svg"); }
+
+[class*="ky-"] {
+  display: block; }
+
+[class*="ky-"] {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.txs {
+  height: 0.5em;
+  width: 0.5em; }
+
+.xs {
+  height: 1em;
+  width: 1em; }
+
+.sm {
+  height: 1.5em;
+  width: 1.5em; }
+
+.lg {
+  height: 4em;
+  width: 4em; }
+
+.xl {
+  height: 5em;
+  width: 5em; }
+
+.txl {
+  height: 7em;
+  width: 7em; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  height: 100vh;
+  font: 1.875em Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: weight(regular); }
+
+a {
+  color: black;
+  text-decoration: none; }
+a:hover {
+  color: #55c57a; }
+
+input, button {
+  font: 1em Helvetica, sans-serif;
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem; }
+input:hover, button:hover {
+  border: 0.1rem #55c57a solid; }
+
+button {
+  cursor: pointer; }
+
+.ky-x {
+  background-image: url("./svgs/x.svg"); }
+
+.ky-x-circle {
+  background-image: url("./svgs/x-circle.svg"); }
+
+.ky-star {
+  background-image: url("./svgs/stars/star.svg"); }
+
+.ky-star-half {
+  background-image: url("./svgs/stars/star-half.svg"); }
+
+.ky-star-e {
+  background-image: url("./svgs/stars/star-e.svg"); }
+
+.ky-user {
+  background-image: url("./svgs/user.svg"); }
+
+.ky-team {
+  background-image: url("./svgs/team.svg"); }
+
+.ky-next {
+  background-image: url("./svgs/media/next.svg"); }
+
+.ky-play {
+  background-image: url("./svgs/media/play.svg"); }
+
+.ky-previous {
+  background-image: url("./svgs/media/previous.svg"); }
+
+.ky-volume {
+  background-image: url("./svgs/media/volume.svg"); }
+
+.ky-search {
+  background-image: url("./svgs/search.svg"); }
+
+.ky-location {
+  background-image: url("./svgs/location.svg"); }
+
+.ky-check {
+  background-image: url("./svgs/check.svg"); }
+
+.ky-align-c {
+  background-image: url("./svgs/align/horizontal-align-center.svg"); }
+
+.ky-align-l {
+  background-image: url("./svgs/align/horizontal-align-left.svg"); }
+
+.ky-align-r {
+  background-image: url("./svgs/align/horizontal-align-right.svg"); }
+
+.ky-whiteboard {
+  background-image: url("./svgs/whiteboard.svg"); }
+
+[class*="ky-"] {
+  display: block; }
+
+[class*="ky-"] {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.txs {
+  height: 0.5em;
+  width: 0.5em; }
+
+.xs {
+  height: 1em;
+  width: 1em; }
+
+.sm {
+  height: 1.5em;
+  width: 1.5em; }
+
+.lg {
+  height: 4em;
+  width: 4em; }
+
+.xl {
+  height: 5em;
+  width: 5em; }
+
+.txl {
+  height: 7em;
+  width: 7em; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  height: 100vh;
+  font: 1.875em Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: weight(regular); }
+
+a {
+  color: black;
+  text-decoration: none; }
+a:hover {
+  color: #55c57a; }
+
+input, button {
+  font: 1em Helvetica, sans-serif;
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem; }
+input:hover, button:hover {
+  border: 0.1rem #55c57a solid; }
+
+button {
+  cursor: pointer; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  70% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+.container {
+  display: grid;
+  margin: 0; }
+.container .container-grid {
+  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%; }
+.container .container-grid .card {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; }
+.container .container-grid .card li {
+  flex: 0 1 30rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  height: 42rem;
+  border-top: 0.2rem #ffffff solid; }
+.container .container-grid .card li .card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%; }
+.container .container-grid .card li .card-item img {
+  max-height: 26rem;
+  max-width: 22rem;
+  margin-top: 2rem; }
+.container .container-grid .card li .card-item .item-name {
+  line-height: 2.2rem; }
+.container .container-grid .card li .card-item .item-brand {
+  font-size: 0.754em;
+  color: #808080; }
+.container .container-grid .card li .card-item .item-price {
+  font-size: 1em; }
+.container .container-grid .card li .card-item .item-rating {
+  font-size: 0.625em; }
+
+header {
+  grid-area: header;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  border-bottom: 1px solid rgba(37, 47, 45, 0.2);
+  box-shadow: 1px 1px 5px rgba(0, 19, 8, 0.2);
+  backface-visibility: hidden; }
+header a {
+  color: #252f2d;
+  text-decoration: none;
+  padding-right: 2.5rem; }
+header a:hover {
+  color: #55c57a; }
+header .brand {
+  animation: moveInLeft 1s ease-out; }
+header .brand a {
+  font-weight: bold;
+  font-size: 2.25em;
+  padding-left: 3rem; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #001308;
+  font-size: 0.625em !important;
+  border-top: 1px solid rgba(37, 47, 45, 0.2);
+  height: 60px; }
+
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 1rem; }
+.cart .cart-list {
+  flex: 3 1 60rem; }
+.cart .cart-list .list-container {
+  padding: 1rem;
+  list-style-type: none; }
+.cart .cart-list .list-container li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid; }
+.cart .cart-list .list-container li:first-child {
+  align-items: flex-end; }
+.cart .cart-list .list-container li h3 {
+  margin: 0; }
+.cart .cart-list .list-container img {
+  max-width: 5rem;
+  max-height: 5rem; }
+.cart .cart-list .list-container .cart-image {
+  flex: 1 1; }
+.cart .cart-list .list-container .cart-name {
+  flex: 8 1; }
+.cart .cart-list .list-container .cart-name > div {
+  padding: 1rem; }
+.cart .cart-list .list-container .cart-price {
+  flex: 1 1;
+  text-align: right; }
+.cart .cart-list .list-container button, .cart .cart-list .list-container select {
+  font-size: 0.754em;
+  padding: 0.5rem; }
+.cart .cart-action {
+  flex: 1 1 20rem;
+  background-color: #c7c7c7;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  padding: 1rem; }
+
+.item-content {
+  padding: 1rem; }
+.item-content .item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+.item-content .item-details .details-img {
+  flex: 2 1 60rem; }
+.item-content .item-details .details-img img {
+  max-width: 50rem;
+  width: 100%; }
+.item-content .item-details .details-info {
+  flex: 1 1 30rem; }
+.item-content .item-details .details-info ul {
+  padding: 0;
+  list-style-type: none; }
+.item-content .item-details .details-info h1 {
+  font-size: 1.125em;
+  margin: 0; }
+.item-content .item-details .details-info li {
+  margin-bottom: 1rem; }
+.item-content .item-details .details-action {
+  flex: 1 1 30rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  background-color: #c7c7c7;
+  padding: 1rem; }
+.item-content .item-details .details-action ul {
+  padding: 0;
+  list-style-type: none; }
+.item-content .item-details .details-action li {
+  margin-bottom: 1rem; }
+
+.fwidth {
+  width: 100%; }
+
+.primary {
+  color: #ffffff;
+  background-color: #001308; }
+
+.success {
+  color: #40c040; }
+
+.danger {
+  color: #c04040; }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%; }
+.form-container h1 {
+  font-size: 1.375em; }
+.form-container .form-items {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin: 30px;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  list-style-type: none; }
+.form-container .form-items li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5rem;
+  margin-top: .5rem; }
+.form-container .form-items li a {
+  font-size: 0.754em; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 19, 8, 0.3); }
+.overlay > div {
+  background-color: #29ab87;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 40rem; }
+.overlay > div > * {
+  margin: 2rem; }
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; }
+
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 409rem;
+  margin: 1rem auto; }
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1 1;
+  padding-top: 1rem; }
+
+.checkout-steps > div.active {
+  color: #001308;
+  border-top-color: #001308; }
+
+.order {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: space-between; }
+.order h2 {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 1.125em; }
+.order .order-info {
+  flex: 3 1 60rem; }
+.order .order-info > div {
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  margin: 1rem; }
+.order .order-info > div:first-child {
+  margin-top: 0; }
+.order .order-info > div > div {
+  padding: 1rem; }
+.order .order-action {
+  flex: 1 1 20rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  max-height: 30rem; }
+.order .order-action > ul {
+  padding: 0;
+  list-style-type: none; }
+.order .order-action li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem; }
+.order .order-action .total {
+  font-size: 1.125em;
+  font-weight: bold;
+  color: #c04000; }
+.order .cart-list-container {
+  padding: 0; }
+
+.profile {
+  width: 320px;
+  padding: 0; }
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%; }
+.dashboard h1 {
+  font-size: 1.875em;
+  margin: 1rem 0; }
+.dashboard .dashboard-content {
+  flex: 4 1 90rem;
+  color: #001308;
+  background-color: #f1f5f9;
+  overflow: hidden; }
+.dashboard .dashboard-content header {
+  background-color: #fcfcfc;
+  color: #001308;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  height: 59px; }
+.dashboard .dashboard-content header label {
+  display: inline-flex;
+  align-items: center; }
+.dashboard .dashboard-content header label span {
+  font-size: 1em;
+  padding-right: 1rem; }
+.dashboard .dashboard-content header .search-wrapper {
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  height: 40px;
+  width: 600px;
+  float: left; }
+.dashboard .dashboard-content header .search-wrapper input {
+  float: right;
+  left: 1em;
+  border: none;
+  height: 100%;
+  width: 560px;
+  font-size: 0.754em; }
+.dashboard .dashboard-content header .search-wrapper input:focus {
+  outline: none; }
+.dashboard .dashboard-content header .search-wrapper span {
+  background-color: aqua;
+  display: inline-flex;
+  border-radius: 8px; }
+.dashboard .dashboard-content main {
+  padding: 1rem 2rem;
+  background-color: #f1f5f9; }
+.dashboard .dashboard-content main .dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  margin-top: 1rem; }
+.dashboard .dashboard-content main .dashboard-cards .card-single {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 19, 8, 0.3); }
+.dashboard .dashboard-content main .dashboard-cards .card-single h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+.dashboard .dashboard-content main .dashboard-cards .card-single div:last-child span {
+  font-size: 1em;
+  color: #29ab87; }
+.dashboard .dashboard-content main .dashboard-cards .card-single div:first-child span {
+  color: #c0c0c0; }
+.dashboard .dashboard-content main .dashboard-cards .card-single:last-child {
+  background-color: #29ab87;
+  color: #ffffff; }
+.dashboard .dashboard-content main .recent-grid {
+  margin-top: 3.5rem; }
+.dashboard .dashboard-content .product-list button {
+  font-size: 0.625em;
+  padding: 0.5rem; }
+.dashboard .dashboard-content .product-list .tr-action {
+  width: 10rem; }
+.dashboard .dashboard-content .product-list table {
+  width: 100%; }
+.dashboard .dashboard-content .product-list table > thead {
+  background-color: #c0c0c0;
+  color: #001308;
+  border-bottom: 1px solid rgba(0, 19, 8, 0.5); }
+.dashboard .dashboard-content .product-list table > thead th {
+  text-align: left;
+  padding: 10px; }
+.dashboard .dashboard-content .product-list table > tbody > tr > td {
+  align-items: baseline;
+  padding: 0.1rem; }
+.dashboard .dashboard-content .product-list table > tbody > tr > td > img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain; }
+.dashboard .dashboard-content .product-list table > tbody > tr:nth-child(even) {
+  background-color: #daecda; }
+
+.dashboard-menu {
+  flex: 1 1 10rem;
+  height: 530px;
+  border-right: 1px solid rgba(0, 19, 8, 0.2); }
+.dashboard-menu ul {
+  padding: 0; }
+.dashboard-menu a {
+  display: flex;
+  padding: 1rem;
+  align-items: center; }
+.dashboard-menu a:hover {
+  background-color: #fcfcfc; }
+.dashboard-menu li.selected a {
+  background-color: #fcfcfc;
+  color: #001308; }
+
+.user-wrapper {
+  display: inline-flex;
+  align-items: center; }
+.user-wrapper img {
+  border-radius: 50%;
+  margin-right: 1rem; }
+.user-wrapper small {
+  display: inline-block;
+  font-size: 0.754em;
+  color: #252f2d; }
+
+/*# sourceMappingURL=kwito.css.map */
