@@ -40,12 +40,12 @@ const MainSection = {
                 <div class="row">
                     <div class="col-1-of-2 top-margin">
                         <div class="motor">
-                            <h1>how teams </h1>
-                            <h1>play</h1>
+                            <h1>how teams <br> play</h1>                          
                         </div>
                         <div class="motivation bottom-margin">
                             <h2>Forget the old rules. You can Play the Best teams.</h2>
-                            <h2>Right here. Right now</h2>
+                            <h2>Right here. Right now <a href="/#/register">JOIN US</a></h2>
+                            
                         </div>
                     </div>
                     <div class="col-1-of-2 top-margin bottom-margin">
