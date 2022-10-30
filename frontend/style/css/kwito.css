@@ -173,28 +173,6 @@ h6 {
   font-size: 0.8rem;
   color: #29ab87; }
 
-.main-page .home-header {
-  font-size: 0.8rem; }
-.main-page .home-header ul a:hover {
-  text-decoration: underline;
-  color: #55c57a; }
-.main-page .motor h1 {
-  font-size: 5rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: rgba(31, 130, 103, 0.9); }
-.main-page .motivation h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: rgba(34, 34, 154, 0.7); }
-.main-page .motivation h2 a {
-  color: rgba(37, 47, 45, 0.5);
-  font-size: 1.2rem;
-  text-transform: lowercase; }
-.main-page .motivation h2 a:hover {
-  text-decoration: underline;
-  color: #55c57a; }
-
 .center-text {
   text-align: center; }
 
@@ -406,11 +384,24 @@ footer {
   position: relative;
   z-index: 7; }
 .main-page .home-header {
+  font-size: 0.8rem;
   height: 4rem; }
 .main-page .home-header ul {
   padding: 1.5rem 5rem;
   display: flex; }
+.main-page .home-header ul a:hover {
+  text-decoration: underline;
+  color: #55c57a; }
 .main-page .motor {
   margin-top: 5rem; }
+.main-page .motor h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(31, 130, 103, 0.9); }
+.main-page .motivation h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(34, 34, 154, 0.7); }
 
 /*# sourceMappingURL=kwito.css.map */
