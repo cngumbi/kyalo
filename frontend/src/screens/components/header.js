@@ -6,7 +6,7 @@ const Header = {
                 const { name, isAdmin } = getUserInfo();
                 return `
                     <div class="brand">
-                        <a href="#">kwi<span>t&#361;</span></a>
+                        ${ name ? `<a href="/#/dashboard">kwi<span>t&#361;</span></a>`: `<a href="#">kwi<span>t&#361</span></a>`}
                     </div>
                     <div class="list-items">
                     ${
@@ -18,7 +18,7 @@ const Header = {
                                     <img src="../../images/1.png" width="30px" height="30px" alt="">
                                     <div>
                                         <h4> <a href="#/profile">${name}</a></h4>
-                                        <small>  ${isAdmin ? `<a href="#">super admin</a>` : `<a href="#">Your Account</a>`}</small>
+                                        <small>  ${isAdmin ? `<a href="/#/dashboard">super admin</a>` : `<a href="#">Your Account</a>`}</small>
                                     </div>
                                 </div>
                                 ` 

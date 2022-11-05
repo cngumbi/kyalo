@@ -44,6 +44,7 @@ export const redirectUser = () => {
     if (getCartItems().length !== 0) {
         document.location.hash = '/shipping';
     } else {
+        //to check for error
         const { name } = getUserInfo();
         if (!name) {
             document.location.hash = '/';

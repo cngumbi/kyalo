@@ -61,3 +61,20 @@
             }
         }
     }
+    
+    header {
+        color: white;
+    }
+    
+    .dashboard {
+        color: $green-cyan-dack;
+        .dashboard-content {
+            h1 {
+                font-size: $font-default;
+                text-transform: uppercase;
+            }
+            div {
+                font-size: $font-smallest;
+            }
+        }
+    }

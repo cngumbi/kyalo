@@ -1,179 +1,34 @@
-//dashboard
-.dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    h1 {
-        font-size: $font-medium-3;
-        margin: 1rem 0;
-    }
-    .dashboard-content {
-        flex: 4 1 90rem;
-        color: $green-cyan-dack;
-        background-color: #f1f5f9;
-        overflow: hidden;
-        header {
-            background-color: $light-w;
-            color: $green-cyan-dack;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 2rem;
-            height: 59px;
-            //box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
-            //border-bottom: 1px solid rgba($green-cyan-dack, 0.3);
-            label {
-                display: inline-flex;
-                align-items: center;
-                span {
-                    font-size: $font-default;
-                    padding-right: 1rem;
-                }
-            }
-            .search-wrapper {
-                border: 1px solid $light-color;
-                border-radius: 8px;
-                height: 40px;
-                width: 600px;
-                float: left;
-                //justify-content: center;
-                //align-items: center;
-                //overflow: hidden;
-                input {
-                    //display: inline-flex;
-                    float: right;
-                    left: 1em;
-                    border: none;
-                    height: 100%;
-                    width: 560px;
-                    font-size: $font-smaller;
-                    &:focus {
-                        outline: none;
-                    }
-                }
-                span {
-                    background-color: aqua;
-                    display: inline-flex;
-                    border-radius: 8px;
-                }
-            }
-        }
-        main {
-            padding: 1rem 2rem;
-            background-color: #f1f5f9;
-            .dashboard-cards {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-gap: 1rem;
-                margin-top: 1rem;
-                .card-single {
-                    display: flex;
-                    justify-content: space-between;
-                    background-color: $light-w;
-                    padding: 2rem;
-                    border-radius: 10px;
-                    box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
-                    h1 {
-                        text-align: center;
-                        padding: 0;
-                        margin: 0;
-                    }
-                    div:last-child span {
-                        font-size: $font-default;
-                        color: $main-color;
-                    }
-                    div:first-child span {
-                        color: $gray-color;
-                    }
-                    &:last-child {
-                        background-color: $main-color;
-                        color: $text-color;
-                    }
-                }
-            }
-            .recent-grid {
-                margin-top: 3.5rem;
-            }
-        }
-        .product-list {
-            button {
-                font-size: $font-smallest;
-                padding: 0.5rem;
-            }
-            .tr-action {
-                width: 10rem;
-            }
-            //start the creation of tables here
-            table {
-                width: 100%;
-                //border: 0.2rem $gray-color solid;
-                //border-radius: 50% !important;
-                >thead {
-                    background-color: $gray-color;
-                    color: $green-cyan-dack;
-                    border-bottom: 1px solid rgba($green-cyan-dack, 0.5);
-                    th {
-                        text-align: left;
-                        padding: 10px;
-                    }
-                }
-                >tbody {
-                    >tr {
-                        >td {
-                            align-items: baseline;
-                            padding: 0.1rem;
-                            >img {
-                                display: inline-block;
-                                width: 30px;
-                                height: 30px;
-                                object-fit: contain;
-                            }
-                        }
-                        &:nth-child(even) {
-                            background-color: $table-color-row-odd;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-//dashboard menu
-.dashboard-menu {
-    flex: 1 1 10rem;
-    //background-color: $main-color;
-    height: 530px;
-    border-right: 1px solid rgba($green-cyan-dack, 0.2);
-    //box-shadow: 2px 2px 10px rgba($green-cyan-dack, 0.3);
-    ul {
-        padding: 0;
-    }
-    a {
+    //dashboard
+    .dashboard {
         display: flex;
-        padding: 1rem;
-        //justify-content: space-between;
-        align-items: center;
-        &:hover {
-            background-color: $light-w;
+        flex-wrap: wrap;
+        height: 78vh;
+        .dashboard-menu {
+            flex: 1 1 1rem;
+            height: 100%;
+            background-color: lighten(rgba($green, 0.8), 60);
+            ul {
+                padding: 0;
+            }
+            a {
+                display: flex;
+                padding: .8rem;
+                align-items: center;
+                &:hover {
+                    background-color: $light-w;
+                }
+            }
+            li.selected a {
+                background-color: $light-w;
+                color: $green-cyan-dack;
+            }
+        }
+        .dashboard-content {
+            flex: 8 1 15rem;
+            background-color: lighten(rgba($lightGoldenrodYellow, .8), 10);
+            div,
+            h1 {
+                margin: 1rem 0 0 1rem;
+            }
         }
     }
-    li.selected a {
-        background-color: $light-w;
-        color: $green-cyan-dack;
-    }
-}
-
-//user details
-.user-wrapper {
-    display: inline-flex;
-    align-items: center;
-    img {
-        border-radius: 50%;
-        margin-right: 1rem;
-    }
-    small {
-        display: inline-block;
-        font-size: $font-smaller;
-        color: $forest-green-darck;
-    }
-}

@@ -173,6 +173,17 @@ h6 {
   font-size: 0.8rem;
   color: #29ab87; }
 
+header {
+  color: white; }
+
+.dashboard {
+  color: #001308; }
+.dashboard .dashboard-content h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+.dashboard .dashboard-content div {
+  font-size: 0.8rem; }
+
 .center-text {
   text-align: center; }
 
@@ -378,7 +389,8 @@ footer {
   align-items: center;
   color: #001308;
   font-size: 0.8rem !important;
-  height: 60px; }
+  height: 5rem;
+  background-color: rgba(205, 255, 205, 0.8); }
 
 .main-page {
   position: relative;
@@ -403,5 +415,30 @@ footer {
   font-size: 1.2rem;
   font-weight: 700;
   color: rgba(34, 34, 154, 0.7); }
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 78vh; }
+.dashboard .dashboard-menu {
+  flex: 1 1 1rem;
+  height: 100%;
+  background-color: rgba(179, 255, 179, 0.8); }
+.dashboard .dashboard-menu ul {
+  padding: 0; }
+.dashboard .dashboard-menu a {
+  display: flex;
+  padding: .8rem;
+  align-items: center; }
+.dashboard .dashboard-menu a:hover {
+  background-color: #fcfcfc; }
+.dashboard .dashboard-menu li.selected a {
+  background-color: #fcfcfc;
+  color: #001308; }
+.dashboard .dashboard-content {
+  flex: 8 1 15rem;
+  background-color: rgba(255, 255, 255, 0.8); }
+.dashboard .dashboard-content div, .dashboard .dashboard-content h1 {
+  margin: 1rem 0 0 1rem; }
 
 /*# sourceMappingURL=kwito.css.map */
