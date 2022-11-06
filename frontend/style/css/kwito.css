@@ -173,6 +173,23 @@ h6 {
   font-size: 0.8rem;
   color: #29ab87; }
 
+header {
+  color: white; }
+
+.dashboard {
+  color: #001308; }
+.dashboard .dashboard-content h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+.dashboard .dashboard-content div {
+  font-size: 0.8rem; }
+
+.header-list .user-wrapper div h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase; }
+.header-list .user-wrapper div small {
+  font-size: 0.8rem; }
+
 .main-page .home-header {
   font-size: 0.8rem; }
 .main-page .home-header ul a:hover {
@@ -332,12 +349,22 @@ h6 {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   backface-visibility: hidden;
   background-color: #29ab87; }
+
+.header-list .user-wrapper {
+  display: flex; }
+.header-list .user-wrapper img {
+  height: 2rem;
+  width: 2rem;
+  padding-right: 1rem; }
+.header-list .user-wrapper div {
+  display: flex; }
 
 .row {
   max-width: 114rem;
@@ -400,7 +427,8 @@ footer {
   align-items: center;
   color: #001308;
   font-size: 0.8rem !important;
-  height: 60px; }
+  height: 5rem;
+  background-color: rgba(205, 255, 205, 0.8); }
 
 .main-page {
   position: relative;
@@ -412,5 +440,30 @@ footer {
   display: flex; }
 .main-page .motor {
   margin-top: 5rem; }
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 78vh; }
+.dashboard .dashboard-menu {
+  flex: 1 1 1rem;
+  height: 100%;
+  background-color: rgba(179, 255, 179, 0.8); }
+.dashboard .dashboard-menu ul {
+  padding: 0; }
+.dashboard .dashboard-menu a {
+  display: flex;
+  padding: .8rem;
+  align-items: center; }
+.dashboard .dashboard-menu a:hover {
+  background-color: #fcfcfc; }
+.dashboard .dashboard-menu li.selected a {
+  background-color: #fcfcfc;
+  color: #001308; }
+.dashboard .dashboard-content {
+  flex: 8 1 15rem;
+  background-color: rgba(255, 255, 255, 0.8); }
+.dashboard .dashboard-content div, .dashboard .dashboard-content h1 {
+  margin: 1rem 0 0 1rem; }
 
 /*# sourceMappingURL=kwito.css.map */

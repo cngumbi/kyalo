@@ -1,6 +1,6 @@
 import { signin } from "../../js/kyalo";
 import { getUserInfo, setUserInfo } from "../../localStorage";
-import { hideLoading, redirectUser, showLooding, showMessage } from "../../util";
+import { hideLoading, redirectUser, showLoading, showMessage } from "../../util";
 
 const MainSection = {
     after_render: () => {
@@ -8,7 +8,7 @@ const MainSection = {
             .getElementById('signin-form')
             .addEventListener('submit', async(e) => {
                 e.preventDefault();
-                showLooding();
+                showLoading();
                 const data = await signin({
                     email: document.getElementById('email').value,
                     password: document.getElementById('password').value

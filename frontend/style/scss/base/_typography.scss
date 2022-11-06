@@ -62,6 +62,37 @@
         }
     }
     
+    header {
+        color: white;
+    }
+    
+    .dashboard {
+        color: $green-cyan-dack;
+        .dashboard-content {
+            h1 {
+                font-size: $font-default;
+                text-transform: uppercase;
+            }
+            div {
+                font-size: $font-smallest;
+            }
+        }
+    }
+    
+    .header-list {
+        .user-wrapper {
+            div {
+                h4 {
+                    font-size: $font-smaller;
+                    text-transform: uppercase;
+                }
+                small {
+                    font-size: $font-smallest;
+                }
+            }
+        }
+    }
+    
     .main-page {
         .home-header {
             font-size: $font-smallest;
