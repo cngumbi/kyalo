@@ -1,0 +1,34 @@
+    //dashboard
+    .dashboard {
+        display: flex;
+        flex-wrap: wrap;
+        height: 78vh;
+        .dashboard-menu {
+            flex: 1 1 1rem;
+            height: 100%;
+            background-color: lighten(rgba($green, 0.8), 60);
+            ul {
+                padding: 0;
+            }
+            a {
+                display: flex;
+                padding: .8rem;
+                align-items: center;
+                &:hover {
+                    background-color: $light-w;
+                }
+            }
+            li.selected a {
+                background-color: $light-w;
+                color: $green-cyan-dack;
+            }
+        }
+        .dashboard-content {
+            flex: 8 1 15rem;
+            background-color: lighten(rgba($lightGoldenrodYellow, .8), 10);
+            div,
+            h1 {
+                margin: 1rem 0 0 1rem;
+            }
+        }
+    }

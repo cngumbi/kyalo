@@ -13,9 +13,9 @@ import ShippingSection from "./screens/signups/shippingSection.js";
 import PaymentSection from "./screens/signups/paymentSection.js";
 import PlaceorderSection from "./screens/signups/placeorderSection.js";
 import OrderSection from "./screens/signups/orderSection.js";
-//import DashboardSection from "./screens/dashboard/dashboardSection.js";
 import ProductListSection from "./screens/dashboard/productListSection.js";
 import UsersListSection from "./screens/dashboard/usersListSection.js";
+import DashboardSection from "./screens/dashboard/dashboardSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
@@ -30,7 +30,7 @@ const routes = {
     '/payment': PaymentSection,
     '/placeorder': PlaceorderSection,
     '/order/:id': OrderSection,
-    //'/dashboard': DashboardSection,
+    '/dashboard': DashboardSection,
     '/productlist': ProductListSection,
     '/userslist': UsersListSection,
 
