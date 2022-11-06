@@ -61,10 +61,10 @@ const ProfileSection = {
                                             <input type="password" name="password" id="password"/>
                                         </li>
                                         <li>
-                                            <button type="submit" class="primary">Update</button>
+                                            <button type="submit" class="button-fill">Update</button>
                                         </li>
                                         <li>
-                                            <button type="button" id="signout" class="primary">Sign out</button>
+                                            <button type="button" id="signout" class="button-fill ">Sign out</button>
                                         </li>
                                     </ul>
                                 </form>

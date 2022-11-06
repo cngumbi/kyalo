@@ -18,13 +18,13 @@ const MainSection = {
                     showMessage(data.error);
                 } else {
                     setUserInfo(data);
-                    document.location.hash = '/dashboard';
+                    redirectUser();
                 }
             });
     },
     render: async() => {
         if (getUserInfo().name) {
-            document.location.hash = '/dashboard';
+            redirectUser();
         }
         return `
             <div class="main-page">

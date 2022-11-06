@@ -184,6 +184,12 @@ header {
 .dashboard .dashboard-content div {
   font-size: 0.8rem; }
 
+.header-list .user-wrapper div h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase; }
+.header-list .user-wrapper div small {
+  font-size: 0.8rem; }
+
 .center-text {
   text-align: center; }
 
@@ -321,12 +327,22 @@ header {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   backface-visibility: hidden;
   background-color: #29ab87; }
+
+.header-list .user-wrapper {
+  display: flex; }
+.header-list .user-wrapper img {
+  height: 2rem;
+  width: 2rem;
+  padding-right: 1rem; }
+.header-list .user-wrapper div {
+  display: flex; }
 
 .row {
   max-width: 114rem;

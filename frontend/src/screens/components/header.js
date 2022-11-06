@@ -8,7 +8,7 @@ const Header = {
                     <div class="brand">
                         ${ name ? `<a href="/#/dashboard">kwi<span>t&#361;</span></a>`: `<a href="#">kwi<span>t&#361</span></a>`}
                     </div>
-                    <div class="list-items">
+                    <div class="header-list">
                     ${
                         name
                             ? `

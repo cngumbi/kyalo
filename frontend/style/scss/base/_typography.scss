@@ -78,3 +78,17 @@
             }
         }
     }
+    
+    .header-list {
+        .user-wrapper {
+            div {
+                h4 {
+                    font-size: $font-smaller;
+                    text-transform: uppercase;
+                }
+                small {
+                    font-size: $font-smallest;
+                }
+            }
+        }
+    }
