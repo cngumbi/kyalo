@@ -29,7 +29,8 @@ export const showMessage = (message, callback) => {
     <div>
         <div id="message-content">${message}</div>
         <button id="close-button">OK</button>
-        >Dashboard  </div>
+        Dashboard  
+    </div>
     `;
     document.getElementById('message-overlay').classList.add('active');
     document.getElementById('close-button').addEventListener('click', () => {
