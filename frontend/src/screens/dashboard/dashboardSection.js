@@ -1,9 +1,3 @@
-//import { getProducts } from "../../js/kyalo";
-//import DashboardMenu from "./components/dashboardMenu";
-//import User from "../../../../backend/models/userModel";
-//import { getUserInfo } from "../../localStorage";
-//import { redirectUser } from "../../util";
-
 import DashboardMenu from "./components/dashboardMenu";
 
 const DashboardSection = {
