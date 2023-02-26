@@ -1,7 +1,7 @@
-import jwt from 'jsonwebtoken';
-import config from './config';
+const jwt = require('jsonwebtoken');
+const config = require('../backend/config/config');
 
-export const generateToken = (user) => {
+const generateToken = (user) => {
     return jwt.sign({
             _id: user._id,
             name: user.name,
@@ -11,7 +11,7 @@ export const generateToken = (user) => {
         config.JWT_SECRET
     );
 };
-export const isAuth = (req, res, next) => {
+const isAuth = (req, res, next) => {
     const bearerToken = req.headers.authorization;
     if (!bearerToken) {
         res.status(401).send({ message: 'Token not available' });
@@ -27,4 +27,13 @@ export const isAuth = (req, res, next) => {
             }
         })
     }
-}
+};
+ const isAdmin = (req, res, next) => {
+    if(req.user && req.user.isAdmin){
+        next();
+    }else{
+        req.status(401).send({ message: 'Token not valid for admin user' });
+    }
+ };
+
+ module.exports = { generateToken, isAdmin, isAuth };

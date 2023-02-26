@@ -1,30 +1,21 @@
-//import multer from 'multer';
-/*import { GridFsStorage } from 'multer-gridfs-storage';
-import config from '../config';
+const express = require('express');
+const multer = require('multer');
+const { isAuth, isAdmin } = require('../util');
 
-//const multer = multer;
-const GridFsStorage = { GridFsStorage };
-
-//create a storage object with a given configaration
-const storage = new GridFsStorage({
-    url: config.MONGODB_URL,
-    options: {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+const storage = multer.diskStorage({
+    destination(req, file, cd){
+        cd(null, 'uploads/');
     },
-    file: (req, file) => {
-        const match = ["image/png", "image/jpeg", "image/jpg"];
-
-        if (match.indexOf(file.mimetype) === -1) {
-            const filename = `${Date.now()}-any-name-${file.originalname}`;
-            return filename;
-        }
-        return {
-            bucketName: "photos",
-            filename: `${Date.now()}-any-name-${file.originalname}`,
-        }
+    filename(req, file, cd){
+        cd(null, `${Date.now()}.jpg`);
     }
+});
 
-})
+const upload = multer({ storage });
+const uploadRouter = express.Router();
 
-export const upload = multer({ storage }); //to check for error*/
+uploadRouter.post('/', isAuth, isAdmin, upload.single('image'), (req, res)=>{
+    res.status(201).send({ image: `/${req.file.path }` });
+});
+
+module.exports = uploadRouter;

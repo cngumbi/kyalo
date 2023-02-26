@@ -1,14 +1,12 @@
-import express from 'express';
-import Player from '../models/playerModel';
-import expressAsyncHandler from 'express-async-handler';
+const express = require('express');
+const Player = require('../models/playerModel');
+const expressAsyncHandler = require('express-async-handler');
 
 const PlayerRouter = express.Router();
 
 PlayerRouter.post('/addplayer', expressAsyncHandler(async(req, res) => {
     const player = new Player({
-        sirName: req.body.name.sirName,
-        fistName: req.body.name.fistName,
-        lastName: req.body.name.lastName,
+        name: req.body.name.name,
         positionPlayed: req.body.positionPlayed,
         age: req.body.age,
         DOB: req.body.DOB,
@@ -25,9 +23,7 @@ PlayerRouter.post('/addplayer', expressAsyncHandler(async(req, res) => {
     } else {
         res.send({
             _id: createdPlayer._id,
-            sirName: createdPlayer.sirName,
-            firstName: createdPlayer.firstName,
-            lastName: createdPlayer.lastName,
+            name: createdPlayer.name,
             positionPlayed: createdPlayer.positionPlayed,
             age: createdPlayer.age,
             DOB: createdPlayer.DOB,
@@ -38,4 +34,4 @@ PlayerRouter.post('/addplayer', expressAsyncHandler(async(req, res) => {
     }
 }));
 
-export default PlayerRouter;
+module.exports = PlayerRouter;
