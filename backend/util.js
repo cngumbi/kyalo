@@ -32,7 +32,7 @@ const isAuth = (req, res, next) => {
     if(req.user && req.user.isAdmin){
         next();
     }else{
-        req.status(401).send({ message: 'Token not valid for admin user' });
+        res.status(401).send({ message: 'Token not valid for admin user' });
     }
  };
 
