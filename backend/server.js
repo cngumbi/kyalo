@@ -1,12 +1,12 @@
-import express from 'express';
-import cors from 'cors';
-import data from './data';
-import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
-import config from './config';
-import UserRouter from './routers/userRouter';
-import OrderRouter from './routers/orderRouter';
-import PlayerRouter from './routers/playerRouter';
+const express = require('express');
+const cors = require('cors');
+//import data from './data';
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const config = require('./config/config');
+const UserRouter = require('./routers/userRouter');
+//const OrderRouter = require('./routers/orderRouter');
+const PlayerRouter = require('./routers/playerRouter');
 
 
 //-----------------------------------------------------
@@ -36,10 +36,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/users', UserRouter);
 app.use('/api/players', PlayerRouter);
-app.use('/api/orders', OrderRouter);
-app.get('/api/paypal/clientId', (req, res) => {
-    res.send({ clientId: config.PAYPAL_CLIENT_ID });
-});
+//app.use('/api/orders', OrderRouter);
+//app.get('/api/paypal/clientId', (req, res) => {
+//    res.send({ clientId: config.PAYPAL_CLIENT_ID });
+//});
 app.get('/api/products', (req, res) => {
     res.send(data.products);
 });
