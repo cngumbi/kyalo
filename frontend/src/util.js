@@ -24,22 +24,53 @@ export const hideLoading = () => {
 };
 //--------------------------------------------------------------------------
 //validation section
+//export const showMessage = (message, callback) => {
+//    document.getElementById('message-overlay').innerHTML = `
+//    <div>
+//        <div id="message-content">${message}</div>
+//        <button id="close-button">OK</button>
+//        Dashboard  
+//    </div>
+//    `;
+//    document.getElementById('message-overlay').classList.add('active');
+//    document.getElementById('close-button').addEventListener('click', () => {
+//        document.getElementsById('message-overlay').classList.remove('active');
+//        if (callback) {
+//            callback();
+//        }
+//    });
+//};
+// Define the function
 export const showMessage = (message, callback) => {
-    document.getElementById('message-overlay').innerHTML = `
-    <div>
+    // Get the message overlay element
+    const messageOverlay = document.getElementById('message-overlay');
+  
+    // Create the message content
+    const messageContent = `
+      <div>
         <div id="message-content">${message}</div>
         <button id="close-button">OK</button>
-        Dashboard  
-    </div>
+        Dashboard
+      </div>
     `;
-    document.getElementById('message-overlay').classList.add('active');
-    document.getElementById('close-button').addEventListener('click', () => {
-        document.getElementsById('message-overlay').classList.remove('active');
-        if (callback) {
-            callback();
-        }
+  
+    // Set the message overlay content and show it
+    messageOverlay.innerHTML = messageContent;
+    messageOverlay.classList.add('active');
+  
+    // Add a click listener to the OK button
+    const okButton = document.getElementById('close-button');
+    okButton.addEventListener('click', () => {
+      // Hide the message overlay
+      messageOverlay.classList.remove('active');
+      
+      // Call the callback function if provided
+      if (callback) {
+        callback();
+      }
     });
 };
+  
 //------------------------------------------------------------------------------
 export const redirectUser = () => {
     if (getCartItems().length !== 0) {
