@@ -1,33 +1,23 @@
 const express = require('express');
 const cors = require('cors');
-//import data from './data';
-const mongoose = require('mongoose');
+const database = require('./config/mongooseConfig');
 const bodyParser = require('body-parser');
 const config = require('./config/config');
 const UserRouter = require('./routers/userRouter');
-//const OrderRouter = require('./routers/orderRouter');
 const PlayerRouter = require('./routers/playerRouter');
-//const { PORT } = require('./config/config');
 
 
 //-----------------------------------------------------
 //create a connection with the database
-//-----------------------------------------------------
-//main().catch(err => console.log(err));
-//async function main() {
-//    await mongoose.connect('database url');
-//}
 //------------------------------------------------------
-mongoose.connect(config.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    //useFindAndModify: false,
-    //useCreateIndex: true
-}).then(() => {
-    console.log('connected to mongodb.');
-}).catch((error) => {
-    console.log(error.reason);
-});
+//mongoose.connect(config.MONGODB_URL, {
+//    useNewUrlParser: true,
+//    useUnifiedTopology: true,
+//}).then(() => {
+//    console.log('connected to mongodb.');
+//}).catch((error) => {
+//    console.log(error.reason);
+//});
 
 //----------------------------------------------------------------------------------
 //instentiate the express 
@@ -37,10 +27,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/users', UserRouter);
 app.use('/api/players', PlayerRouter);
-//app.use('/api/orders', OrderRouter);
-//app.get('/api/paypal/clientId', (req, res) => {
-//    res.send({ clientId: config.PAYPAL_CLIENT_ID });
-//});
+
+
 app.get('/api/products', (req, res) => {
     res.send(data.products);
 });
