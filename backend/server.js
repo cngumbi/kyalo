@@ -1,24 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const database = require('./config/mongooseConfig');
 const bodyParser = require('body-parser');
 const config = require('./config/config');
 const UserRouter = require('./routers/userRouter');
 const PlayerRouter = require('./routers/playerRouter');
-
-
-//-----------------------------------------------------
-//create a connection with the database
-//------------------------------------------------------
-//mongoose.connect(config.MONGODB_URL, {
-//    useNewUrlParser: true,
-//    useUnifiedTopology: true,
-//}).then(() => {
-//    console.log('connected to mongodb.');
-//}).catch((error) => {
-//    console.log(error.reason);
-//});
-
 //----------------------------------------------------------------------------------
 //instentiate the express 
 //----------------------------------------------------------------------------------
@@ -29,19 +16,30 @@ app.use('/api/users', UserRouter);
 app.use('/api/players', PlayerRouter);
 
 
-app.get('/api/products', (req, res) => {
-    res.send(data.products);
+//app.get('/api/products', (req, res) => {
+//    res.send(data.products);
+//});
+//
+//app.get('/api/products/:id', (req, res) => {
+//    const product = data.products.find(x => x._id === req.params.id);
+//    if (product) {
+//        res.send(product);
+//    } else {
+//        res.status(404).send({ message: 'Product not found!' });
+//    }
+//
+//});
+//----------------------------------------------------
+//conect the front end with the backend
+//----------------------------------------------------
+//----------------serving uploaded images--------------
+app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
+//-----------------------------------------------------
+app.use(express.static(path.join(__dirname, '/../frontend')));
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/../frontend/index.html'));
 });
-
-app.get('/api/products/:id', (req, res) => {
-    const product = data.products.find(x => x._id === req.params.id);
-    if (product) {
-        res.send(product);
-    } else {
-        res.status(404).send({ message: 'Product not found!' });
-    }
-
-});
+//----------------------------------------------------
 //error handling
 //code to handle all errors in express instance
 app.use((err, req, res, next) => {
