@@ -7,7 +7,7 @@ node_modules
 
 #the environment file
 .env
-
+dist
 
 
 package-lock.json
