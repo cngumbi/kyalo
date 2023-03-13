@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('./config');
+
+
 mongoose.set('useNewUrlParser', 'useUnifiedTopology', true);
 mongoose.connect(config.MONGODB_URL);
 
