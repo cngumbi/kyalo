@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const db = require('./config/mongoConfig');
-//const database = require('./config/mongooseConfig');
 const bodyParser = require('body-parser');
 const config = require('./config/config');
 const UserRouter = require('./routers/userRouter');
@@ -47,8 +46,15 @@ app.use((err, req, res, next) => {
     const status = (err.name && err.name === 'ValidationError') ? 400 : 500;
     res.status(status).send({ message: err.message });
 })
+//initialize the database and start the app
+db.initDb((err, db)=>{
+    if(err){
+        console.log(err);
+    }else{
+        app.listen(config.PORT, () => {
+            console.log(`server at http://localhost:${config.PORT}`);
+        });
+    }
+})
 
-app.listen(config.PORT, () => {
-    console.log(`server at http://localhost:${config.PORT}`);
-});
 //----------------------------------------------------------------------------------------

@@ -11,5 +11,6 @@ dist
 
 
 package-lock.json
-
+test.js
+test.html
 main.js
