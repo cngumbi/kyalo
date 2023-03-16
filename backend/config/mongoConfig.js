@@ -11,17 +11,25 @@ const connect = async()=>{
         serverApi: ServerApiVersion.v1
     })
     await client.connect();
-}
+};
 
-const getCollection = ({dbName,collectionName})=>{
+const getCollection = (dbName, collectionName )=>{
     return client.db(dbName).collection(collectionName);
-}
+};
 
 const disconnect = async()=>{
     await client.close();
+};
+
+const listDatabases = async()=>{
+    const databaseslist = await client.db().admin().listDatabases();
+    console.log("databaes");
+    databaseslist.databases.forEach(db => {
+        console.log(`-${db.name}`);
+    });
 }
 
-module.exports = { connect, getCollection, disconnect };
+module.exports = { connect, getCollection, disconnect, listDatabases };
 
 
 
