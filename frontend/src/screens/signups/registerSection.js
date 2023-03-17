@@ -1,11 +1,77 @@
 import { register } from '../../js/kyalo';
-import { eValid, isRange, isRequired, msgError, msgSuccess } from '../../js/language';
+//import { eValid, isRange, isRequired, msgError, msgSuccess } from '../../js/language';
 import { getUserInfo, setUserInfo } from '../../localStorage';
 import { hideLoading, redirectUser, showLoading, showMessage } from '../../util';
 
 const RegisterSection = {
     after_render: () => {
-        const nameVd = document.querySelector('#name');
+        document.getElementById('register-form').addEventListener('submit', async(e)=>{
+            e.preventDefault();
+            showLoading();
+            const data = await register({
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            });
+            hideLoading();
+            if(data.error){
+                showMessage(data.error);
+            }else{
+                setUserInfo(data);
+                redirectUser();
+            }
+        });
+    },
+    render: () => {
+        if (getUserInfo().name) {
+            redirectUser();
+        }
+        return `
+        <div class="form-container">
+            <form id="register-form">
+                <ul class="form-items">
+                    <li>
+                        <h1>Create Account</h1>
+                    </li>
+                    <li class="form-field">
+                        <label for="name">Name</label>
+                        <input type="name" name="name" id="name"/>
+                        <small></small>
+                    </li>
+                    <li class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"/>
+                        <small></small>
+                    </li>
+                    <li class="form-field">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password"/>
+                        <small></small>
+                    </li>
+                    <li class="form-field">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword"/>
+                        <small></small>
+                    </li>
+                    <li>
+                        <button type="submit" class="button-fill">Registor</button>
+                    </li>
+                    <li>
+                        <div>
+                            Have an Account?
+                            <a href="/#/signin">Sign In</a>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        `;
+    },
+};
+export default RegisterSection;
+
+/*
+const nameVd = document.querySelector('#name');
         const emailVd = document.querySelector('#email');
         const passwordVd = document.querySelector('#password');
         const confirmpwdVd = document.querySelector('#confirmPassword');
@@ -147,51 +213,4 @@ const RegisterSection = {
                     break;
             }
         }));
-    },
-    render: () => {
-        if (getUserInfo().name) {
-            redirectUser();
-        }
-        return `
-        <div class="form-container">
-            <form id="register-form">
-                <ul class="form-items">
-                    <li>
-                        <h1>Create Account</h1>
-                    </li>
-                    <li class="form-field">
-                        <label for="name">Name</label>
-                        <input type="name" name="name" id="name"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword"/>
-                        <small></small>
-                    </li>
-                    <li>
-                        <button type="submit" class="button-fill">Registor</button>
-                    </li>
-                    <li>
-                        <div>
-                            Have an Account?
-                            <a href="/#/signin">Sign In</a>
-                        </div>
-                    </li>
-                </ul>
-            </form>
-        </div>
-        `;
-    },
-};
-export default RegisterSection;
+*/

@@ -9,7 +9,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Softcraze Corporation",
-    "license": "ISC", 
+    "license": "ISC",
     "devDependencies": {
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.12",
