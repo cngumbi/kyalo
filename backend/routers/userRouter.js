@@ -1,5 +1,7 @@
 const express = require('express');
-const User = require('../models/userModel');
+//const User = require('../models/userModel');
+const db = require('../config/mongoConfig');
+const bcrypt = require('bcrypt');
 const expressAsyncHandler = require('express-async-handler');
 const { generateToken, isAuth } = require('../util');
  
@@ -40,27 +42,54 @@ UserRouter.post('/signin', expressAsyncHandler(async(req, res) => {
     }
 }));
 //post  register function
-UserRouter.post('/register', expressAsyncHandler(async(req, res) => {
-    const user = new User({
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password,
+UserRouter.post('/register', expressAsyncHandler(async(req, res)=>{
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password;
+    bcrypt.hash(password, 12).then(hashedPassword => {
+        db.getDb().collection('users')
+        .insertOne({
+            name: name,
+            email: email,
+            password: hashedPassword
+        }).then(result=>{
+            console.log(result);
+            const token = generateToken();
+            res.status(201).json({ token: token, user: {
+                email: email,
+            } });
+        }).catch(err=>{
+            console.log(err);
+            res.status(500).json({message: 'Creating the user failed!!'});
+        });
+        
+    }).catch(err=>{
+        console.log(err);
+        res.status(500).json({message: 'Creating the user failed!!'});
     });
-    const createdUser = await user.save();
-    if (!createdUser) {
-        res.status(401).send({
-            message: 'Invalid User Data',
-        });
-    } else {
-        res.send({
-            _id: createdUser._id,
-            name: createdUser.name,
-            email: createdUser.email,
-            isAdmin: createdUser.isAdmin,
-            token: generateToken(createdUser),
-        });
-    }
-}));
+    
+}))
+//UserRouter.post('/register', expressAsyncHandler(async(req, res) => {
+//    const user = new User({
+//        name: req.body.name,
+//        email: req.body.email,
+//        password: req.body.password,
+//    });
+//    const createdUser = await user.save();
+//    if (!createdUser) {
+//        res.status(401).send({
+//            message: 'Invalid User Data',
+//        });
+//    } else {
+//        res.send({
+//            _id: createdUser._id,
+//            name: createdUser.name,
+//            email: createdUser.email,
+//            isAdmin: createdUser.isAdmin,
+//            token: generateToken(createdUser),
+//        });
+//    }
+//}));
 //update
 UserRouter.put('/:id', isAuth, expressAsyncHandler(async(req, res) => {
     const user = await User.findById(req.params.id);
