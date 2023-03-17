@@ -23,23 +23,27 @@ UserRouter.get('/createadmin', expressAsyncHandler(async(req, res) => {
     }
 }));
 UserRouter.post('/signin', expressAsyncHandler(async(req, res) => {
-    const signinUser = await User.findOne({
-        email: req.body.email,
-        password: req.body.password
-    });
-    if (!signinUser) {
-        res.status(401).send({
+    
+    const email = req.body.email;
+    const password = req.body.password;
+    db.getDb().collection('users')
+    .findOne({email: email}).then( userDocument =>{
+        return bcrypt.compare(password, userDocument.password);
+    }).then(result =>{
+        if(!result){
+            throw Error();
+        }
+        const token = generateToken();
+        res.status(200).json({
+            message: 'User Authenticated.',
+            token: token
+        });
+    }).catch(err=>{
+        res.status(401).json({
             message: 'Invalid Email or Password',
         });
-    } else {
-        res.send({
-            _id: signinUser._id,
-            name: signinUser.name,
-            email: signinUser.email,
-            isAdmin: signinUser.isAdmin,
-            token: generateToken(signinUser),
-        });
-    }
+    });
+    
 }));
 //post  register function
 UserRouter.post('/register', expressAsyncHandler(async(req, res)=>{
@@ -68,7 +72,7 @@ UserRouter.post('/register', expressAsyncHandler(async(req, res)=>{
         res.status(500).json({message: 'Creating the user failed!!'});
     });
     
-}))
+}));
 //UserRouter.post('/register', expressAsyncHandler(async(req, res) => {
 //    const user = new User({
 //        name: req.body.name,
