@@ -18,13 +18,15 @@ const RegisterSection = {
                 showMessage(data.error);
             }else{
                 setUserInfo(data);
-                redirectUser();
+                //redirectUser();
+                document.location.hash = '/dashboard';
             }
         });
     },
     render: () => {
         if (getUserInfo().name) {
-            redirectUser();
+            //redirectUser();
+            document.location.hash = '/dashboard';
         }
         return `
         <div class="form-container">
