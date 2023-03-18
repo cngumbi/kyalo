@@ -24,23 +24,7 @@ export const hideLoading = () => {
 };
 //--------------------------------------------------------------------------
 //validation section
-//export const showMessage = (message, callback) => {
-//    document.getElementById('message-overlay').innerHTML = `
-//    <div>
-//        <div id="message-content">${message}</div>
-//        <button id="close-button">OK</button>
-//        Dashboard  
-//    </div>
-//    `;
-//    document.getElementById('message-overlay').classList.add('active');
-//    document.getElementById('close-button').addEventListener('click', () => {
-//        document.getElementsById('message-overlay').classList.remove('active');
-//        if (callback) {
-//            callback();
-//        }
-//    });
-//};
-// Define the function
+//--------------------------------------------------------------------------
 export const showMessage = (message, callback) => {
     // Get the message overlay element
     const messageOverlay = document.getElementById('message-overlay');
@@ -73,16 +57,6 @@ export const showMessage = (message, callback) => {
   
 //------------------------------------------------------------------------------
 export const redirectUser = () => {
-    if (getCartItems().length !== 0) {
-        document.location.hash = '/shipping';
-    } else {
-        //to check for error
-        const { name } = getUserInfo();
-        if (!name) {
-            document.location.hash = '/';
-        } else {
-            document.location.hash = '/dashboard';
-        }
-
-    }
+    const redirectTo = getCartItems().length !== 0 ? '/shipping' : getUserInfo().name ? '/dashboard' : '/';
+    document.location.hash = redirectTo;
 };
