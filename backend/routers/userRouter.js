@@ -8,20 +8,20 @@ const { generateToken, isAuth } = require('../util');
 
 const UserRouter = express.Router();
 
-UserRouter.get('/createadmin', expressAsyncHandler(async(req, res) => {
-    try {
-        const user = new User({
-            name: 'admin',
-            email: 'softadmin@softcraze.com',
-            password: 'kyalo2',
-            isAdmin: true
-        });
-        const createdUser = await user.save();
-        res.send(createdUser);
-    } catch (err) {
-        res.status(500).send({ message: err.message });
-    }
-}));
+//UserRouter.get('/createadmin', expressAsyncHandler(async(req, res) => {
+//    try {
+//        const user = new User({
+//            name: 'admin',
+//            email: 'softadmin@softcraze.com',
+//            password: 'kyalo2',
+//            isAdmin: true
+//        });
+//        const createdUser = await user.save();
+//        res.send(createdUser);
+//    } catch (err) {
+//        res.status(500).send({ message: err.message });
+//    }
+//}));
 UserRouter.post('/signin', expressAsyncHandler(async(req, res) => {
     
     const email = req.body.email;
