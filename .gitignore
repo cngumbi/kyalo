@@ -11,6 +11,8 @@ dist
 
 
 package-lock.json
+#test files 
 test.js
 test.html
 main.js
+http_t.js

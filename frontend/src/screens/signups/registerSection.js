@@ -5,7 +5,9 @@ import { hideLoading, redirectUser, showLoading, showMessage } from '../../util'
 
 const RegisterSection = {
     after_render: () => {
-        document.getElementById('register-form').addEventListener('submit', async(e)=>{
+        document
+            .getElementById('register-form')
+         .addEventListener('submit', async(e)=>{
             e.preventDefault();
             showLoading();
             const data = await register({
