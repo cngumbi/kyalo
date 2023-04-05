@@ -30,7 +30,7 @@
 //1em = 16px
 @mixin responsive($breakpoint) {
     @if $breakpoint==phone {
-        @media (max-width: 37.5em) {
+        @media (max-width: 30.5em) {
             @content
         }
         ;

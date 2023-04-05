@@ -28,15 +28,7 @@ const MainSection = {
         }
         return `
             <div class="main-page">
-               <!-- <div class="home-header bottom-margin">
-                    <ul>
-                        <li class="space-between"><a>tournaments</a></li>
-                        <li class="space-between"><a>new games</a></li>
-                        <li class="space-between"><a>new teams</a></li>
-                        <li class="space-between"><a>match fixture</a></li>
-                        <li class="space-between"><a>league</a></li>
-                    </ul>
-                </div> -->
+
                 <div class="row">
                     <div class="col-1-of-2 top-margin">
                         <div class="motor">
