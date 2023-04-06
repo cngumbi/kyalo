@@ -4,6 +4,11 @@
     justify-content: center;
     align-items: flex-start;
     height: 100%;
+    @include responsive(phone){
+        float: left;
+        right: 100px;
+    }
+  
     .form-items {
         display: flex;
         flex-direction: column;
@@ -15,6 +20,11 @@
         border-radius: 0.5rem;
         list-style-type: none;
         box-shadow: 2px 5px 10px rgba($forest-green-darck, 0.2);
+        @include responsive(phone){
+            margin: 2rem;
+            padding: 1rem;
+            //width: 12rem;
+        }
         li {
             display: flex;
             flex-direction: column;
