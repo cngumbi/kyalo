@@ -28,7 +28,6 @@ const MainSection = {
         }
         return `
             <div class="main-page">
-
                 <div class="row">
                     <div class="col-1-of-2 top-margin">
                         <div class="motor">
