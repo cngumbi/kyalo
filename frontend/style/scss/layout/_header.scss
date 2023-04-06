@@ -12,6 +12,15 @@ header{
     .brand{
         position: relative;
     }
+    .sticky{
+        padding: 4px 100px;
+        background: $main-color;
+        .logo,
+        ul, li, a{
+            color: #fff;
+        }
+    }
+    
     .logo{
         position: relative;
         font-weight: weight(bold);
