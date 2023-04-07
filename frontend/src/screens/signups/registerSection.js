@@ -37,7 +37,7 @@ const RegisterSection = {
                 </div>
                 <div class="main">
                     <div class="auth-container">
-                        <p class="title">Welcome Sign Up</p>
+                        <p class="title">Welcome SignUp</p>
                         <div class="separator"></div>
                         <p class="welcome-message">
                             Create An Account with us.
@@ -60,7 +60,7 @@ const RegisterSection = {
                                 <i class="fas fa-lock"></i>
                             </div>
                             <button type="submit" class="submit">Register</button>
-                            <div class="redirect">Have an Account ? <a href="/#/signin">Sign In</a></div>
+                            <div class="redirect">Have an Account ? <a href="/#/signin">SignIn</a></div>
                         </form>
                     </div>
                 </div>
