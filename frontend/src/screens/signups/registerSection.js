@@ -37,7 +37,7 @@ const RegisterSection = {
                 </div>
                 <div class="main">
                     <div class="auth-container">
-                        <p class="title">Welcome</p>
+                        <p class="title">Welcome Sign Up</p>
                         <div class="separator"></div>
                         <p class="welcome-message">
                             Create An Account with us.
