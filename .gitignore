@@ -16,3 +16,18 @@ test.js
 test.html
 main.js
 http_t.js
+#vscode
+.vscode
+
+#file to add 
+shippingSect.js
+orderSect.js
+paymentSect.js
+placeorderSect.js
+productSect.js
+productListSect.js
+usersListSect.js
+cartSect.js
+addPlayerSect.js
+checkoutStepsSect.js
+ratingSect.js
