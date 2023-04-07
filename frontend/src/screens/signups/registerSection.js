@@ -6,7 +6,7 @@ import { hideLoading, redirectUser, showLoading, showMessage } from '../../util'
 const RegisterSection = {
     after_render: () => {
         document
-            .getElementById('registor-form')
+            .getElementById('register-form')
          .addEventListener('submit', async(e)=>{
             e.preventDefault();
             showLoading();
@@ -42,7 +42,7 @@ const RegisterSection = {
                         <p class="welcome-message">
                             Create An Account with us.
                         </p>
-                        <form action="" class="auth-form" id="registor-form">
+                        <form action="" class="auth-form" id="register-form">
                             <div class="form-control">
                                 <input type="text" name="name" placeholder="Full Name" id="name">
                                 <i class="fas fa-user"></i>
@@ -59,7 +59,7 @@ const RegisterSection = {
                                 <input type="password" name="confirmPassword" placeholder=" Confirm Password" id="confirmPassword">
                                 <i class="fas fa-lock"></i>
                             </div>
-                            <button type="submit" class="submit">Login</button>
+                            <button type="submit" class="submit">Register</button>
                             <div class="redirect">Have an Account ? <a href="/#/signin">Sign In</a></div>
                         </form>
                     </div>
