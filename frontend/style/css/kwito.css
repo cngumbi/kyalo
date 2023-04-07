@@ -576,9 +576,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  /*.side{
-      display: none;
-  }*/
+  .side {
+    display: none;
+  }
 }
 @media (max-width: 850px) {
   .side {
