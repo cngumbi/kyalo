@@ -29,32 +29,32 @@ const SigninSection = {
             document.location.hash = '/dashboard';
         }
         return `
-        <div class="form-container bottom-margin">
-            <form id="signin-form">
-                <ul class="form-items">
-                    <li>
-                        <h1>Sign In</h1>
-                    </li>
-                    <li>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email"/>
-                    </li>
-                    <li>
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password"/>
-                    </li>
-                    <li>
-                        <button type="submit" class="button-fill">Sign In</button>
-                    </li>
-                    <li>
-                        <div>
-                            New User?
-                            <a href="/#/register">Create an accoount with us</a>
-                        </div>
-                    </li>
-                </ul>
-            </form>
-        </div>
+            <section>
+                <div class="side">
+                    <img src="../../images/soccer.svg">
+                </div>
+                <div class="main">
+                    <div class="auth-container">
+                        <p class="title">Welcome back</p>
+                        <div class="separator"></div>
+                        <p class="welcome-message">Please,
+                            provide login credential
+                        </p>
+                        <form action="" class="auth-form" id="signin-form">
+                            <div class="form-control">
+                                <input type="email" name="email" placeholder="Email" id="email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-control">
+                                <input type="password" name="password" placeholder="Password" id="password">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <button type="submit" class="submit">Login</button>
+                            <div class="redirect">NEW USER ? <a href="/#/register">Create an account with us</a></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         `;
     },
 };

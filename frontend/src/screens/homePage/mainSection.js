@@ -27,41 +27,32 @@ const MainSection = {
             redirectUser();
         }
         return `
-            <div class="main-page">
-                <div class="row">
-                    <div class="col-1-of-2 top-margin">
-                        <div class="motor">
-                            <h1>how teams <br> play</h1>                          
-                        </div>
-                        <div class="motivation bottom-margin">
-                            <h2>Forget the old rules. You can Play the Best teams.</h2>
-                            <h2>Right here. Right now <a href="/#/register">JOIN US</a></h2>
-                            
-                        </div>
-                    </div>
-                    <div class="col-1-of-2 top-margin bottom-margin">
-                        <div class="form-container">
-                            <form id="signin-form">
-                                <ul class="form-items">
-                                    <li>
-                                        <h1>SIGN IN</h1>
-                                    </li>
-                                    <li>
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" id="email"/>
-                                    </li>
-                                    <li>
-                                        <label for="password">Password</label>
-                                        <input type="password" name="password" id="password"/>
-                                    </li>
-                                    <li><button type="submit" class="button-fill">SIGN IN</button></li>
-                                    <li><div>NEW USER?<a href="/#/register">Create an account with us</a></div></li>
-                                </ul>
-                            </form>
-                        </div>
-                    </div> 
+            <section>
+                <div class="side">
+                    <img src="../../images/soccer.svg">
                 </div>
-            </div>            
+                <div class="main">
+                    <div class="auth-container">
+                        <p class="title">Welcome back</p>
+                        <div class="separator"></div>
+                        <p class="welcome-message">Please,
+                            provide login credential
+                        </p>
+                        <form action="" class="auth-form" id="signin-form">
+                            <div class="form-control">
+                                <input type="email" name="email" placeholder="Email" id="email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-control">
+                                <input type="password" name="password" placeholder="Password" id="password">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <button type="submit" class="submit">Login</button>
+                            <div class="redirect">NEW USER ? <a href="/#/register">Create an account with us</a></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         `;
     },
 };

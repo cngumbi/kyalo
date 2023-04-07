@@ -6,7 +6,7 @@ import { hideLoading, redirectUser, showLoading, showMessage } from '../../util'
 const RegisterSection = {
     after_render: () => {
         document
-            .getElementById('register-form')
+            .getElementById('registor-form')
          .addEventListener('submit', async(e)=>{
             e.preventDefault();
             showLoading();
@@ -31,44 +31,40 @@ const RegisterSection = {
             document.location.hash = '/dashboard';
         }
         return `
-        <div class="form-container">
-            <form id="register-form">
-                <ul class="form-items">
-                    <li>
-                        <h1>Create Account</h1>
-                    </li>
-                    <li class="form-field">
-                        <label for="name">Name</label>
-                        <input type="name" name="name" id="name"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password"/>
-                        <small></small>
-                    </li>
-                    <li class="form-field">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword"/>
-                        <small></small>
-                    </li>
-                    <li>
-                        <button type="submit" class="button-fill">Registor</button>
-                    </li>
-                    <li>
-                        <div>
-                            Have an Account?
-                            <a href="/#/signin">Sign In</a>
-                        </div>
-                    </li>
-                </ul>
-            </form>
-        </div>
+            <section>
+                <div class="side">
+                    <img src="../../images/soccer.svg">
+                </div>
+                <div class="main">
+                    <div class="auth-container">
+                        <p class="title">Welcome</p>
+                        <div class="separator"></div>
+                        <p class="welcome-message">
+                            Create An Account with us.
+                        </p>
+                        <form action="" class="auth-form" id="registor-form">
+                            <div class="form-control">
+                                <input type="text" name="name" placeholder="Full Name" id="name">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-control">
+                                <input type="email" name="email" placeholder="Email" id="email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-control">
+                                <input type="password" name="password' placeholder="Password" id="password">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-control">
+                                <input type="password" name="confirmPassword" placeholder=" Confirm Password" id="confirmPassword">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <button type="submit" class="submit">Login</button>
+                            <div class="redirect">Have an Account ? <a href="/#/signin">Sign In</a></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         `;
     },
 };
