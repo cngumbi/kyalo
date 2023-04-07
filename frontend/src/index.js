@@ -1,38 +1,19 @@
 import MainSection from "./screens/homePage/mainSection.js";
-import ProductSection from "./screens/productPage/productSection.js";
 import { hideLoading, parseRequestUrl, showLoading } from "./util.js";
 import Error404Section from "./screens/productPage/error404Section.js";
-import CartSection from "./screens/cart/cartSection.js";
 import SigninSection from "./screens/signups/signinSection.js";
 import Header from "./screens/components/header.js";
 import Footer from "./screens/components/footer.js";
-import AddPlayerSection from "./pages/addPlayer.js";
 import RegisterSection from "./screens/signups/registerSection.js";
 import ProfileSection from "./screens/signups/profileSection.js";
-import ShippingSection from "./screens/signups/shippingSection.js";
-import PaymentSection from "./screens/signups/paymentSection.js";
-import PlaceorderSection from "./screens/signups/placeorderSection.js";
-import OrderSection from "./screens/signups/orderSection.js";
-import ProductListSection from "./screens/dashboard/productListSection.js";
-import UsersListSection from "./screens/dashboard/usersListSection.js";
 import DashboardSection from "./screens/dashboard/dashboardSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
-    '/product/:id': ProductSection,
-    '/cart/:id': CartSection,
-    '/cart': CartSection,
     '/signin': SigninSection,
     '/register': RegisterSection,
-    '/addplayer': AddPlayerSection,
     '/profile': ProfileSection,
-    '/shipping': ShippingSection,
-    '/payment': PaymentSection,
-    '/placeorder': PlaceorderSection,
-    '/order/:id': OrderSection,
     '/dashboard': DashboardSection,
-    '/productlist': ProductListSection,
-    '/userslist': UsersListSection,
 
 };
 const router = async() => {
