@@ -7,13 +7,18 @@ const Header = {
                 return `
                     <header>
                         <div class="brand">
-                            ${ name ? `<a href="/#/dashboard" class="logo">kwi<span>t&#361;</span></a>`: `<a href="#" class="logo">kwi<span>t&#361</span></a>`}
+                            ${ name ? `<a href="/#/dashboard" class="logo">kwit&#361;</a>`: `<a href="#" class="logo">kwit&#361</a>`}
                         </div>
                     </header>
                    
                 `;
         },
-        after_render: () => {},
+        after_render: () => {
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            });
+        },
 
 };
 export default Header;
