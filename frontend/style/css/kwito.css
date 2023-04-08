@@ -532,6 +532,10 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .brand {
+    top: -1rem;
+    left: -3rem;
+  }
   body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -576,11 +580,19 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .brand {
+    top: -1rem;
+    left: -3rem;
+  }
   .side {
     display: none;
   }
 }
 @media (max-width: 850px) {
+  .brand {
+    top: -1rem;
+    left: -3rem;
+  }
   .side {
     background: none;
   }
