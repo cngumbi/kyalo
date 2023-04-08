@@ -1,7 +1,7 @@
 // create a function parseRequesturl to handle the urls
 //Author: Softcraze Corporation
 //Date Eighteenth June Two Thousand Twenty-Two
-import { getCartItems, getUserInfo } from "./localStorage";
+import { getUserInfo } from "./localStorage";
 
 export const parseRequestUrl = () => {
     const url = document.location.hash.toLowerCase();
@@ -56,7 +56,7 @@ export const showMessage = (message, callback) => {
 };
   
 //------------------------------------------------------------------------------
-export const redirectUser = () => {
-    const redirectTo = getCartItems().length !== 0 ? '/shipping' : getUserInfo().name ? '/dashboard' : '/';
-    document.location.hash = redirectTo;
-};
+//export const redirectUser = () => {
+//    const redirectTo = getCartItems().length !== 0 ? '/shipping' : getUserInfo().name ? '/dashboard' : '/';
+//    document.location.hash = redirectTo;
+//};
