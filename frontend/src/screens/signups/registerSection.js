@@ -52,11 +52,11 @@ const RegisterSection = {
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="form-control">
-                                <input type="password" name="password' placeholder="Password" id="password">
+                                <input type="password" name="password" placeholder="Password" id="password">
                                 <i class="fas fa-lock"></i>
                             </div>
                             <div class="form-control">
-                                <input type="password" name="confirmPassword" placeholder=" Confirm Password" id="confirmPassword">
+                                <input type="password" name="confirmPassword" placeholder="Confirm Password" id="confirmPassword">
                                 <i class="fas fa-lock"></i>
                             </div>
                             <button type="submit" class="submit">Register</button>
