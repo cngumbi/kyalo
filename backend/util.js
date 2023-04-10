@@ -1,13 +1,23 @@
 const jwt = require('jsonwebtoken');
 const config = require('../backend/config/config');
-
 const generateToken = (user) => {
     return jwt.sign(
-        {},
-        config.JWT_SECRET,
-        { expiresIn: '1h'}
+        {
+            _id: user.id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin,
+        },
+        config.JWT_SECRET
     );
-};
+} 
+//const generateToken = (user) => {
+//    return jwt.sign(
+//        {},
+//        config.JWT_SECRET,
+//        { expiresIn: '1h'}
+//    );
+//};
 const isAuth = (req, res, next) => {
     const bearerToken = req.headers.authorization;
     if (!bearerToken) {
