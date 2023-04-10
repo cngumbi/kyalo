@@ -34,7 +34,6 @@ export const showMessage = (message, callback) => {
       <div>
         <div id="message-content">${message}</div>
         <button id="close-button">OK</button>
-        Dashboard
       </div>
     `;
   
@@ -54,7 +53,13 @@ export const showMessage = (message, callback) => {
       }
     });
 };
-  
+export const redirectUser = () => {
+  if(!getUserInfo().name){
+    document.location.hash = '/';
+  }else{
+    document.location.hash = '/dashboard';
+  }
+}
 //------------------------------------------------------------------------------
 //export const redirectUser = () => {
 //    const redirectTo = getCartItems().length !== 0 ? '/shipping' : getUserInfo().name ? '/dashboard' : '/';
