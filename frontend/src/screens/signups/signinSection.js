@@ -18,15 +18,15 @@ const SigninSection = {
                     showMessage(data.error);
                 } else {
                     setUserInfo(data);
-                    //redirectUser();
-                    document.location.hash = '/dashboard';
+                    redirectUser();
+                    //document.location.hash = '/dashboard';
                 }
             });
     },
     render: () => {
         if (getUserInfo().name) {
-            //redirectUser();
-            document.location.hash = '/dashboard';
+            redirectUser();
+            //document.location.hash = '/dashboard';
         }
         return `
             <section>
