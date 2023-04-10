@@ -1,4 +1,4 @@
-import { getMyOrder, update } from '../../js/kyalo';
+import { update } from '../../js/kyalo';
 import { clearUser, getUserInfo, setUserInfo } from '../../localStorage';
 import { hideLoading, showLoading, showMessage } from '../../util';
 import DashboardMenu from '../dashboard/components/dashboardMenu';
@@ -29,7 +29,7 @@ const ProfileSection = {
             });
     },
     render: async() => {
-        const orders = await getMyOrder();
+        //const orders = await getMyOrder();
         const { name, email } = getUserInfo();
         if (!name) {
             document.location.hash = '/';
