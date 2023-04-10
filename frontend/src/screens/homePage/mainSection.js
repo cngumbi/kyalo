@@ -18,13 +18,13 @@ const MainSection = {
                     showMessage(data.error);
                 } else {
                     setUserInfo(data);
-                    //redirectUser();
+                    redirectUser();
                 }
             });
     },
     render: async() => {
         if (getUserInfo().name) {
-            //redirectUser();
+            redirectUser();
         }
         return `
             <section>
