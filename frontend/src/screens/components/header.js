@@ -9,6 +9,9 @@ const Header = {
                         <div class="brand">
                             ${ name ? `<a href="/#/dashboard" class="logo">kwit&#361;</a>`: `<a href="#" class="logo">kwit&#361</a>`}
                         </div>
+                        <ul>
+                            <li><a href="#/profile">${name}</a></li>
+                        </ul>                        
                     </header>
                    
                 `;
