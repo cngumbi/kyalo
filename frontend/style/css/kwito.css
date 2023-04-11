@@ -929,22 +929,22 @@ section {
 
 .title {
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
 }
 
 .separator {
-  width: 300px;
-  height: 3px;
+  width: 12rem;
+  height: 0.1rem;
   background-color: #3bc74e;
   margin: 7px;
 }
 
 .welcome-message {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.2rem;
   line-height: 28px;
   margin-bottom: 28px;
   color: #696969;
@@ -972,7 +972,7 @@ button {
   border: none;
   outline: none;
   border-radius: 30px;
-  font-size: 1.1em;
+  font-size: 1.2rem;
 }
 
 input {
@@ -1004,7 +1004,7 @@ button.submit {
   margin: 0.5rem auto;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: bold;
+  font-weight: 700;
   background-image: -webkit-gradient(linear, left top, right top, from(#33c53f), to(#15e1a4));
   background-image: linear-gradient(to right, #33c53f, #15e1a4);
   cursor: pointer;

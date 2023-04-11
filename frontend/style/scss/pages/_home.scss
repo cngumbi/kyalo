@@ -22,20 +22,20 @@ section{
 }
 .title{
     text-transform: uppercase;
-    font-size: $font-medium-1;
+    font-size: $font-default;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
 }
 .separator{
-    width: 300px;
-    height: 3px;
+    width: 12rem;
+    height: .1rem;
     background-color: #3bc74e;
     margin: 7px;
 }
 .welcome-message{
     text-align: center;
-    font-size: 1.1em;
+    font-size: $font-smaller;
     line-height: 28px;
     margin-bottom: 28px;
     color: #696969;
@@ -55,7 +55,7 @@ button{
     border: none;
     outline: none;
     border-radius: 30px;
-    font-size: 1.1em;
+    font-size: $font-smaller;
 }
 input{
     width: 100%;
@@ -81,7 +81,7 @@ button.submit{
     margin: .5rem auto;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: bold;
+    font-weight: weight(medium);
     background-image: linear-gradient( to right, #33c53f, #15e1a4);
     cursor: pointer;
     transition: opacity 0.4s;
