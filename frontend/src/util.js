@@ -31,10 +31,10 @@ export const showMessage = (message, callback) => {
   
     // Create the message content
     const messageContent = `
-      <div>
-        <div id="message-content">${message}</div>
-        <button id="close-button">OK</button>
-      </div>
+    <div>
+      <div id="message-content">${message}</div>
+      <button id="close-button">OK</button>
+    </div>
     `;
   
     // Set the message overlay content and show it
@@ -55,9 +55,9 @@ export const showMessage = (message, callback) => {
 };
 export const redirectUser = () => {
   if(!getUserInfo().name){
-    document.location.hash = '/';
+    window.location.assign('/');
   }else{
-    document.location.hash = '/dashboard';
+    window.location.assign('/#/dashboard');
   }
 }
 //------------------------------------------------------------------------------
