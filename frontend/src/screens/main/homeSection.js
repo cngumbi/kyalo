@@ -1,6 +1,6 @@
 import DashboardMenu from "./components/dashboardMenu";
 
-const DashboardSection = {
+const HomeSection = {
     after_render: () => {
 
     },
@@ -19,4 +19,4 @@ const DashboardSection = {
     }
 };
 
-export default DashboardSection;
+export default HomeSection;

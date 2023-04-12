@@ -1,7 +1,7 @@
 import { update } from '../../js/kyalo';
 import { clearUser, getUserInfo, setUserInfo } from '../../localStorage';
 import { hideLoading, showLoading, showMessage } from '../../util';
-import DashboardMenu from '../dashboard/components/dashboardMenu';
+import DashboardMenu from '../main/components/dashboardMenu';
 
 const ProfileSection = {
     after_render: () => {
