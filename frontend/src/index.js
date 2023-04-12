@@ -1,19 +1,19 @@
 import MainSection from "./screens/homePage/mainSection.js";
 import { hideLoading, parseRequestUrl, showLoading } from "./util.js";
-import Error404Section from "./screens/productPage/error404Section.js";
+import Error404Section from "./screens/errors/error404Section.js";
 import SigninSection from "./screens/signups/signinSection.js";
 import Header from "./screens/components/header.js";
 import Footer from "./screens/components/footer.js";
 import RegisterSection from "./screens/signups/registerSection.js";
 import ProfileSection from "./screens/signups/profileSection.js";
-import DashboardSection from "./screens/dashboard/dashboardSection.js";
+import HomeSection from "./screens/main/homeSection.js";
 //create the route of the web pages
 const routes = {
     '/': MainSection,
     '/signin': SigninSection,
     '/register': RegisterSection,
     '/profile': ProfileSection,
-    '/dashboard': DashboardSection,
+    '/kwitumain': HomeSection,
 
 };
 const router = async() => {

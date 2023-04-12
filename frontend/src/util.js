@@ -57,7 +57,7 @@ export const redirectUser = () => {
   if(!getUserInfo().name){
     window.location.assign('/');
   }else{
-    window.location.assign('/#/dashboard');
+    window.location.assign('/#/kwitumain');
   }
 }
 //------------------------------------------------------------------------------
