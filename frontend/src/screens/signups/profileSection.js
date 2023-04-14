@@ -1,7 +1,8 @@
 import { update } from '../../js/kyalo';
 import { clearUser, getUserInfo, setUserInfo } from '../../localStorage';
 import { hideLoading, showLoading, showMessage } from '../../util';
-import DashboardMenu from '../main/components/dashboardMenu';
+import LeftSideContent from "../main/components/leftSideContent";
+//import DashboardMenu from '../main/components/dashboardMenu';
 
 const ProfileSection = {
     after_render: () => {
@@ -37,7 +38,6 @@ const ProfileSection = {
 
         return `
             <div class="dashboard">
-                ${DashboardMenu.render({selected: 'profile'})}
                 <div class="dashboard-content">
                     <div class="profile">
                         <div class="profile-info">

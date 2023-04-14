@@ -18,6 +18,9 @@
 @import 'layout/grid';
 @import 'layout/forms';
 @import 'layout/footer';
+@import 'layout/leftsideContent';
+@import 'layout/mainContent';
+@import 'layout/rightsideContent';
 //pages
 @import 'pages/home';
-@import 'pages/dashboard';
+@import 'pages/mainSection';
