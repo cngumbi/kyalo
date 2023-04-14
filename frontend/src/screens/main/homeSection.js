@@ -1,4 +1,4 @@
-import DashboardMenu from "./components/dashboardMenu";
+import LeftSideContent from "./components/leftSideContent";
 
 const HomeSection = {
     after_render: () => {
@@ -7,13 +7,7 @@ const HomeSection = {
     render: () => {
         return `
             <div class="dashboard">
-                ${DashboardMenu.render({selected:'dashboard'})}
-                <div class="dashboard-content">
-                    <h1>dashboard</h1>
-                    <div>
-                        all dashboard content will be added here
-                    </div>
-                </div>
+                ${LeftSideContent.render()}
             </div>
         `;
     }
