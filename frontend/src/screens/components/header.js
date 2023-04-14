@@ -2,6 +2,24 @@ import { getUserInfo } from "../../localStorage";
 
 //this section handles the header of the pages
 const Header = {
+        after_render: () => {
+            //document.getElementById("signout").addEventListener("click", () => {
+            //    clearUser();
+            //    document.location.hash = '/';
+            //})
+            //let profileMenu = document.getElementById("profileMenu");
+            //function toggleMenu(){
+            //    profileMenu.classList.toggle("open-menu");
+            //}
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            });
+            window.addEventListener("click", ()=>{
+                let profileMenu = document.getElementById("profileMenu");
+                profileMenu.classList.toggle("open-menu");
+            });
+        },
         render: () => {
                 const { name, isAdmin } = getUserInfo();
                 return `
@@ -65,21 +83,6 @@ const Header = {
                     </header>
                    
                 `;
-        },
-        after_render: () => {
-            //document.getElementById("signout").addEventListener("click", () => {
-            //    clearUser();
-            //    document.location.hash = '/';
-            //})
-            window.addEventListener("scroll", function(){
-                var header = document.querySelector("header");
-                header.classList.toggle("sticky", window.scrollY > 0);
-            });
-            window.addEventListener("click", ()=>{
-                let profileMenu = document.getElementById("profileMenu");
-                profileMenu.classList.toggle("open-menu");
-            });
-        },
-
+        }
 };
 export default Header;
