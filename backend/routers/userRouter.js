@@ -1,7 +1,7 @@
 const express = require('express');
 const User = require('../models/userModel');
 //const db = require('../config/mongoConfig');
-//const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const expressAsyncHandler = require('express-async-handler');
 const { generateToken, isAuth } = require('../util');
  
