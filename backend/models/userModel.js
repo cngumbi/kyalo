@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     password: { type: String, required: true },
-    //profilepic: { type:String, default: "/images/yy.png"},
+    profilePic: { type:String, default: "/images/yy.png"},
     isAdmin: { type: Boolean, required: true, default: false },
 }, { timestamps: true });
 
