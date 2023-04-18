@@ -1,13 +1,11 @@
-import { update } from '../../js/kyalo';
+import { update, uploadProfileImage } from '../../js/kyalo';
 import { clearUser, getUserInfo, setUserInfo } from '../../localStorage';
 import { hideLoading, showLoading, showMessage } from '../../util';
 import EducationSection from '../main/components/educationContent';
 import ExperienceContent from '../main/components/experinceContent';
 import LanguageContent from '../main/components/languageContent';
-import LeftSideContent from "../main/components/leftSideContent";
 import SkillsContent from '../main/components/skillsContent';
 import TrendingNews from '../main/components/trendingNews';
-//import DashboardMenu from '../main/components/dashboardMenu';
 
 const ProfileSection = {
     after_render: () => {
@@ -23,6 +21,7 @@ const ProfileSection = {
                 const data = await update({
                     name: document.getElementById('name').value,
                     email: document.getElementById('email').value,
+                    profilePic: document.getElementById('image').value,
                     password: document.getElementById('password').value
                 });
                 hideLoading();
@@ -33,10 +32,24 @@ const ProfileSection = {
                     document.location.hash = '/';
                 }
             });
+            document.getElementById('image-file').addEventListener('change', async(e)=>{
+                const file = e.target.file[0];
+                const formData = new FormData();
+                formData.append('image', file);
+                showLoading();
+                const data = await uploadProfileImage(formData);
+                hideLoading();
+                if(data.error){
+                    showMessage(data.error);
+                }else{
+                    showMessage('Image uploaded');
+                    document.getElementById('image').value = data.image;
+                }
+            })
     },
     render: async() => {
         //const orders = await getMyOrder();
-        const { name, email } = getUserInfo();
+        const { name, email, profilePic } = getUserInfo();
         if (!name) {
             document.location.hash = '/';
         }
@@ -100,6 +113,11 @@ const ProfileSection = {
                                         <li>
                                             <label for="email">Email</label>
                                             <input type="email" name="email" id="email" value="${email}"/>
+                                        </li>
+                                        <li>
+                                            <label for="image">image (680 x 830)</label>
+                                            <input type="text" name="image" id="image" value="${profilePic}"/>
+                                            <input type="file" name="image-file" id="image-file" />
                                         </li>
                                         <li>
                                             <label for="password">Password</label>

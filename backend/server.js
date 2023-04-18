@@ -7,12 +7,14 @@ const bodyParser = require('body-parser');
 const config = require('./config/config');
 const UserRouter = require('./routers/userRouter');
 const PlayerRouter = require('./routers/playerRouter');
+//const UploadRouter = require('./middleware/upload');
 //----------------------------------------------------------------------------------
 //instentiate the express 
 //----------------------------------------------------------------------------------
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+//app.use('/api/uploads', UploadRouter);
 app.use('/api/users', UserRouter);
 app.use('/api/players', PlayerRouter);
 
