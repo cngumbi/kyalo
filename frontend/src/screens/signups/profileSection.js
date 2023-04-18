@@ -37,8 +37,91 @@ const ProfileSection = {
         }
 
         return `
-            <div class="dashboard">
-                <div class="dashboard-content">
+            <div class="container">
+                <div class="profile-main">
+                    <div class="profile-container">
+                        <img src="../images/p01.PNG" class="profile-sidebar-img">
+                        <div class="profile-continer-inner">
+                            <img src="../images/yy.jpg" class="profile-pic">
+                            <h1>${name}</h1>
+                            <b>${email}</b>
+                            <br>
+                            <b> Programmer at Softcraze Corporation</b>
+                            <p> Nairobi, Kenya <a href="#">Contact Info</p></p>
+                            <div class="mutual-collaboration">
+                                <img src="../images/yy.jpg">
+                                <span> 1 Collaboration: KSSA Organisation</span>
+                            </div>
+                            <div class="profile-btn">
+                                <a href="#" class="primary-btn"><img src="../images/soccer.png">Collaborate</a>
+                                <a href="#"><img src="../images/soccer.png">Message</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-description">
+                        <h2> About</h2>
+                        <p>
+                            It is true and we as Christians believe that Christ will 
+                            coming back  again and we need to be prepared all the 
+                            time since no one know the hour or the day but the 
+                            sings can tell. We are living end times since many of the
+                            things that were prophesied already has come to pass 
+                            but before 
+                        </p>
+                        <a href="#" class="see-more-link">See More...</a>
+                    </div>
+                    <div class="profile-description">
+                        <h2>Experience</h2>
+                        <div class="profile-desc-row">
+                            <img src="../images/soccer.png">
+                            <div>
+                                <h3>Lead Front-End Developer</h3>
+                                <b>Softcraze Corporation &middot; Full time</b>
+                                <b> Feb 2021 - Present &middot; 1.5 years</b>
+                                <p>
+                                    It is true and we as Christians believe that Christ will 
+                                    coming back  again and we need to be prepared all the 
+                                    time since no one know the hour or the day but the 
+                                    sings can tell.
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                        <hr>
+                        <a href="#" class="experience-link">Show All...<img src="../images/soccer.png"></a>
+                    </div>
+                    <div class="profile-description">
+                        <h2>Education</h2>
+                        <div class="profile-desc-row">
+                            <img src="../images/soccer.png">
+                            <div>
+                                <h3>Embu University</h3>
+                                <b> BSC, Computer Science</b>
+                                <b>2018 - 2022</b>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-description">
+                        <h2>Skills</h2>
+                        <a href="#" class="skills-btn">Leadership</a>
+                        <a href="#" class="skills-btn">Soccer Player</a>
+                        <a href="#" class="skills-btn">Under 12 trainer</a>
+                        <a href="#" class="skills-btn">Gym Instractor</a>
+                        <a href="#" class="add-link">Add Skill...</a>
+                    </div>
+                    <div class="profile-description">
+                        <h2>Languages</h2>
+                        <a href="#" class="language-btn">English</a>
+                        <a href="#" class="language-btn">Swahili</a>
+                        <a href="#" class="language-btn">Spanish</a>
+                        <a href="#" class="language-btn">French</a>
+                        <a href="#" class="add-link">Add Language...</a>
+                    </div>
+                </div>
+              
+                <!---profile sidebar ------>
+                <div class="profile-sidebar">
                     <div class="profile">
                         <div class="profile-info">
                             <!--profile update form-->
@@ -69,9 +152,23 @@ const ProfileSection = {
                                     </ul>
                                 </form>
                             </div>
-                        </div>
-                        
+                        </div>                        
                     </div>
+                    <!--<div class="sidebar-ads">
+                        <small>Ad &middot; &middot; &middot;</small>
+                        <p>Master the 5 principles</p>
+                        <div>
+                            <img src="../images/yy.jpg" alt="">
+                            <img src="../images/yy.jpg" alt="">
+                        </div>
+                        <b>Brand and Demand</b>
+                        <a href="" class="ad-link">Learn More</a>
+                    </div>-->
+                </div>
+            </div>
+            <div class="dashboard">
+                <div class="dashboard-content">
+                    
                 </div>
                 </div>`;
     },
