@@ -1062,10 +1062,15 @@ header ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   margin: 5px 8px;
   padding-right: 5px;
   position: relative;
+}
+.navbar .navbar-center ul li span a {
+  padding: 0;
+  margin: 0;
+  color: #001308;
 }
 .navbar .navbar-right .nav-profile-img {
   width: 40px;

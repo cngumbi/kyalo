@@ -1,27 +1,10 @@
+import TrendingNews from "./trendingNews";
+
 const RightSideContent = {
     render: ()=>{
         return `
         <div class="right-sidebar">
-            <div class="sidebar-news">
-                <img src="../../../images/soccer.png" class="info-icon" alt="">
-                <h3> Treading News</h3>
-                <a href="#"> High deman for manpower</a>
-                <span>1d age &middot; 100 readers</span>
-
-                <a href="#"> High deman for manpower</a>
-                <span>1d age &middot; 100 readers</span>
-
-                <a href="#"> High deman for manpower</a>
-                <span>1d age &middot; 100 readers</span>
-
-                <a href="#"> High deman for manpower</a>
-                <span>1d age &middot; 100 readers</span>
-
-                <a href="#"> High deman for manpower</a>
-                <span>1d age &middot; 100 readers</span>
-
-                <a href="#" class="read-more-link">Read More</a>
-            </div>
+            ${ TrendingNews.render() }
             <div class="sidebar-ad">
                 <small>Ad &middot; &middot; &middot;</small>
                 <p>Master the 5 principles</p>
