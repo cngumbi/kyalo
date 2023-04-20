@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-const { isAuth, isAdmin } = require('../util');
+const { isAuth } = require('../util');
 
 const storage = multer.diskStorage({
     destination(req, file, cd){
@@ -12,10 +12,10 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
-const uploadRouter = express.Router();
+const UploadRouter = express.Router();
 
-uploadRouter.post('/', isAuth, isAdmin, upload.single('image'), (req, res)=>{
+uploadRouter.post('/', isAuth, upload.single('image'), (req, res)=>{
     res.status(201).send({ image: `/${req.file.path }` });
 });
 
-module.exports = uploadRouter;
+module.exports = UploadRouter;

@@ -1,23 +1,21 @@
 #directories to ignore
 .sass-cache
 node_modules
-
-#files to ignore
 *.swp
-
-#the environment file
 .env
 dist
-
-
 package-lock.json
+#vscode
+.vscode
+#uploads files
+uploads/*.jpg
+uploads/*.png
 #test files 
 test.js
 test.html
 main.js
 http_t.js
-#vscode
-.vscode
+
 
 #file to add 
 middleware.js

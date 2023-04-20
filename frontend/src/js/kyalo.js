@@ -98,7 +98,7 @@ export const register = async({ name, email, password }) => {
     }
 };
 //update function
-export const update = async({ name, email, password }) => {
+export const update = async({ name, email, password, profilePic }) => {
     try {
         const { _id, token } = getUserInfo();
         const response = await axios({
@@ -112,6 +112,7 @@ export const update = async({ name, email, password }) => {
                 name,
                 email,
                 password,
+                profilePic
             },
         });
         if (response.statusText !== 'OK') {
@@ -125,6 +126,27 @@ export const update = async({ name, email, password }) => {
 
     }
 };
+export const uploadProfileImage = async(formData) => {
+    try{
+        const { token } = getUserInfo();
+        const response = await axios({
+            url: `${apiURL}/api/uploads`,
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'multipart/form-data',
+            },
+            data: formData
+        });
+        if(response.statusText !== 'Created'){
+            throw new Error(response.data.message);
+        }else{
+            return response.data;
+        }
+    }catch(err){
+        return { error: err.response ? err.response.data.message : err.massage };
+    }
+}
 //function to get the user 
 //export const getUsers = async() => {
 //    try {
