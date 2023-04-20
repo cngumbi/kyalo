@@ -1,4 +1,7 @@
 const ExperienceContent = {
+    after_render: ()=>{
+
+    },
     render: ()=>{
         return `
         <div class="profile-description">
