@@ -11,6 +11,7 @@ export const setUserInfo = ({
     name = '',
     email = '',
     password = '',
+    profilePic = '',
     token = '',
     isAdmin = false
 }) => {
@@ -21,6 +22,7 @@ export const setUserInfo = ({
             name,
             email,
             password,
+            profilePic,
             token,
             isAdmin
         })
@@ -33,7 +35,7 @@ export const clearUser = () => {
 };
 export const getUserInfo = () => {
     return localStorage.getItem('userInfo') ?
-        JSON.parse(localStorage.getItem('userInfo')) : { name: '', email: '', password: '' };
+        JSON.parse(localStorage.getItem('userInfo')) : { name: '', email: '', password: '', profilePic:'' };
 };
 //get shipping section
 //export const getShipping = () => {

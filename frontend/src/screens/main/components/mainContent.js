@@ -1,19 +1,12 @@
+import { getUserInfo } from "../../../localStorage";
+import PostContent from "./postContent";
+
 const MainContent = {
     render: ()=>{
+        const { profilePic } = getUserInfo();
         return `
         <div class="main-content">
-            <div class="create-post">
-                <div class="create-post-input">
-                    <img src="../../../images/yy.jpg" alt="">
-                    <textarea name="" id="" rows="2" placeholder="write a post"></textarea>
-                </div>
-                <div class="create-post-links">
-                    <li><img src="../../../images/soccer.png">Photo</li>
-                    <li><img src="../../../images/soccer.png">Video</li>
-                    <li><img src="../../../images/soccer.png">Event</li>
-                    <li>Post</li>
-                </div>
-            </div>
+            ${PostContent.render()}
             <div class="sort-by">
                 <hr>
                 <p>Sort By: <span>Top <img src="../../../images/soccer.png" alt=""></span></p>

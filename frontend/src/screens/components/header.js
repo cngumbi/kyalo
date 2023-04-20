@@ -7,8 +7,9 @@ const Header = {
             //    clearUser();
             //    document.location.hash = '/';
             //})
-            //let profileMenu = document.getElementById("profileMenu");
+            
             //function toggleMenu(){
+            //    const profileMenu = document.querySelector(".profile-menu-wrap");
             //    profileMenu.classList.toggle("open-menu");
             //}
             window.addEventListener("scroll", function(){
@@ -19,6 +20,14 @@ const Header = {
                 let profileMenu = document.getElementById("profileMenu");
                 profileMenu.classList.toggle("open-menu");
             });
+            //let profileDropdown = document.getElementById("profileMenu");
+            //let btn = document.querySelector(".nav-profile-img");
+            //const toggleMenu = ()=> profileDropdown.classList.toggle("open-menu");
+            //window.addEventListener('click', function(e){
+            //    if(!btn.contains(e.target)){
+            //        profileDropdown.classList.remove('open-menu');
+            //    }
+            //})
         },
         render: () => {
                 const { name, isAdmin } = getUserInfo();
@@ -42,40 +51,40 @@ const Header = {
                             ${name ? `
                             <div class="navbar-center">
                                 <ul>
-                                    <li><span>${name}</span></li>
+                                    <li><span><a href="/#/profile">${name}</a></span></li>
                                 </ul>
                             </div>
                             <div class="navbar-right">
                                 <div class="online">
-                                    <img src="../../images/yy.jpg" alt="" class="nav-profile-img" onclick="toggleMenu()">
+                                    <img src="../../images/yy.jpg" alt="" class="nav-profile-img">
                                 </div>
-                            </div>
-                            <!--profile dropdown menu-->
-                            <div class="profile-menu-wrap" id="profileMenu">
-                                <div class="profile-menu">
-                                    <div class="user-info">
-                                        <img src="../../images/yy.jpg" alt="">
-                                        <div>
-                                            <h3>${name}</h3>
-                                            <a href="/#/profile">see your profile</a>
+                                <!--profile dropdown menu-->
+                                <div class="profile-menu-wrap" id="profileMenu">
+                                    <div class="profile-menu">
+                                        <div class="user-info">
+                                            <img src="../../images/yy.jpg" alt="">
+                                            <div>
+                                                <h3>${name}</h3>
+                                                <a href="/#/profile">see your profile</a>
+                                            </div>
                                         </div>
+                                        <hr>
+                                        <a href="#" class="profile-menu-link">
+                                            <img src="" alt="">
+                                            <p>Give Feedback</p>
+                                            <span>></span>
+                                        </a>
+                                        <a href="#" class="profile-menu-link">
+                                            <img src="soccer.png" alt="">
+                                            <p>Settings</p>
+                                            <span>></span>
+                                        </a>
+                                        <!--<a href="" class="profile-menu-link" id="signout">
+                                            <img src="soccer.png" alt="">
+                                            <p>logout</p>
+                                            <span>></span>
+                                        </a>-->
                                     </div>
-                                    <hr>
-                                    <a href="#" class="profile-menu-link">
-                                        <img src="" alt="">
-                                        <p>Give Feedback</p>
-                                        <span>></span>
-                                    </a>
-                                    <a href="#" class="profile-menu-link">
-                                        <img src="soccer.png" alt="">
-                                        <p>Settings</p>
-                                        <span>></span>
-                                    </a>
-                                    <!--<a href="" class="profile-menu-link" id="signout">
-                                        <img src="soccer.png" alt="">
-                                        <p>logout</p>
-                                        <span>></span>
-                                    </a>-->
                                 </div>
                             </div>
                             `:''}
