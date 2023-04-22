@@ -3,6 +3,7 @@
 node_modules
 *.swp
 .env
+.prettierrc
 dist
 package-lock.json
 #vscode
