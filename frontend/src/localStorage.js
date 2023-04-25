@@ -35,7 +35,8 @@ export const clearUser = () => {
 };
 export const getUserInfo = () => {
     return localStorage.getItem('userInfo') ?
-        JSON.parse(localStorage.getItem('userInfo')) : { name: '', email: '', password: '', profilePic:'' };
+        JSON.parse(localStorage.getItem('userInfo')) : 
+        { name: '', email: '', password: '', profilePic:'' };
 };
 //get shipping section
 //export const getShipping = () => {

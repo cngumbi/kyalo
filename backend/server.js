@@ -9,7 +9,7 @@ const UserRouter = require('./routers/userRouter');
 const PlayerRouter = require('./routers/playerRouter');
 //const UploadRouter = require('./middleware/upload');
 //----------------------------------------------------------------------------------
-//instentiate the express 
+//instentiate the express
 //----------------------------------------------------------------------------------
 const app = express();
 app.use(cors());
@@ -17,7 +17,6 @@ app.use(bodyParser.json());
 //app.use('/api/uploads', UploadRouter);
 app.use('/api/users', UserRouter);
 app.use('/api/players', PlayerRouter);
-
 
 //app.get('/api/products', (req, res) => {
 //    res.send(data.products);
@@ -39,16 +38,16 @@ app.use('/api/players', PlayerRouter);
 app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
 //-----------------------------------------------------
 app.use(express.static(path.join(__dirname, '/../frontend')));
-app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/../frontend/index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../frontend/index.html'));
 });
 //----------------------------------------------------
 //error handling
 //code to handle all errors in express instance
 app.use((err, req, res, next) => {
-    const status = (err.name && err.name === 'ValidationError') ? 400 : 500;
-    res.status(status).send({ message: err.message });
-})
+  const status = err.name && err.name === 'ValidationError' ? 400 : 500;
+  res.status(status).send({ message: err.message });
+});
 //initialize the database and start the app
 //db.initDb((err, db)=>{
 //    if(err){
@@ -60,6 +59,6 @@ app.use((err, req, res, next) => {
 //    }
 //})
 app.listen(config.PORT, () => {
-    console.log(`server at http://localhost:${config.PORT}`);
+  console.log(`server at http://localhost:${config.PORT}`);
 });
 //----------------------------------------------------------------------------------------
