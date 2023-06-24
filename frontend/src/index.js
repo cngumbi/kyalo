@@ -7,6 +7,8 @@ import Footer from './screens/components/footer.js';
 import RegisterSection from './screens/signups/registerSection.js';
 import ProfileSection from './screens/signups/profileSection.js';
 import HomeSection from './screens/main/homeSection.js';
+//import the style
+import "../style/css/kwito.css";
 //create the route of the web pages
 const routes = {
   '/': MainSection,

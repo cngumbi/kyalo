@@ -2,33 +2,35 @@
 .sass-cache
 node_modules
 *.swp
-.env
-.prettierrc
+#.env
+#.prettierrc
 dist
 package-lock.json
 #vscode
 .vscode
 #uploads files
-uploads/*.jpg
-uploads/*.png
+#uploads/*.jpg
+#uploads/*.png
 #test files 
-test.js
-test.html
-main.js
-http_t.js
+#test.js
+#test.html
+#main.js
+#http_t.js
+#config files
+#webpack.config.js
 
 
 #file to add 
-middleware.js
-shippingSect.js
-orderSect.js
-paymentSect.js
-placeorderSect.js
-productSect.js
-productListSect.js
-usersListSect.js
-cartSect.js
-addPlayerSect.js
-checkoutStepsSect.js
-ratingSect.js
-cartSect.js
+#middleware.js
+#shippingSect.js
+#orderSect.js
+#paymentSect.js
+#placeorderSect.js
+#productSect.js
+#productListSect.js
+#usersListSect.js
+#cartSect.js
+#addPlayerSect.js
+#checkoutStepsSect.js
+#ratingSect.js
+#cartSect.js

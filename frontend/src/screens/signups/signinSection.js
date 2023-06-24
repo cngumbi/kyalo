@@ -23,6 +23,7 @@ const SigninSection = {
                 }
             });
     },
+    
     render: () => {
         if (getUserInfo().name) {
             redirectUser();

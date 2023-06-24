@@ -65,7 +65,7 @@ export const getUserInfo = () => {
 //export const getPayment = () => {
 //    const shipping = localStorage.getItem('payment') ?
 //        JSON.parse(localStorage.getItem('payment')) : {
-            paymentMethod: 'paypal'
+//            paymentMethod: 'paypal'
 //        };
 //    return shipping;
 //

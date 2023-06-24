@@ -17,7 +17,7 @@ export const rerender = async (component) => {
     await component.render();
   await component.after_render();
 };
-export const showLoading = () => {
+export const showLoading =  () => {
   document.getElementById('loading-overlay').classList.add('active');
 };
 export const hideLoading = () => {

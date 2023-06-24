@@ -3,10 +3,6 @@ import { getUserInfo } from '../../localStorage';
 //this section handles the header of the pages
 const Header = {
   after_render: () => {
-    //document.getElementById('signout').addEventListener('click', () => {
-    //  clearUser();
-    //  document.location.hash = '/';
-    //});
     window.addEventListener('scroll', function () {
       var header = document.querySelector('header');
       header.classList.toggle('sticky', window.scrollY > 0);
